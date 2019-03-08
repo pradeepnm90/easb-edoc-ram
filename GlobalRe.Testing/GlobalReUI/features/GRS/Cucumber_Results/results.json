@@ -1,0 +1,397 @@
+[
+  {
+    "uri": "C:/Users/vboya/RubymineProjects/GlobalReUI/features/GRS/feature/GRS-Home-Page/GRS_Home_page.feature",
+    "id": "grs-home-page-feature",
+    "keyword": "Feature",
+    "name": "GRS Home Page Feature",
+    "description": "  This feature covers the scenarios identified to verify the GRS Home Page",
+    "line": 1,
+    "elements": [
+      {
+        "id": "grs-home-page-feature;verify-whether-the-deals-displayed-in-grid-are-updated-to-show-only-corresponding-substatus-deals-if-the-user-unselects-all-other-substatus-apart-from-corresponding-substatus;;2",
+        "keyword": "Scenario Outline",
+        "name": "Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus",
+        "description": "",
+        "line": 209,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 202
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/GRS/support/hooks.rb:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13991497400
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I open the browser and navigate to GRS link and click on the In Progress Panel",
+            "line": 209,
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12594903700
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I uncheck all other substatus apart from Under Review substatus",
+            "line": 209,
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:586"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29263694400
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the grid displaying the deals should now only show Under Review deals",
+            "line": 209,
+            "output": [
+              "10"
+            ],
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:607"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49788390900
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/GRS/support/hooks.rb:245"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2212288700
+            }
+          }
+        ]
+      },
+      {
+        "id": "grs-home-page-feature;verify-whether-the-deals-displayed-in-grid-are-updated-to-show-only-corresponding-substatus-deals-if-the-user-unselects-all-other-substatus-apart-from-corresponding-substatus;;3",
+        "keyword": "Scenario Outline",
+        "name": "Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus",
+        "description": "",
+        "line": 210,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 202
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/GRS/support/hooks.rb:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16749017300
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I open the browser and navigate to GRS link and click on the In Progress Panel",
+            "line": 210,
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12636351500
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I uncheck all other substatus apart from Authorize substatus",
+            "line": 210,
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:586"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29098989500
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the grid displaying the deals should now only show Authorize deals",
+            "line": 210,
+            "output": [
+              "10"
+            ],
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:607"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57685826700
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/GRS/support/hooks.rb:245"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1847140500
+            }
+          }
+        ]
+      },
+      {
+        "id": "grs-home-page-feature;verify-whether-the-deals-displayed-in-grid-are-updated-to-show-only-corresponding-substatus-deals-if-the-user-unselects-all-other-substatus-apart-from-corresponding-substatus;;4",
+        "keyword": "Scenario Outline",
+        "name": "Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus",
+        "description": "",
+        "line": 211,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 202
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/GRS/support/hooks.rb:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17355466100
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I open the browser and navigate to GRS link and click on the In Progress Panel",
+            "line": 211,
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13187212400
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I uncheck all other substatus apart from Outstanding Quote substatus",
+            "line": 211,
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:586"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29169107400
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the grid displaying the deals should now only show Outstanding Quote deals",
+            "line": 211,
+            "output": [
+              "10"
+            ],
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:607"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51625737700
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/GRS/support/hooks.rb:245"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1849043300
+            }
+          }
+        ]
+      },
+      {
+        "id": "grs-home-page-feature;verify-whether-the-deals-displayed-in-grid-are-updated-to-show-only-corresponding-substatus-deals-if-the-user-unselects-all-other-substatus-apart-from-corresponding-substatus;;5",
+        "keyword": "Scenario Outline",
+        "name": "Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus",
+        "description": "",
+        "line": 212,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 202
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/GRS/support/hooks.rb:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20440663900
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I open the browser and navigate to GRS link and click on the In Progress Panel",
+            "line": 212,
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12692564700
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I uncheck all other substatus apart from To Be Declined substatus",
+            "line": 212,
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:586"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29077402300
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the grid displaying the deals should now only show To Be Declined deals",
+            "line": 212,
+            "output": [
+              "10"
+            ],
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:607"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51813968800
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/GRS/support/hooks.rb:245"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1862774400
+            }
+          }
+        ]
+      },
+      {
+        "id": "grs-home-page-feature;verify-whether-the-deals-displayed-in-grid-are-updated-to-show-only-corresponding-substatus-deals-if-the-user-unselects-all-other-substatus-apart-from-corresponding-substatus;;6",
+        "keyword": "Scenario Outline",
+        "name": "Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus",
+        "description": "",
+        "line": 213,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 202
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/GRS/support/hooks.rb:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20599128800
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I open the browser and navigate to GRS link and click on the In Progress Panel",
+            "line": 213,
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12881543600
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I uncheck all other substatus apart from Bound Pending Data Entry substatus",
+            "line": 213,
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:586"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29195622400
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the grid displaying the deals should now only show Bound Pending Data Entry deals",
+            "line": 213,
+            "output": [
+              "10"
+            ],
+            "match": {
+              "location": "features/GRS/step_definitions/GRS_Home_Page.rb:607"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55731019200
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/GRS/support/hooks.rb:245"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1931427300
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

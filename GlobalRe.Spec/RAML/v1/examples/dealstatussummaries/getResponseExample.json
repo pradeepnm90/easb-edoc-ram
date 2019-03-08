@@ -1,0 +1,85 @@
+{
+	"url": "/v1/dealstatussummaries",
+	"totalRecords": 3,
+	"messages": [],
+	"results": [
+		{
+			"data": {
+				"statusCode": null,
+				"statusName": "In Progress",
+				"sortOrder": 1,
+				"count": 752,
+				"workflowId": 1,
+				"workflowName": "wf001",
+				"statusSummary": [
+					{
+						"statusCode": 3,
+						"statusName": "Under Review",
+						"sortOrder": 1,
+						"count": 15,
+						"workflowId": 1,
+						"workflowName": "wf001",
+						"statusSummary": null
+					},
+					{
+						"statusCode": 11,
+						"statusName": "Authorize",
+						"sortOrder": 2,
+						"count": 12,
+						"workflowId": 1,
+						"workflowName": "wf001",
+						"statusSummary": null
+					},
+					{
+						"statusCode": 2,
+						"statusName": "Outstanding Quote",
+						"sortOrder": 3,
+						"count": 0,
+						"workflowId": 1,
+						"workflowName": "wf001",
+						"statusSummary": null
+					}
+				]
+			},
+			"links": [
+				{
+					"type": "RelatedEntity",
+					"rel": "Deal",
+					"href": "v1/deals?statusCodes=3,11,2",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"data": {
+				"statusCode": 1000,
+				"statusName": "Bound",
+				"sortOrder": 3,
+				"count": 12405,
+				"workflowId": 1,
+				"workflowName": "wf001",
+				"statusSummary": null
+			},
+			"links": [
+				{
+					"type": "RelatedEntity",
+					"rel": "Deal",
+					"href": "v1/deals?statusCodes=1000",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"data": {
+				"statusCode": 16,
+				"statusName": "On Hold",
+				"sortOrder": 2,
+				"count": 0,
+				"workflowId": 1,
+				"workflowName": "wf001",
+				"statusSummary": null
+			},
+			"links": []
+		}
+	]
+}

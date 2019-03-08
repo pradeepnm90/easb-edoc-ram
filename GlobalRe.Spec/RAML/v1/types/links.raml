@@ -1,0 +1,42 @@
+#%RAML 1.0 DataType
+##### LINKS #####
+displayName: Links
+type: array
+description: "Reference to Related Entities, Reference Entities, Sub Entities, and Actions"
+
+items:
+  displayName: Link
+  type: object
+  properties:
+    type:
+      type: string
+      description: "Type"
+      enum: ["Entity", "RelatedEntity", "ReferenceEntity", "SubEntity", "Action"]
+    rel:
+      type: string
+      description: Entity/Action
+      enum: [
+        "Self",
+
+        #Entity
+        "Deal",
+
+        # Reference Data
+        "UnderwritingTeams", "FilterDefinitions", "FilterTemplates",
+        "Currencies",
+
+        # Configs
+        "Parameters", "Children",
+
+        # Actions
+        "Add", "Update", "Delete"
+      ]
+    href:
+      type: string
+      description: FQN URI to entity or action
+    method:
+      type: string
+      items:
+        type: string
+        enum: ["GET", "PUT", "POST", "DELETE", "OPTIONS"]
+        description: HTTP Action

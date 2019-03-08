@@ -1,0 +1,8 @@
+{
+  "url": "/v1/personprofile",
+  "data": {
+        "defaultSubdivisions": [1, 2, 3]
+  },
+  "links": [],
+  "messages": []
+}

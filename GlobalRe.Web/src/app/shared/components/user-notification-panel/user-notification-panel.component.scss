@@ -1,0 +1,15 @@
+.user-notification-panel{
+    position: fixed;
+    bottom: 0px;
+    left: calc(50% - 250px);
+    background: transparent;
+    z-index: 1000;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100%;
+    -webkit-transition: width 2s, height 4s; /* Safari */
+    transition: width 2s, height 4s;
+    .individual-notification{
+        padding: 5px 0px;
+    }
+}

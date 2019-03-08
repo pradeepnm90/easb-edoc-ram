@@ -1,0 +1,31 @@
+<#@ include file=".\Enum.Generator.Core.ttinclude" #>
+<#
+    ProjectName = null; // Defaults to active/default project in solution; therefore, this needs to be set to specific project is not using default, i.e. "GlobalRe.Service";
+    ConnectionStringName = "ERMSDbContext";   // Searches for this connection string in config files listed below
+
+    // Filtering **************************************************************************************************************************
+    // Use the following table/view name regex filters to include or exclude tables/views
+    // Exclude filters are checked first and tables matching filters are removed.
+    //  * If left null, none are excluded.
+    //  * If not null, any tables matching the regex are excluded.
+    // Include filters are checked second.
+    //  * If left null, all are included.
+    //  * If not null, only the tables matching the regex are included.
+    //  Example:    TableFilterExclude = new Regex(".*auto.*");
+    //              TableFilterInclude = new Regex("(.*_FR_.*)|(data_.*)");
+    //              TableFilterInclude = new Regex("^table_name1$|^table_name2$|etc");
+    TableFilterInclude = new Regex("^tb_currency$");
+    TableFilterExclude = null;
+
+    EnumNameFormat = "{0}Enum";
+    DefaultEnumValueColumnName = "Name";
+    DefaultEnumDescriptionColumnName = "Description";
+
+    // Table Column Modification*****************************************************************************************************************
+    // Use the following list to replace table PK, name and description column names.
+    // As long as the type can be mapped to your new type, all is well.
+    TableColumnDefinitions.Add(new EnumTableColumnDefinition { Schema = "dbo", Table = "tb_currency", KeyColumnName = "currency", ValueColumnName = "currcode", DescriptionColumnName = "currname" });
+
+#>
+<#@ include file=".\Enum.Generator.ttinclude" #>
+

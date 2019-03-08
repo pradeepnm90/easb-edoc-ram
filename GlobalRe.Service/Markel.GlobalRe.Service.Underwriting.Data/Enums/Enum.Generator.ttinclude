@@ -1,0 +1,104 @@
+<#
+    Project project = GetContainingProject();
+    ProjectName = string.IsNullOrEmpty(ProjectName)? project.Name : ProjectName;
+    connectionString = GetConnectionString(ProjectName);
+#>
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+ 
+/// <summary>
+/// Auto generated enumerations. The contents of this file are automatically generated from the database; 
+/// therefore, any edits made to this file will be lost the next time the file is re-generated.
+/// </summary>
+namespace <#= project.Properties.Item("DefaultNamespace").Value #><#= Path.GetDirectoryName(Host.TemplateFile).Remove(0, Path.GetDirectoryName(project.FileName).Length).Replace("\\", ".") #>
+{
+<#
+    string tblcommand = "SELECT SCHEMA_NAME(schema_id) AS SchemaName, name AS TableName FROM sys.tables ORDER BY SchemaName, TableName";
+    SqlConnection tblconn = new SqlConnection(connectionString);
+    SqlCommand tblcomm = new SqlCommand(tblcommand, tblconn);
+ 
+    tblconn.Open();
+ 
+    SqlDataReader tblreader = tblcomm.ExecuteReader();
+    while(tblreader.Read())
+    {
+        // Set table information
+        string schemaName = tblreader["SchemaName"].ToString();
+        string tableName = tblreader["TableName"].ToString();
+        string columnName = DefaultEnumValueColumnName;
+        string columnDescription = DefaultEnumDescriptionColumnName;
+        string columnId = tableName + "ID";
+        bool pascalize = false;
+
+        // Only include tables in include list
+        if(TableFilterInclude != null && !TableFilterInclude.IsMatch(tableName))
+            continue;
+
+        // Exclude tables in exclude list
+        if(TableFilterExclude != null && TableFilterExclude.IsMatch(tableName))
+            continue;
+
+        // Update table column names if needed
+        if (TableColumnDefinitions != null && TableColumnDefinitions.Count != 0)
+        {
+            var tbl = TableColumnDefinitions.Where(t => t.Schema == schemaName && t.Table == tableName).FirstOrDefault();
+            if (tbl != null)
+            {
+                columnName = tbl.ValueColumnName;
+                columnDescription = tbl.DescriptionColumnName;
+                columnId = tbl.KeyColumnName;
+                pascalize = tbl.Pascalize;
+            }
+        }
+#>
+    #region <#= schemaName #>.<#= string.Format(EnumNameFormat, tableName) #>
+
+    /// <summary> <#= schemaName #>.<#= tableName #> - auto generated enumeration </summary>
+    [GeneratedCode("EnumTemplatingFileGenerator", "10")]
+    public enum <#= string.Format(EnumNameFormat, tableName) #>
+    {
+<#
+        SqlConnection conn = new SqlConnection(connectionString);
+        string command = string.Format("select {0} AS ColumnValue, {1} AS ColumnName, {2} AS ColumnDescription from {3}.{4} order by {1}", columnId, columnName, columnDescription, schemaName, tableName);
+        SqlCommand comm = new SqlCommand(command, conn);
+        conn.Open();
+ 
+        SqlDataReader reader = comm.ExecuteReader();
+        bool loop = reader.Read();
+        while(loop)
+        {
+            string enumName = reader["ColumnName"] as string;
+            if (pascalize == true)
+            {
+                enumName = Pascalize(enumName);
+            }
+            enumName = RemoveInvalidNameCharacters(enumName);
+
+            if (!string.IsNullOrEmpty(enumName))
+            {
+        /// <summary> < # = reader["ColumnDescription"] # >. </summary>
+#>
+        [Description("<#= reader["ColumnDescription"] #>")]
+        <#= enumName #> = <#= reader["ColumnValue"] #><# loop = reader.Read(); #><#= loop ? "," : string.Empty #>
+<#
+            }
+            else
+            {
+#>
+        /// Error: Name(<#= columnName #> = <#= reader["ColumnName"] #>), Value(<#= columnId #> = <#= reader["ColumnValue"] #>) and Description(<#= columnDescription #> = <#= reader["ColumnDescription"] #>)
+<#
+                loop = reader.Read();
+            }
+        }
+#>
+    }
+
+    #endregion <#= schemaName #>.<#= tableName #>
+
+<#
+    }
+#>
+}

@@ -1,0 +1,9 @@
+#%RAML 1.0 Trait
+##### ORDERABLE: Query Parameters #####
+displayName: orderable
+queryParameters:
+  sort:
+    description: |
+      Order by field: <<fieldsList>> (Prefix column name with ('-') to sort in descending order)
+    type: string
+    required: false

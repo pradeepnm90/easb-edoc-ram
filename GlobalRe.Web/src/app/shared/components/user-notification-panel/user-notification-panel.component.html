@@ -1,0 +1,5 @@
+<div class="user-notification-panel">
+    <div class="individual-notification" *ngFor="let notification of notificationList">
+        <user-notification [notificationMsg]="notification" (closeNotification)="closeNotificationHandler($event)"></user-notification>
+    </div>
+</div>

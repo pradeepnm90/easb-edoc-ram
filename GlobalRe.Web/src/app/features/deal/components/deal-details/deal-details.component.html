@@ -1,0 +1,254 @@
+<div class="row_container">
+  <form [formGroup]="dealDetails" (ngSubmit)="onFormSubmit()">
+    <div class="flexRow">
+    <div class="quick-edit-panel-left-header">
+      <div class="violetColor cusrorPointer" style="float:left;" (click)="openEditErms(dealNumber)">
+        <p class="">ERMS</p>
+      </div>
+      <div class="violetColor cusrorPointer" style="float:left;margin-left:20px;border:none;box-shadow: none;background: none;color: dimgrey;font-size: 19px;" (click)="openDeclineDialog()">
+        <!-- <i aria-hidden="true" class="fa fa-ban textSize23"></i> -->
+        <img src="./assets/images/Decline.png" />
+        <div class="textSize10">Decline</div>
+      </div>
+     
+
+    </div>
+    <div class="form-group button_container save_links">
+      <button
+        class="mar-10-r"
+        mat-button
+        type="button"
+        id="deal_dealdetails_btnCancel"
+       (click)="openDialog($event)"
+      >
+        Cancel
+      </button>
+      <button
+        mat-button
+        #saveBtn
+        type="submit"
+        [disabled]=" shouldDisableSubmit"
+        id="deal_dealdetails_btn_Submit"
+        class="save_btn"
+      >
+ Save
+      </button>
+      <cancel-popup class="popOver"  [position]="position"
+      *ngIf="showCancelPopup === true" (closeWholePop)="cancelButton()"  (closePopUp) = "closeCancelPopUp()" [popUpText]="popOverMsg"></cancel-popup>
+      <div class="vSpacer30"></div>
+      <div class="inlineIcon pad-15-r" (click)="onDealCheckList($event)">
+        <i class="fa fa-list-ul textSize23" aria-hidden="true"></i>
+        <span class="textSize10">Checklist</span>
+      </div>
+      <div class="inlineIcon pad-15-r" (click)="onDocsClick($event)">
+        <i class="fa fa-file-pdf-o textSize23" aria-hidden="true"></i>
+        <span class="textSize10">Documents</span>
+      </div>
+      <div class="inlineIcon" (click)="onNotesClick($event)">
+        <i class="fa fa-sticky-note-o textSize23" aria-hidden="true"></i>
+        <span class="textSize10">Notes</span>
+      </div>
+    </div>
+    <div class="spacer40 clear"></div>
+  </div>
+    <div class="deal-name-header" matTooltip="{{dealNameHeader}}" matTooltipPosition="above">
+    {{dealNameHeader}}
+    </div>
+    <div class="row" style="width: 100%; display:flex; padding-left:1%">
+      <span class="deal-number-header">Deal #</span>
+      <div class="deal-number">{{dealNumber}}</div>
+      </div>
+      <div class="row" style="width: 100%; display:flex; padding-left:1%">
+      <span class="contract-number-header">Contract #</span>
+       <div class="contract-number" *ngIf="contractNumber>0">{{contractNumber}}</div>
+        </div>
+    <deal-key-non-key-documents
+      *ngIf="displayDocs"
+      [currentDealData]="currentDeal"
+    ></deal-key-non-key-documents>
+    <!--  <deal-documents
+      *ngIf="displayDocs"
+      [currentDealData]="currentDeal"
+    ></deal-documents> -->
+    <deal-notes
+      *ngIf="displayNotes"
+      [currentDealData]="currentDeal"
+    ></deal-notes>
+    <deal-checklist
+      (onPinChecked)="closeCheckList($event)"
+      [dealdetails]="formValue"
+      *ngIf="displayCheckList">
+    </deal-checklist>
+
+    <div class="spacer40 clear"></div>
+    <fieldset>
+      <h2>Submission Details</h2>
+      <mat-form-field>
+        <input
+        #dealName
+         matInput
+         placeholder="DEAL NAME"
+         maxlength="100"
+         type ="text"
+         formControlName="dealName"
+         id="deal_dealdetails_matInput_dealName"
+         (input)="dealNameChange($event)"
+         [readonly]="!disablebasedOnEditPermission"
+        
+      />
+      <mat-hint align="end">{{ dealName.value?.length || 0 }}/100</mat-hint>
+        </mat-form-field>
+      <mat-form-field>
+        <mat-select
+          placeholder="STATUS"   (change)="updateFormChanged()"
+          formControlName="statusCode"
+          id="deal_dealdetails_matSelect_statuscode"
+          [disabled] = "!disableDropdown"
+        >
+          <mat-option *ngFor="let status of statusnames" [value]="status.value">
+            {{ status.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="form-group">
+        <input #input 
+          matInput
+          placeholder="PRIORITY" maxlength="7"
+          type="text"
+          [readonly]="!disablebasedOnEditPermission" 
+          (keypress)="validatenumeric($event)"
+          formControlName="priority"
+          id="deal_dealdetails_matInput_priority"
+          (change)="onPriorityChange()"
+        />
+        <mat-hint align="end">{{ input.value?.length || 0 }}/7</mat-hint>
+      </mat-form-field>
+      <mat-form-field style="width:11.5rem">
+        <mat-label>TARGET DATE</mat-label>
+        <input
+        formControlName="targetDate"
+          matInput
+          [matDatepicker]="targetDatePicker"
+          placeholder="MM/DD/YYYY"
+          autocomplete="off"
+          id="deal_dealdetails_matInput_targetdate"
+          type="text"
+          [disabled] = "!disablebasedOnEditPermission"
+           (dateInput)="onTargetChange( $event)"
+           (dateChange)="onTargetChange( $event)"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="targetDatePicker"
+          id="deal_dealdetails_matDatePickerToggle_target"
+        ></mat-datepicker-toggle>
+        <mat-datepicker
+          #targetDatePicker
+          id="deal_dealdetails_matDatePicker_target"
+          [disabled] = "!disablebasedOnEditPermission"
+          (change)="onTargetChange($event)"
+        ></mat-datepicker>
+        <mat-hint align="start"><span style="color: red; font-size: 12px;" *ngIf="targetDateErrorOccured">{{targetDateErrorMessage}}</span></mat-hint>
+      </mat-form-field>
+      <mat-form-field style="width:11.5rem">
+        <input
+          matInput
+          placeholder="INCEPTION DATE"
+          formControlName="inceptionDate"
+        />
+      </mat-form-field >
+      <mat-form-field style="width:11.5rem">
+        <input
+          matInput
+          placeholder="EXPIRATION DATE"
+          formControlName="expiryDate"
+        />
+      </mat-form-field >
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="SUBMISSION DATE"
+          formControlName="submittedDate"
+        />
+      </mat-form-field>
+    </fieldset>
+    <fieldset>
+      <h2>Key Members</h2>
+      <mat-form-field>
+        <mat-select
+          placeholder="UNDERWRITER"
+          formControlName="primaryUnderwriterCode"
+          id="deal_dealdetails_matSelect_underwritter"
+          [disabled] = "!disableDropdown"
+          (change)="updateFormChanged()"
+        >
+          <mat-option [value]="null">Select</mat-option>
+          <mat-option
+            *ngFor="let underwriter of underwriters"
+            [value]="underwriter.value"
+          >
+            {{ underwriter.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select
+          placeholder="UNDERWRITER 2"
+          formControlName="secondaryUnderwriterCode"
+          [disabled] = "!disableDropdown"
+          id="deal_dealdetails_matSelect_underwritter2"  (change)="updateFormChanged()"
+        >
+          <mat-option [value]="null">Select</mat-option>
+          <mat-option
+            *ngFor="let underwriter of underwriterssecondary"
+            [value]="underwriter.value"
+          >
+            {{ underwriter.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select
+          placeholder="UA/TA"
+          formControlName="technicalAssistantCode"
+          [disabled] = "!disableDropdown"
+          id="deal_dealdetails_matSelect_techasst"
+          (change)="updateFormChanged()"
+        >
+          <mat-option [value]="null">Select</mat-option>
+          <mat-option *ngFor="let techasst of tas" [value]="techasst.value">
+            {{ techasst.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select
+          placeholder="CAT MODELER"
+          formControlName="modellerCode"
+          [disabled] = "!disableDropdown"
+          id="deal_dealdetails_matSelect_modeler"
+          (change)="updateFormChanged()"
+        >
+          <mat-option [value]="null">Select</mat-option>
+          <mat-option *ngFor="let modeler of modelers" [value]="modeler.value">
+            {{ modeler.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field style="width:11.5rem">
+        <mat-select class="noelipse-emptyfield"
+          placeholder="PRICING ACTUARY"
+          formControlName="actuaryCode"
+          [disabled] = "!disableDropdown"
+          id="deal_dealdetails_matSelect_actuary" 
+           (change)="updateFormChanged()"
+        >
+          <mat-option [value]="null">Select</mat-option>
+          <mat-option *ngFor="let actuary of actuaries" [value]="actuary.value">
+            {{ actuary.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </fieldset>
+  </form>
+</div>

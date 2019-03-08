@@ -1,0 +1,8 @@
+{
+  "statusCodes": "0, 1, 2",
+  "subdivisions": "4,5,6,7,8,9",
+  "offset": 0,
+  "limit": 10,
+  "sort": "dealName",
+  "userName": "don.bahr"
+}

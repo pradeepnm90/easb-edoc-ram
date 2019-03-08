@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.GlobalRe.WebServer", "Markel.GlobalRe.WebServer\Markel.GlobalRe.WebServer.csproj", "{F3868D09-FEE1-4A95-940C-EA3180D4FC11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.GlobalRe.WebServer.Test", "Markel.GlobalRe.WebServer.Test\Markel.GlobalRe.WebServer.Test.csproj", "{408AFD42-BAE4-4F49-A002-C767A9ABC12B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3868D09-FEE1-4A95-940C-EA3180D4FC11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3868D09-FEE1-4A95-940C-EA3180D4FC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3868D09-FEE1-4A95-940C-EA3180D4FC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3868D09-FEE1-4A95-940C-EA3180D4FC11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{408AFD42-BAE4-4F49-A002-C767A9ABC12B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{408AFD42-BAE4-4F49-A002-C767A9ABC12B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{408AFD42-BAE4-4F49-A002-C767A9ABC12B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{408AFD42-BAE4-4F49-A002-C767A9ABC12B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6A0DBE6-0C55-4B48-96FC-F9B59E072836}
+	EndGlobalSection
+EndGlobal

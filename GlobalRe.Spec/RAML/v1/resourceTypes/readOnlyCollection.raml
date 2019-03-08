@@ -1,0 +1,28 @@
+#%RAML 1.0 ResourceType
+##### READ ONLY COLLECTION #####
+usage: Use this to describe resource that list items
+
+get:
+  description: <<description>>
+  responses:
+    200: # OK
+      body:
+        application/json:
+          type: object
+          properties:
+            url: string
+            totalRecords?: integer
+            offset?: integer
+            limit?: integer
+            results:
+              description: "Collection of <<item>>'s and Links"
+              type: array
+              items:
+                type: object
+                properties:
+                  data: <<item>>
+                  links?: !include ../types/links.raml
+            messages?:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example: <<getResponse_example>>

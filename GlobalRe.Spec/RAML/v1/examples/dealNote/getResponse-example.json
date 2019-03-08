@@ -1,0 +1,187 @@
+{
+    "url": "/v1/DealNotes?dealNumber=3841651",
+    "results": [
+        {
+            "data": {
+                "notenum": 523960,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-14T00:00:00",
+                "notetype": 3,
+                "notes": "Test Note New-type3",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523961,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-14T00:00:00",
+                "notetype": 47,
+                "notes": "Test Note New-type3",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523962,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-14T00:00:00",
+                "notetype": 66,
+                "notes": "Test Note New-type66",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523942,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-11T00:00:00",
+                "notetype": 3,
+                "notes": "Test Note New",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523943,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-11T00:00:00",
+                "notetype": 3,
+                "notes": "Test Note New-2",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523944,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-11T00:00:00",
+                "notetype": 3,
+                "notes": "",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523945,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-11T00:00:00",
+                "notetype": null,
+                "notes": "Test Note New-2",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523946,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-11T00:00:00",
+                "notetype": null,
+                "notes": null,
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523947,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-11T00:00:00",
+                "notetype": 46,
+                "notes": "Test Note New-2",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523948,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-11T00:00:00",
+                "notetype": 40,
+                "notes": "Test Note New-40",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523949,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-11T00:00:00",
+                "notetype": 66,
+                "notes": "Test Note type66",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523950,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-11T00:00:00",
+                "notetype": 47,
+                "notes": "Test Note type47",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523953,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-11T00:00:00",
+                "notetype": null,
+                "notes": "Test Note type47",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523959,
+                "dealNumber": 3841651,
+                "notedate": "2018-12-11T00:00:00",
+                "notetype": 3,
+                "notes": "Test Note New-type3",
+                "whoentered": 714027
+            },
+            "links": null,
+            "messages": []
+        },
+        {
+            "data": {
+                "notenum": 523638,
+                "dealNumber": 3841651,
+                "notedate": "2018-10-10T00:00:00",
+                "notetype": 1,
+                "notes": "From CRC SF\r\n- TIV = 64m\r\n- 4 single famlily dwellings - good spread - 31m Zone B, 13m Zone D, 10m HI, 10m PNW)\r\n- DIC EQ & Flood\r\n- 100% frame - 1980-2008 construction\r\n- 100% Flood Zone X\r\n- Liq 1\r\n\r\nERMS GU PML = 39k\r\nERMS GU Price = 224k (0.35)\r\n\r\nCA EQ 10m w/ 5% ded --- 6k AAL\t\t34k / 17k PML / 173k CA PI --- Scaling mid-range @ 74k -- 12.3xAAL / 2.3-year payback against PI\r\nPNW EQ 10m w/ 5% ded --- 0 AAL\t\t3k / 0 PML / 6k CA PI --- Scaling mid-range @ 12k\r\nHI EQ 10m w/ 5% ded --- 0 AAL\t\t2k / 0 PML / 19k CA PI --- Scaling mid-range @ 6k\r\n\r\nBlended premium for the EQ is 92k (0.14)\r\n",
+                "whoentered": 1119444
+            },
+            "links": null,
+            "messages": []
+        }
+    ],
+    "totalRecords": 15,
+    "messages": []
+}

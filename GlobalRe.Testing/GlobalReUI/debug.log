@@ -1,0 +1,6 @@
+[0117/124607.061:ERROR:file_io_win.cc(161)] CreateFile C:\Users\vboya\Local Settings\Temp\scoped_dir6360_13891\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0117/124607.062:ERROR:file_io_win.cc(170)] CreateFile C:\Users\vboya\Local Settings\Temp\scoped_dir6360_13891\Crashpad\reports\0872f938-16c5-4541-8769-89bf4642b3b3.dmp: The system cannot find the path specified. (0x3)
+[0117/124607.062:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0117/124722.855:ERROR:file_io_win.cc(161)] CreateFile C:\Users\vboya\Local Settings\Temp\scoped_dir5384_28297\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0117/124722.856:ERROR:file_io_win.cc(170)] CreateFile C:\Users\vboya\Local Settings\Temp\scoped_dir5384_28297\Crashpad\reports\3dcab180-9016-4223-8c54-dbacdc340472.dmp: The system cannot find the path specified. (0x3)
+[0117/124722.856:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed

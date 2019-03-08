@@ -1,0 +1,48 @@
+{
+    "url": "/v1/lookups/notetypes",
+    "results": [
+        {
+            "name": "Peer Review",
+            "value": "6",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "General/Misc.",
+            "value": "66",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Underwriting Info",
+            "value": "46",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Negotiation",
+            "value": "67",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Internal Communications",
+            "value": "70",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Modeling/Pricing",
+            "value": "69",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Accommodations",
+            "value": "68",
+            "group": null,
+            "isActive": true
+        }
+    ],
+    "totalRecords": 7
+}

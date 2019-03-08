@@ -1,0 +1,135 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime", "Runtime\Runtime.csproj", "{36B46AA2-02B4-4D51-B0E2-B95879DCE2B7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3E8F802A-2B43-40A2-9882-087735F9426A} = {3E8F802A-2B43-40A2-9882-087735F9426A}
+		{E364DF31-E439-4B1F-B2F0-FC65DAEC5085} = {E364DF31-E439-4B1F-B2F0-FC65DAEC5085}
+		{7DBE533A-FF18-4DDA-9634-E82A95705F4C} = {7DBE533A-FF18-4DDA-9634-E82A95705F4C}
+		{0EAB0B4D-7707-4EB7-8A7B-235C0F85E6E4} = {0EAB0B4D-7707-4EB7-8A7B-235C0F85E6E4}
+		{6B272150-A78E-4F48-AE20-472BFA2B0EE0} = {6B272150-A78E-4F48-AE20-472BFA2B0EE0}
+		{F2D26A8A-2464-424D-99AA-44FAEE64ABF5} = {F2D26A8A-2464-424D-99AA-44FAEE64ABF5}
+		{09329DA2-58CD-43B5-8B04-6443FDF2C504} = {09329DA2-58CD-43B5-8B04-6443FDF2C504}
+		{C1C9E3B1-BF21-41EF-B9E8-BCA0730EDF92} = {C1C9E3B1-BF21-41EF-B9E8-BCA0730EDF92}
+		{46A19EED-4905-4DED-84AD-79FC557A3CEB} = {46A19EED-4905-4DED-84AD-79FC557A3CEB}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{D1544CC9-E3FA-4E08-93C3-C626BB8C90E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreVelocity.Data", "CoreVelocity.Data\CoreVelocity.Data.csproj", "{3E8F802A-2B43-40A2-9882-087735F9426A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{985A66B6-8A29-4AC3-94E4-C7068E441DDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.Pricing.Service.Infrastructure.WebAPI", "Markel.Pricing.Service.Infrastructure.WebAPI\Markel.Pricing.Service.Infrastructure.WebAPI.csproj", "{E364DF31-E439-4B1F-B2F0-FC65DAEC5085}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.Pricing.Service.Infrastructure.Data", "Markel.Pricing.Service.Infrastructure.Data\Markel.Pricing.Service.Infrastructure.Data.csproj", "{F2D26A8A-2464-424D-99AA-44FAEE64ABF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.Pricing.Service.Infrastructure.Core", "Markel.Pricing.Service.Infrastructure.Core\Markel.Pricing.Service.Infrastructure.Core.csproj", "{4BEF6FFF-C688-45ED-99F0-B89FF79994B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.Pricing.Service.Infrastructure.BLL", "Markel.Pricing.Service.Infrastructure.BLL\Markel.Pricing.Service.Infrastructure.BLL.csproj", "{C1C9E3B1-BF21-41EF-B9E8-BCA0730EDF92}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3E8F802A-2B43-40A2-9882-087735F9426A} = {3E8F802A-2B43-40A2-9882-087735F9426A}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Underwriting", "Underwriting", "{46779CAD-348B-4666-941F-71BD7D614C86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.GlobalRe.Service.Underwriting.API.v1", "Markel.GlobalRe.Service.Underwriting.API.v1\Markel.GlobalRe.Service.Underwriting.API.v1.csproj", "{6B272150-A78E-4F48-AE20-472BFA2B0EE0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3E8F802A-2B43-40A2-9882-087735F9426A} = {3E8F802A-2B43-40A2-9882-087735F9426A}
+		{F2D26A8A-2464-424D-99AA-44FAEE64ABF5} = {F2D26A8A-2464-424D-99AA-44FAEE64ABF5}
+		{09329DA2-58CD-43B5-8B04-6443FDF2C504} = {09329DA2-58CD-43B5-8B04-6443FDF2C504}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.GlobalRe.Service.Underwriting.BLL", "Markel.GlobalRe.Service.Underwriting.BLL\Markel.GlobalRe.Service.Underwriting.BLL.csproj", "{7DBE533A-FF18-4DDA-9634-E82A95705F4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.GlobalRe.Service.Underwriting.BLL.Implementation", "Markel.GlobalRe.Service.Underwriting.BLL.Implementation\Markel.GlobalRe.Service.Underwriting.BLL.Implementation.csproj", "{46A19EED-4905-4DED-84AD-79FC557A3CEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.GlobalRe.Service.Underwriting.Data", "Markel.GlobalRe.Service.Underwriting.Data\Markel.GlobalRe.Service.Underwriting.Data.csproj", "{0EAB0B4D-7707-4EB7-8A7B-235C0F85E6E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.GlobalRe.Service.Underwriting.Data.Implementation", "Markel.GlobalRe.Service.Underwriting.Data.Implementation\Markel.GlobalRe.Service.Underwriting.Data.Implementation.csproj", "{09329DA2-58CD-43B5-8B04-6443FDF2C504}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.GlobalRe.Service.Underwriting.Test", "Test\Markel.GlobalRe.Service.Underwriting.Test\Markel.GlobalRe.Service.Underwriting.Test.csproj", "{FBA5262B-A8BD-4E13-886A-2AE35975017B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36B46AA2-02B4-4D51-B0E2-B95879DCE2B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B46AA2-02B4-4D51-B0E2-B95879DCE2B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B46AA2-02B4-4D51-B0E2-B95879DCE2B7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{36B46AA2-02B4-4D51-B0E2-B95879DCE2B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B46AA2-02B4-4D51-B0E2-B95879DCE2B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E8F802A-2B43-40A2-9882-087735F9426A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E8F802A-2B43-40A2-9882-087735F9426A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E8F802A-2B43-40A2-9882-087735F9426A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3E8F802A-2B43-40A2-9882-087735F9426A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E8F802A-2B43-40A2-9882-087735F9426A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E364DF31-E439-4B1F-B2F0-FC65DAEC5085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E364DF31-E439-4B1F-B2F0-FC65DAEC5085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E364DF31-E439-4B1F-B2F0-FC65DAEC5085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E364DF31-E439-4B1F-B2F0-FC65DAEC5085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2D26A8A-2464-424D-99AA-44FAEE64ABF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2D26A8A-2464-424D-99AA-44FAEE64ABF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2D26A8A-2464-424D-99AA-44FAEE64ABF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2D26A8A-2464-424D-99AA-44FAEE64ABF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BEF6FFF-C688-45ED-99F0-B89FF79994B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BEF6FFF-C688-45ED-99F0-B89FF79994B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BEF6FFF-C688-45ED-99F0-B89FF79994B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BEF6FFF-C688-45ED-99F0-B89FF79994B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C9E3B1-BF21-41EF-B9E8-BCA0730EDF92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C9E3B1-BF21-41EF-B9E8-BCA0730EDF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C9E3B1-BF21-41EF-B9E8-BCA0730EDF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C9E3B1-BF21-41EF-B9E8-BCA0730EDF92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B272150-A78E-4F48-AE20-472BFA2B0EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B272150-A78E-4F48-AE20-472BFA2B0EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B272150-A78E-4F48-AE20-472BFA2B0EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B272150-A78E-4F48-AE20-472BFA2B0EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DBE533A-FF18-4DDA-9634-E82A95705F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DBE533A-FF18-4DDA-9634-E82A95705F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DBE533A-FF18-4DDA-9634-E82A95705F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DBE533A-FF18-4DDA-9634-E82A95705F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46A19EED-4905-4DED-84AD-79FC557A3CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46A19EED-4905-4DED-84AD-79FC557A3CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46A19EED-4905-4DED-84AD-79FC557A3CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46A19EED-4905-4DED-84AD-79FC557A3CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EAB0B4D-7707-4EB7-8A7B-235C0F85E6E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EAB0B4D-7707-4EB7-8A7B-235C0F85E6E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EAB0B4D-7707-4EB7-8A7B-235C0F85E6E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EAB0B4D-7707-4EB7-8A7B-235C0F85E6E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09329DA2-58CD-43B5-8B04-6443FDF2C504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09329DA2-58CD-43B5-8B04-6443FDF2C504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09329DA2-58CD-43B5-8B04-6443FDF2C504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09329DA2-58CD-43B5-8B04-6443FDF2C504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBA5262B-A8BD-4E13-886A-2AE35975017B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBA5262B-A8BD-4E13-886A-2AE35975017B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBA5262B-A8BD-4E13-886A-2AE35975017B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBA5262B-A8BD-4E13-886A-2AE35975017B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3E8F802A-2B43-40A2-9882-087735F9426A} = {D1544CC9-E3FA-4E08-93C3-C626BB8C90E0}
+		{E364DF31-E439-4B1F-B2F0-FC65DAEC5085} = {D1544CC9-E3FA-4E08-93C3-C626BB8C90E0}
+		{F2D26A8A-2464-424D-99AA-44FAEE64ABF5} = {D1544CC9-E3FA-4E08-93C3-C626BB8C90E0}
+		{4BEF6FFF-C688-45ED-99F0-B89FF79994B9} = {D1544CC9-E3FA-4E08-93C3-C626BB8C90E0}
+		{C1C9E3B1-BF21-41EF-B9E8-BCA0730EDF92} = {D1544CC9-E3FA-4E08-93C3-C626BB8C90E0}
+		{46779CAD-348B-4666-941F-71BD7D614C86} = {985A66B6-8A29-4AC3-94E4-C7068E441DDE}
+		{6B272150-A78E-4F48-AE20-472BFA2B0EE0} = {46779CAD-348B-4666-941F-71BD7D614C86}
+		{7DBE533A-FF18-4DDA-9634-E82A95705F4C} = {46779CAD-348B-4666-941F-71BD7D614C86}
+		{46A19EED-4905-4DED-84AD-79FC557A3CEB} = {46779CAD-348B-4666-941F-71BD7D614C86}
+		{0EAB0B4D-7707-4EB7-8A7B-235C0F85E6E4} = {46779CAD-348B-4666-941F-71BD7D614C86}
+		{09329DA2-58CD-43B5-8B04-6443FDF2C504} = {46779CAD-348B-4666-941F-71BD7D614C86}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F6D6D90-57A1-4366-A1C5-5196AA022794}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

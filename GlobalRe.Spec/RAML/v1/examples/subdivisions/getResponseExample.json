@@ -1,0 +1,92 @@
+{
+	"url": "/v1/subdivisions",
+	"totalRecords": 3,
+	"messages": [],
+	"results": [
+		{
+			"data": {
+				"id": 1,
+				"name": "Casualty",
+				"sortOrder": 1,
+				"subdivisions": [
+					{
+						"id": 4,
+						"name": "Casualty Treaty",
+						"sortOrder": 1,
+						"subdivisions": null
+					},
+					{
+						"id": 5,
+						"name": "Cas Fac",
+						"sortOrder": 2,
+						"subdivisions": null
+					}
+				]
+			},
+			"links": [
+				{
+					"type": "RelatedEntity",
+					"rel": "Deal",
+					"href": "v1/deals?subdivisions=4,5",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"data": {
+				"id": 2,
+				"name": "Property",
+				"sortOrder": 2,
+				"subdivisions": [
+				{
+					"id": 6,
+					"name": "Intl Property",
+					"sortOrder": 1,
+					"subdivisions": null
+				},
+				{
+					"id": 7,
+					"name": "NA Property",
+					"sortOrder": 2,
+					"subdivisions": null
+				}]
+			},
+			"links": [
+				{
+					"type": "RelatedEntity",
+					"rel": "Deal",
+					"href": "v1/deals?subdivisions=6,7",
+					"method": "GET"
+				}
+			]
+		},
+		{
+			"data": {
+				"id": 3,
+				"name": "Specialty",
+				"sortOrder": 3,
+				"subdivisions": [
+				{
+					"id": 8,
+					"name": "Specialty Non-PE",
+					"sortOrder": 1,
+					"subdivisions": null
+				},
+				{
+					"id": 9,
+					"name": "Public Entity",
+					"sortOrder": 2,
+					"subdivisions": null
+				}]
+			},
+			"links": [
+				{
+					"type": "RelatedEntity",
+					"rel": "Deal",
+					"href": "v1/deals?subdivisions=8,9",
+					"method": "GET"
+				}
+			]
+		}
+	]
+}

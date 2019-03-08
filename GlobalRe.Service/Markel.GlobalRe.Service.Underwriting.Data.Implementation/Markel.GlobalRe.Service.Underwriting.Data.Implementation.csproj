@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09329DA2-58CD-43B5-8B04-6443FDF2C504}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Markel.GlobalRe.Service.Underwriting.Data.Implementation</RootNamespace>
+    <AssemblyName>Markel.GlobalRe.Service.Underwriting.Data.Implementation</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.DbContextScope, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.DbContextScope.1.0.0\lib\net46\EntityFramework.DbContextScope.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Extended.Async.6.1.1.0\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit.EntityFramework, Version=1.1.15.0, Culture=neutral, PublicKeyToken=b6c8cfc71f7a6a80, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqKit.EntityFramework.1.1.15\lib\net45\LinqKit.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Databases\BatchCommandInterceptor.cs" />
+    <Compile Include="Databases\BatchConfigurationInterceptor.cs" />
+    <Compile Include="Databases\ERMSDatabase.Context.cs">
+      <DependentUpon>ERMSDatabase.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Databases\ERMSDbContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BrokerRepository.cs" />
+    <Compile Include="Repositories\CedantRepository.cs" />
+    <Compile Include="Repositories\DealCoveragesRepository.cs" />
+    <Compile Include="Repositories\DealDocumentsRepository.cs" />
+    <Compile Include="Repositories\EntityLockRepository.cs" />
+    <Compile Include="Repositories\TblClausesDealRepository.cs" />
+    <Compile Include="Repositories\WorkbenchDealsRepository.cs" />
+    <Compile Include="Repositories\Lookups\CatalogItemsExtRepository.cs" />
+    <Compile Include="Repositories\Lookups\NoteTypesLookupRepository.cs" />
+    <Compile Include="Repositories\ExposureTreeRepository.cs" />
+    <Compile Include="Repositories\NotesRepository.cs" />
+    <Compile Include="Repositories\DealRepository.cs" />
+    <Compile Include="Repositories\DealStatusSummariesRepository.cs" />
+    <Compile Include="Repositories\Lookups\AttachmentBasisLookupRepository.cs" />
+    <Compile Include="Repositories\Lookups\CoverageBasisLookupRepository.cs" />
+    <Compile Include="Repositories\Lookups\ContractTypesLookupRepository.cs" />
+    <Compile Include="Repositories\Lookups\DealStatusesLookupRepository.cs" />
+    <Compile Include="Repositories\Lookups\RolePersonsLookupRepository.cs" />
+    <Compile Include="Repositories\PersonRepository.cs" />
+    <Compile Include="Repositories\TbDealNotesRepository.cs" />
+    <Compile Include="Repositories\TblCheckListRepository.cs" />
+    <Compile Include="Repositories\TblDealRepository.cs" />
+    <Compile Include="Repositories\UserViewRepository.cs" />
+    <Compile Include="Repositories\UserViewScreenRepository.cs" />
+    <Compile Include="Repositories\WritingCompanyRepository.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Databases\ERMSDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ERMSDatabase.Context.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CodeTemplates\DbHelper.ttinclude" />
+    <None Include="CodeTemplates\Manager.ttinclude" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Markel.GlobalRe.Service.Underwriting.Data\Markel.GlobalRe.Service.Underwriting.Data.csproj">
+      <Project>{0eab0b4d-7707-4eb7-8a7b-235c0f85e6e4}</Project>
+      <Name>Markel.GlobalRe.Service.Underwriting.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.Core\Markel.Pricing.Service.Infrastructure.Core.csproj">
+      <Project>{4bef6fff-c688-45ed-99f0-b89ff79994b9}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.Data\Markel.Pricing.Service.Infrastructure.Data.csproj">
+      <Project>{f2d26a8a-2464-424d-99aa-44faee64abf5}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF EXIST "$(SolutionDir)\Runtime\bin" DEL "$(SolutionDir)\Runtime\bin\*.*" /Q/S/F</PostBuildEvent>
+  </PropertyGroup>
+</Project>

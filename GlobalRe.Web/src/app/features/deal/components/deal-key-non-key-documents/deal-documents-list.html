@@ -1,0 +1,94 @@
+<div class="inline-panel-container doc">
+  <div class="inline-panel">
+    <div class="relative">
+      <div class="inlineHeader">
+        <span
+          ><i class="fa fa-file-pdf-o textSize23 " aria-hidden="true"></i
+        ></span>
+        <span class="txtSize20 pad-15-l">Documents - {{defaultView}} View</span>
+      </div>
+      <ng-template [ngIf]="renderTreeViewOrNot" [ngIfElse]="renderTreeViewNot">
+        <div>
+          <div *ngIf="renderTreeViewOrNot" class="floatR bluText txtSize15 pad-10-r mar-10-t cusrorPointer " (click)="toggleView($event)">Switch to {{ whichView }} View</div>
+        </div>
+      </ng-template>
+      
+      <ng-template #renderTreeViewNot>
+        <div class="floatR bluText txtSize15 pad-10-r mar-10-t">
+            Loading...
+        </div>
+      </ng-template>
+      <div *ngIf="isKeyView" class="clearBoth">
+        <div
+          class="icons-inner-container clearBoth"
+          *ngIf="keyNonKeyDocumentList.length > 0"
+        >
+          <ul class="pad-0-l doc-list-container">
+            <li
+              id="drop-area"
+              *ngFor="let item of keyNonKeyDocumentList"
+              class=" droparea my-drop-zone  doc-list"
+            >
+              <div *ngIf="item !== undefined" class="list-item">
+                <i
+                  class=" txtRed fileIcon  pad-15-l pad-7-right  txtSize18"
+                  [ngClass]="
+                    item.getIcon() ? 'fa fa-folder-open-o' : 'fa fa-folder-o'
+                  "
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="iconButton fa  txtSize18 floatR pad-10-r cusrorPointer chevronDoc  lineHt2_2"
+                  [ngClass]="
+                    item.getIcon()
+                      ? 'fa fa-chevron-circle-down'
+                      : 'fa fa-chevron-circle-right'
+                  "
+                  (click)="item.toggle()"
+                  aria-hidden="true"
+                ></i>
+
+            <span class="txtSize13 fontOpenSans">{{item.data.docType | truncateDocTextCharacters: 55}}</span>
+            <span class="txtSize13 fontOpenSans" >&nbsp;(</span>
+            <span class="txtSize13 fontOpenSans" >
+                {{item.data.pageCount === 'undefined' ? '0' : item.data.pageCount}}
+            </span>
+
+            <ng-template [ngIf]="item.data.pageCount > 1" [ngIfElse]="pageLesseathan1">
+              <span class="txtSize13 fontOpenSans" >pages)</span>
+            </ng-template>
+            
+            <ng-template #pageLesseathan1>
+              <span class="txtSize13 fontOpenSans" >page)</span>
+            </ng-template>
+            
+          </div>
+              <div *ngIf="item.expanded">
+                <div *ngFor="let docItem of keyDocumentList">
+                  <div *ngIf="docItem.data.docType === item.data.docType">
+                    <div>
+                      <ul class="mar-4-t  doc-list-container pad-0-l">   <!--pad-30-l-->
+                        <li class=" doc-list-second"><!--pad-70-left-->
+                          <deal-key-document
+                            [document]="docItem"
+                          ></deal-key-document>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div *ngIf="isTreeView" class="clearBoth">
+        <deal-documents
+          [currentDealData]="currentDealInfo.grsId"
+          [nonKeyList] = "keyNonKeyDocumentList"
+          [keyList]="keyDocumentList"
+        ></deal-documents>
+      </div>
+    </div>
+  </div>
+</div>

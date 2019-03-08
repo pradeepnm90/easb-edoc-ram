@@ -1,0 +1,69 @@
+<div>
+    <ng-template [ngIf]="docTypeList$.length > 0" [ngIfElse]="noTreeViewDocs">
+    <div class="icons-inner-container clearBoth">
+      <ul class="pad-0-l doc-list-container">
+        <li
+          id="drop-area"
+          *ngFor="let docItem of docTypeList$; let i = index"
+          class=" droparea my-drop-zone  doc-list"
+        >
+          <div  class="list-item">
+            <i
+              class=" txtRed fileIcon  pad-15-l pad-7-right  txtSize18"
+              [ngClass]="
+                docItem.getIcon() ? 'fa fa-folder-open-o' : 'fa fa-folder-o'
+              "
+              aria-hidden="true"
+            ></i>
+            <i
+              class="iconButton fa  txtSize18 floatR pad-10-r cusrorPointer chevronDoc lineHt2_2"
+              [ngClass]="
+                docItem.getIcon()
+                  ? 'fa fa-chevron-circle-down'
+                  : 'fa fa-chevron-circle-right'
+              "
+              (click)="docItem.toggle()"
+              aria-hidden="true"
+            ></i>
+            <span class="txtSize13 fontOpenSans">{{docItem.Name | truncateDocTextCharacters:55}}</span>
+            <span class="txtSize13 fontOpenSans" >&nbsp;(</span>
+            <span class="txtSize13 fontOpenSans" >
+                {{docItem.totalPageCount === '' ? 0 : docItem.totalPageCount}}
+            </span>
+    
+            <ng-template [ngIf]="docItem.totalPageCount > 1" [ngIfElse]="pageLesseathan1">
+              <span class="txtSize13 fontOpenSans" >pages)</span>
+            </ng-template>
+            
+            <ng-template #pageLesseathan1>
+              <span class="txtSize13 fontOpenSans" >page)</span>
+            </ng-template>
+    
+          </div>
+          <div *ngIf="docItem.expanded">
+            <div *ngFor="let doc of docItem.Contents">
+                <ul class="mar-4-t  doc-list-container pad-0-l">
+                <li class="doc-list-second ">
+                  <deal-document
+                    [document]="doc"
+                    [docdetail] = "docItem"
+                    [documentDealBelongsTo] = "currentDealInfo.grsId"
+                  ></deal-document>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </ng-template>
+    
+    <ng-template #noTreeViewDocs>
+      <p class= "fontOpenSans warningMsg">
+          <span>Couldn't retrive document details</span>
+      </p>
+      
+    </ng-template>
+    </div>
+    
+    

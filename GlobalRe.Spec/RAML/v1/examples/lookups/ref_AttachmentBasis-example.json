@@ -1,0 +1,36 @@
+{
+    "url": "/v1/lookups/attachmentbasis",
+    "results": [
+        {
+            "name": "Losses Occurring During",
+            "value": "2",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Losses Occurring on Risks Attaching",
+            "value": "1",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Losses Discovered During",
+            "value": "27",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Claims-Made",
+            "value": "3",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Losses Occurring During with Run-Off",
+            "value": "7",
+            "group": null,
+            "isActive": true
+        }
+    ],
+    "totalRecords": 5
+}

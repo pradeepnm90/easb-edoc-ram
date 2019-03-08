@@ -1,0 +1,160 @@
+.workbench-toolbar{
+    position: fixed;
+    top: 125px;
+    left: 0px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 25px;
+    height: 62px;
+    background-color: #DFDDDF;
+    z-index: 990;
+    .line-break-css {
+        height: 29px;
+        width: 1px;
+        border: 1px solid #979797;
+        background-color: #D8D8D8;
+    }
+    .title-panel{
+        width: 130px;
+        font-size: 20px;
+        font-weight: 600;
+        height: 42px;
+        overflow: hidden;
+        padding: 10px 0px;
+        display: inline-block;
+        line-height: 22px;
+        float: left;
+        .workbench-title{
+            padding-right:5px;
+        }
+    }
+    .extended-search-header-panel{
+        width: calc(100% - 340px);
+        height: 42px;
+        overflow: hidden;
+        padding: 8px 10px;
+        display: inline-block;
+        float: left;
+        .my-submission-select-panel{
+            display: inline-block;
+            width: 180px;
+            height: 26px;
+            float: left;
+            .view-submission-panel{
+                width: 175px;
+                display: inline-block;
+                float: left;
+            }
+            .my-submission-box{
+                padding: 0px 10px;
+                box-sizing: border-box;
+                height: 26px;
+                width: 170px;
+                border: 1px solid #3D70B2;
+                border-radius: 18px;
+                background-color: #FFFFFF;
+                box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 8px 0 rgba(0,0,0,0.12), 0 8px 8px 0 rgba(0,0,0,0.24);
+                .triangle-icon{
+                    height: 14px;
+                    width: 8px;
+                    color: #3D70B2;
+                    font-family: FontAwesome;
+                    font-size: 14px;
+                    line-height: 14px;
+                    text-align: center;
+                    float: right;
+                    margin-top: 3px;
+                }
+            }
+        }
+        .extended-search-title{
+            display: inline-block;
+            width: calc(100% - 180px);
+            float: left;
+            .lbl-text-container{
+                width: 100%;
+                padding: 5px 5px 0px;
+                .lbl-text-sub-container{
+                    /* max-width: 100%;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;*/
+                    float: left;
+                    display: inline-block;
+                    width: 100%; 
+                }
+                .ellipsis-cls{
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+                .class-s{
+                    width: 100px;
+                }
+                .class-p{
+                    width: 120px;
+                }
+                .class-eg{
+                    width: 132px; 
+                }
+                .class-en{
+                    width: 128px;
+                }
+                .class-k-s{
+                    max-width: calc(100% - 100px);
+                }
+                .class-k-p{
+                    max-width: calc(100% - 120px);
+                }
+                .class-k-eg{
+                    max-width: calc(100% - 132px);
+                }
+                .class-k-en{
+                    max-width: calc(100% - 128px);
+                }
+                .class-k{
+                    max-width: 100%;
+                }
+                .lbl-txt{
+                    color: #000000;
+                    font-size: 14px;
+                    line-height: 16px;
+                    display: inline-block;
+                    padding: 0px 5px;
+                    float: left;
+                    .lbl{
+                        padding-right: 10px;
+                    }
+                    .line-break-css-lbl{
+                        height: 16px;
+                        width: 1px;
+                        border: 1px solid #000000;
+                        background-color: #000000;
+                    }
+                }
+            }
+        }
+    }
+    .timer-panel{
+        width: 200px;
+        height: 42px;
+        float: right;
+        overflow: hidden;
+        padding: 10px 0px;
+        display: inline-block;
+        line-height: 22px;
+        .display-time{
+            margin-left: 15px;
+            margin-right: 5px;
+            font-size: 12px;
+        }
+    }
+    .refresh-btn-cls{
+        font-size: 18px; 
+        position: relative;
+        top: 2px;
+        cursor: pointer;
+    }
+}
+
+

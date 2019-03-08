@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DBE533A-FF18-4DDA-9634-E82A95705F4C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Markel.GlobalRe.Underwriting.Service.BLL</RootNamespace>
+    <AssemblyName>Markel.GlobalRe.Underwriting.Service.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\GlobalCatalogs.cs" />
+    <Compile Include="Enums\EntityType.cs" />
+    <Compile Include="Interfaces\APIManagers\ICompanyAPIManager.cs" />
+    <Compile Include="Interfaces\APIManagers\IPersonAPIManager.cs" />
+    <Compile Include="Interfaces\APIManagers\IUserPreferencesAPIManager.cs" />
+    <Compile Include="Interfaces\IBrokerManager.cs" />
+    <Compile Include="Interfaces\ICedantManager.cs" />
+    <Compile Include="Interfaces\ICheckListsManager.cs" />
+    <Compile Include="Interfaces\IDealDocumentsManager.cs" />
+    <Compile Include="Interfaces\IEntityLockManager.cs" />
+    <Compile Include="Interfaces\IDealManager.cs" />
+    <Compile Include="Interfaces\IExposureTreeManager.cs" />
+    <Compile Include="Interfaces\INotesManager.cs" />
+    <Compile Include="Interfaces\IDealStatusSummariesManager.cs" />
+    <Compile Include="Interfaces\APIManagers\IDealAPIManager.cs" />
+    <Compile Include="Interfaces\IGlobalReBusinessManager.cs" />
+    <Compile Include="Interfaces\IGlobalReContextManager.cs" />
+    <Compile Include="Interfaces\IPersonsManager.cs" />
+    <Compile Include="Interfaces\IDealCoveragesManager.cs" />
+    <Compile Include="Interfaces\IUserViewManager.cs" />
+    <Compile Include="Interfaces\IWritingCompanyManager.cs" />
+    <Compile Include="Interfaces\Lookups\IAttachmentBasisLookupManager.cs" />
+    <Compile Include="Interfaces\Lookups\IContractTypesManager.cs" />
+    <Compile Include="Interfaces\Lookups\ICoverageBasisLookupManager.cs" />
+    <Compile Include="Interfaces\Lookups\IDealStatusLookupManager.cs" />
+    <Compile Include="Interfaces\Lookups\INoteTypesLookupManager.cs" />
+    <Compile Include="Interfaces\Lookups\IRolePersonsManager.cs" />
+    <Compile Include="Interfaces\Transformations\IBrokerTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\ICedantTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\ICheckListsTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\IContractTypesTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\IDealDocumentsTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\IDealStatusSummariesTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\IDealTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\IEntityLockTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\IExposureTreeTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\INotesTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\IPersonTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\IDealCoveragesTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\ITransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\IUserViewTransformationManager.cs" />
+    <Compile Include="Interfaces\Transformations\IWritingCompanyTransformationManager.cs" />
+    <Compile Include="Models\BaseGlobalReBusinessEntity.cs" />
+    <Compile Include="Models\BLL_Broker.cs" />
+    <Compile Include="Models\BLL_Cedant.cs" />
+    <Compile Include="Models\BLL_CheckListParameter.cs" />
+    <Compile Include="Models\BLL_CheckListTree.cs" />
+    <Compile Include="Models\BLL_ChkCategoryTree.cs" />
+    <Compile Include="Models\BLL_ContractTypes.cs" />
+    <Compile Include="Models\BLL_Deal.cs" />
+    <Compile Include="Models\BLL_EntityLock.cs" />
+    <Compile Include="Models\BLL_ExposureTree.cs" />
+    <Compile Include="Models\BLL_KeyDocuments.cs" />
+    <Compile Include="Models\BLL_Notes.cs" />
+    <Compile Include="Models\BLL_DealStatusSummary.cs" />
+    <Compile Include="Models\BLL_DealCoverages.cs" />
+    <Compile Include="Models\BLL_Person.cs" />
+    <Compile Include="Models\BLL_PersonProfile.cs" />
+    <Compile Include="Models\BLL_SubDivision.cs" />
+    <Compile Include="Models\BLL_UserView.cs" />
+    <Compile Include="Models\BLL_UserViewDelete.cs" />
+    <Compile Include="Models\BLL_WritingCompany.cs" />
+    <Compile Include="Models\GlobalReContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Markel.GlobalRe.Service.Underwriting.Data\Markel.GlobalRe.Service.Underwriting.Data.csproj">
+      <Project>{0eab0b4d-7707-4eb7-8a7b-235c0f85e6e4}</Project>
+      <Name>Markel.GlobalRe.Service.Underwriting.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.BLL\Markel.Pricing.Service.Infrastructure.BLL.csproj">
+      <Project>{c1c9e3b1-bf21-41ef-b9e8-bca0730edf92}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.Core\Markel.Pricing.Service.Infrastructure.Core.csproj">
+      <Project>{4bef6fff-c688-45ed-99f0-b89ff79994b9}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.Data\Markel.Pricing.Service.Infrastructure.Data.csproj">
+      <Project>{f2d26a8a-2464-424d-99aa-44faee64abf5}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF EXIST "$(SolutionDir)\Runtime\bin" DEL "$(SolutionDir)\Runtime\bin\*.*" /Q/S/F</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BEF6FFF-C688-45ED-99F0-B89FF79994B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Markel.Pricing.Service.Infrastructure</RootNamespace>
+    <AssemblyName>Markel.Pricing.Service.Infrastructure.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDataReader, Version=3.4.2.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.4.2\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.4.2.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.4.2\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.1.0.145, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.1.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\AggregateFunctions.cs" />
+    <Compile Include="Data\AggregateField.cs" />
+    <Compile Include="Helpers\PropertyAccessorUtility.cs" />
+    <Compile Include="Models\IdentityContainer.cs" />
+    <Compile Include="Models\ServiceToken.cs" />
+    <Compile Include="ObjectMapper\MappingAttribute.cs" />
+    <Compile Include="Cache\CacheItem.cs" />
+    <Compile Include="Cache\ICacheStore.cs" />
+    <Compile Include="Cache\ICacheStoreManager.cs" />
+    <Compile Include="Cache\ICaching.cs" />
+    <Compile Include="Config\MarkelConfiguration.cs" />
+    <Compile Include="Constants\ComparisonType.cs" />
+    <Compile Include="Constants\ConditionType.cs" />
+    <Compile Include="Constants\ControlTypesEnum.cs" />
+    <Compile Include="Constants\CrudAction.cs" />
+    <Compile Include="Constants\OutputFormat.cs" />
+    <Compile Include="Constants\RegularExpressions.cs" />
+    <Compile Include="Data\Pagination.cs" />
+    <Compile Include="Data\FilterParameter.cs" />
+    <Compile Include="Data\SearchCriteria.cs" />
+    <Compile Include="Data\SortField.cs" />
+    <Compile Include="Data\SortOrderType.cs" />
+    <Compile Include="Exceptions\APIMessageException.cs" />
+    <Compile Include="Exceptions\APIException.cs" />
+    <Compile Include="Exceptions\APIMessage.cs" />
+    <Compile Include="Exceptions\ConflictAPIException.cs" />
+    <Compile Include="Exceptions\ErrorResponseAPIException.cs" />
+    <Compile Include="Exceptions\InsufficientStorageAPIException.cs" />
+    <Compile Include="Exceptions\ServiceUnavailableAPIException.cs" />
+    <Compile Include="Exceptions\TooManyRequestsAPIException.cs" />
+    <Compile Include="Exceptions\UnsupportedMediaTypeAPIException.cs" />
+    <Compile Include="Exceptions\UnauthorizedAPIException.cs" />
+    <Compile Include="Exceptions\NotAllowedAPIException.cs" />
+    <Compile Include="Exceptions\IllegalArgumentAPIException.cs" />
+    <Compile Include="Exceptions\NoContentAPIException.cs" />
+    <Compile Include="Exceptions\NotFoundAPIException.cs" />
+    <Compile Include="Extensions\AssembliesExtension.cs" />
+    <Compile Include="Extensions\CipherExtension.cs" />
+    <Compile Include="Extensions\CollectionExtension.cs" />
+    <Compile Include="Extensions\CriteriaExtension.cs" />
+    <Compile Include="Extensions\DateTimeExtension.cs" />
+    <Compile Include="Extensions\DeepCopyByExpressionTrees.cs" />
+    <Compile Include="Extensions\DictionaryExtension.cs" />
+    <Compile Include="Extensions\EncodingExtension.cs" />
+    <Compile Include="Extensions\EnumExtension.cs" />
+    <Compile Include="Extensions\ExceptionExtension.cs" />
+    <Compile Include="Extensions\JsonExtensions.cs" />
+    <Compile Include="Extensions\LinqExtensionMethods.cs" />
+    <Compile Include="Extensions\NumberExtension.cs" />
+    <Compile Include="Extensions\NumberPrefix.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Extensions\TypeExtension.cs" />
+    <Compile Include="Extensions\XmlExtension.cs" />
+    <Compile Include="Generic\GenericEqualityComparer.cs" />
+    <Compile Include="Helpers\Asserter.cs" />
+    <Compile Include="Models\DateValueConfiguration.cs" />
+    <Compile Include="Models\FilterCondition.cs" />
+    <Compile Include="Helpers\HashProvider.cs" />
+    <Compile Include="Helpers\IOHelper.cs" />
+    <Compile Include="ObjectMapper\PropertyMapper.cs" />
+    <Compile Include="Helpers\TableUtility.cs" />
+    <Compile Include="Helpers\TypeHelper.cs" />
+    <Compile Include="Interfaces\ICriteriaParameter.cs" />
+    <Compile Include="Interfaces\IField.cs" />
+    <Compile Include="Interfaces\IHashProvider.cs" />
+    <Compile Include="Notifications\ConnectionInformation.cs" />
+    <Compile Include="Notifications\IConnectionStore.cs" />
+    <Compile Include="Notifications\INotificationStore.cs" />
+    <Compile Include="Interfaces\IPaginatedList.cs" />
+    <Compile Include="Interfaces\IPagination.cs" />
+    <Compile Include="Interfaces\IUserManager.cs" />
+    <Compile Include="Logging\Entities\LogItem.cs" />
+    <Compile Include="Logging\Enums\LogLevel.cs" />
+    <Compile Include="Logging\Enums\LogMode.cs" />
+    <Compile Include="Logging\ILogController.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\ILogItem.cs" />
+    <Compile Include="Logging\ILogManager.cs" />
+    <Compile Include="Logging\LogModel.cs" />
+    <Compile Include="Models\LookupEntity.cs" />
+    <Compile Include="Models\UserIdentity.cs" />
+    <Compile Include="Notifications\INotificationDetail.cs" />
+    <Compile Include="Notifications\Notification.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\ClaimExtension.cs" />
+    <Compile Include="Security\IAuthenticationManager.cs" />
+    <Compile Include="Security\IAuthorizationManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

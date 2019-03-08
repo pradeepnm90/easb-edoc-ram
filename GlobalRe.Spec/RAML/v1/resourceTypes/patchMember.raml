@@ -1,0 +1,57 @@
+#%RAML 1.0 ResourceType
+##### PATCH_MEMBER #####
+get:
+  description: <<description>>
+  responses:
+    200: # OK
+      body:
+        application/json:
+          type: object
+          properties:
+            url: string
+            totalRecords?: integer
+            offset?: integer
+            limit?: integer
+            results:
+              description: "Collection of <<item>>'s and Links"
+              type: array
+              items:
+                type: object
+                properties:
+                  data: <<item>>
+                  links?: !include ../types/links.raml
+            messages?:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example: <<getResponse_example>>
+
+patch:
+  description: Save (Partial update)
+  body:
+    application/json:
+      type: <<patch_item>>
+      example: <<patch_example>>
+
+  responses:
+    200: # OK
+      body:
+        application/json:
+          description: "Updated <<item>> and Links"
+          type: object
+          properties:
+            url: string
+            totalRecords?: integer
+            offset?: integer
+            limit?: integer
+            results:
+              description: "Collection of <<item>>'s and Links"
+              type: array
+              items:
+                type: object
+                properties:
+                  data: <<item>>
+                  links?: !include ../types/links.raml
+            messages?:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example: <<getResponse_example>>

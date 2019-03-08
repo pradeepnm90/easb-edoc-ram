@@ -1,0 +1,121 @@
+.save_links {
+  float: right;
+  margin-top: -1%;
+  display: flex;
+  border-bottom: solid;
+  border-color: gray;
+  border-bottom-width: 1px;
+  padding-bottom: 1%;
+}
+.save_links .label {
+  display: inline-block;
+  color: #3d3f3f;
+  font-size: 11px;
+  font-weight: 300;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.save_links .mat-button,
+.btn_link_container .save_links .mat-fab,
+.btn_link_container .save_links .mat-icon-button,
+.btn_link_container .save_links .mat-mini-fab,
+.btn_link_container .save_links .mat-raised-button {
+  border-radius: 2px;
+  border: solid 1px #3d70b2;
+  // color: #3d70b2;
+}
+.save_links .save_btn {
+  background-color: #669509;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+  // color: #fff;
+}
+.quick-edit-panel-left-header{
+    float: left;
+    .violetColor{
+        color: #9013FE;
+        border: 1px solid #4A4A4A;
+        height: 41px;
+        margin-top: 35px;
+        margin-bottom: -33px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.1) 100%);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        width: 49px;
+        border-radius: 6px;
+        text-align: center;
+        
+
+        >p{
+            font-size:12px;
+        }
+    }    
+}
+// .flexRow{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+// }
+// .popOver{   
+//     top: 10px;
+//   left: 1pc;
+//    position: relative;
+// }
+
+
+.deal-number-header{
+  max-height:20px; 
+  max-width: 100px;
+  min-height: 15px;
+  min-width: 50px;
+  height:100%;
+  width:100%;
+  color:#138A6F;
+  font-size:1rem; 
+  padding-left: .35rem;
+}
+.contract-number-header{
+  max-height: 20px; 
+  max-width: 100px;
+  min-height: 15px;
+  min-width: 50px;
+  height:100%;
+  width:100%;
+  color:#138A6F;
+  font-size:1rem;    
+  padding-left: .35rem;
+}
+.deal-name-header{
+    overflow: hidden;
+    max-height: 35px; 
+    max-width:400px;
+    text-overflow: ellipsis;
+    min-height: 15px;
+    min-width: 175px;
+    height:100%;
+    width:100%;
+    color:#138A6F;
+    font-size:1.5rem; 
+    padding-left: .7rem;
+    white-space: nowrap;
+}
+
+.deal-number{
+  color: #138A6F;
+  font-size: .9rem; 
+  line-height:18px;
+  padding-left: .5rem; 
+}
+.contract-number{ 
+  color: #138A6F;
+  font-size: .9rem; 
+  line-height:18px; 
+  padding-left: .5rem;
+}
+.noelipse-emptyfield{
+  ::ng-deep{
+    .mat-select-value{
+      text-overflow: inherit
+    }
+  }
+}
+
+

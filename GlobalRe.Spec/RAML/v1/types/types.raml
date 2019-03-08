@@ -1,0 +1,24 @@
+#%RAML 1.0 Library
+
+usage: This library defines some complex types
+
+types:
+  DealStatusSummary:
+    type: object
+    displayName: DealStatusSummary
+    properties:
+      statusCode?: integer
+      statusName: string
+      sortOrder: integer
+      count: integer
+      workflowId?: integer
+      workflowName?: string
+      statusSummary?: DealStatusSummary[]
+  Subdivision:
+    type: object
+    displayName: Subdivision
+    properties:
+      id: integer
+      name: string
+      sortOrder: integer
+      subdivisions?: Subdivision[]

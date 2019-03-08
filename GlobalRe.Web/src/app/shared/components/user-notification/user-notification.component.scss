@@ -1,0 +1,94 @@
+
+.mat-card{
+    border-radius: 2px;
+    padding: 18px;
+    width: 500px;
+    min-height: 54px;
+    animation-name: example;
+    animation-duration: 4s;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+.msg-panel{
+    display: flex;
+    align-items: center;
+    .icon-block{
+        display: flex;
+        width: 30px;
+        float: left;
+        text-align: center;
+        align-items: center;
+        .custom-icon-cls{
+            height: 30px;
+            width: 30px;
+            color: #FFFFFF;
+            font-family: FontAwesome;
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+    .msg-block{
+        display: inline-block;
+        width: calc(100% - 56px);
+        float: left;
+        padding: 0px 10px;
+    }
+    .action-block{
+        display: flex;
+        float: right;
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+        .custom-close{
+            height: 30px;
+            width: 26px;
+            color: #FFFFFF;
+            font-family: FontAwesome;
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+}
+@keyframes example {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+.Info{
+    background: #7AB800;
+    color: #ffffff;
+    .msg-block{
+        color: #ffffff;
+    }
+    .close-btn{
+        color: #ffffff;
+    }
+}
+.Warn{
+    background: #FFA100;
+    color: #ffffff;
+    .msg-block{
+        color: #ffffff;
+    }
+    .close-btn{
+        color: #ffffff;
+    }
+}
+.Error{
+    background: #D52D28;
+    color: #ffffff;
+    .msg-block{
+        color: #ffffff;
+    }
+    .close-btn{
+        color: #ffffff;
+    }
+}
+.Fatal{
+    background: #D52D28;
+    color: #ffffff;
+    .msg-block{
+        color: #ffffff;
+    }
+    .close-btn{
+        color: #ffffff;
+    }
+}

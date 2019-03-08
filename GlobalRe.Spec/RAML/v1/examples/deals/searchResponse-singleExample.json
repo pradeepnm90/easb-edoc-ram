@@ -1,0 +1,38 @@
+{
+  "offset": 1,
+  "limit": 1,
+  "url": "/v1/deals?statusCode=0&limit=1",
+  "results": [
+    {
+      "data": {
+        "dealNumber": 1369785,
+        "dealName": "Giles & Ransome, Inc - 2018",
+        "statusCode": 0,
+        "status": "Bound",
+        "contractNumber": 1949,
+        "inceptionDate": "2018-02-08",
+        "targetDate": "2019-01-08",
+        "priority": 1,
+        "submittedDate": "2018-02-08",
+        "primaryUnderwriterCode": 950986,
+        "primaryUnderwriterName": "Diana Lafemina",
+        "secondaryUnderwriterCode": 950987,
+        "secondaryUnderwriterName": "Test secondary underwriter",
+        "technicalAssistantCode": 950996,
+        "technicalAssistantName": "Kate Trent",
+        "modellerCode": 65125,
+        "modellerName": "Kamal Williams",
+        "actuaryCode": 12111,
+        "actuaryName": "Test Actuary",
+        "expiryDate": "2023-02-08",
+        "brokerCode": 983410,
+        "brokerName": "THB Intermediaries",
+        "brokerContactCode": 983412,
+        "brokerContactName": "Karin Berzin"
+      },
+      "links": []
+    }
+  ],
+  "totalRecords": 12405,
+  "messages": []
+}

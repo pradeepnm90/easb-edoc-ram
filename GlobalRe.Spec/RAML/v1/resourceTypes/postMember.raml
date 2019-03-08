@@ -1,0 +1,83 @@
+#%RAML 1.0 ResourceType
+##### POST_MEMBER #####
+get:
+  description: <<description>>
+  responses:
+    200:
+      body:
+        application/json:
+          description: "<<item>> and Links"
+          type: object
+          properties:
+            url: string
+            data: <<item>>
+            links?: !include ../types/links.raml
+            messages?:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example: <<getResponse_example>>
+
+    404: # Not Found
+      body:
+        application/json:
+          type: object
+          properties:
+            url: string
+            errors:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example:
+            url: "{Requested URL}"
+            errors: [
+              {
+                title: "Not Found",
+                detail: "<<item>> not found.",
+                severity: "Fatal"
+              }
+            ]
+
+post:
+  description: "Save a new <<item>> for the first time"
+  body:
+    application/json:
+      type: <<post_item>>
+      example: <<post_example>>
+  responses:
+    201: # Created
+      body:
+        application/json:
+          description: "<<item>> and Links"
+          type: object
+          properties:
+            url: string
+            data: <<item>>
+            links?: !include ../types/links.raml
+            messages?:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example: <<postResponse_example>>
+    400:
+      body:
+        application/json:
+          description: |
+            The request could not be understood by the server due to malformed syntax.
+            The client SHOULD NOT repeat the request without modifications.
+          type: object
+          properties:
+            url: string
+            errors:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example: <<postResponse400_example>>
+
+options:
+  description: "List of Links containing reference data and possible actions for a new <<item>>"
+  responses:
+    200: # OK
+      body:
+        application/json:
+          type: object
+          properties:
+            url: string
+            links: !include ../types/links.raml
+          example: <<options_example>>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/CoreVelocity.Core.Security" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CoreVelocity.Core.Security" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="EnterpriseIdentity">
+    <xs:sequence>
+      <xs:element name="_x003C_ApplicationName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AuthenticatedBy_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AuthenticatedOn_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_AuthenticationTokenExpires_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_AuthenticationToken_x003E_k__BackingField" nillable="true" type="ser:guid" />
+      <xs:element name="_x003C_DomainName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EnvironmentName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ErmsHomePath_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ImpersonatedBy_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_IsAuthenticated_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_IsServiceAccount_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_NameId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_UserId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_Username_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="connectionsList" nillable="true" type="tns:ArrayOfApplicationConnector" />
+      <xs:element name="permissionSet" nillable="true" type="tns:PermissionSet" />
+      <xs:element name="syncRoot" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnterpriseIdentity" nillable="true" type="tns:EnterpriseIdentity" />
+  <xs:complexType name="ArrayOfApplicationConnector">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApplicationConnector" nillable="true" type="tns:ApplicationConnector" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApplicationConnector" nillable="true" type="tns:ArrayOfApplicationConnector" />
+  <xs:complexType name="ApplicationConnector">
+    <xs:sequence>
+      <xs:element name="_x003C_ConnectionKey_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ConnectionString_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_IsServersideOnly_x003E_k__BackingField" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicationConnector" nillable="true" type="tns:ApplicationConnector" />
+  <xs:complexType name="PermissionSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArePermissionsLoaded" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ConfigurableValues" nillable="true" type="tns:ArrayOfConfigurableValue" />
+      <xs:element minOccurs="0" name="Permissions" nillable="true" type="tns:ArrayOfPermission" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PermissionSet" nillable="true" type="tns:PermissionSet" />
+  <xs:complexType name="ArrayOfConfigurableValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConfigurableValue" nillable="true" type="tns:ConfigurableValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConfigurableValue" nillable="true" type="tns:ArrayOfConfigurableValue" />
+  <xs:complexType name="ConfigurableValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConfigurationKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConfigurationPK" type="xs:int" />
+      <xs:element minOccurs="0" name="ConfigurationValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigurableValue" nillable="true" type="tns:ConfigurableValue" />
+  <xs:complexType name="ArrayOfPermission">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Permission" nillable="true" type="tns:Permission" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPermission" nillable="true" type="tns:ArrayOfPermission" />
+  <xs:complexType name="Permission">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FactDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FactPK" type="xs:int" />
+      <xs:element minOccurs="0" name="FactValue" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Permission" nillable="true" type="tns:Permission" />
+</xs:schema>

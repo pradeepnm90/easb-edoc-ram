@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EAB0B4D-7707-4EB7-8A7B-235C0F85E6E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Markel.GlobalRe.Service.Underwriting.Data</RootNamespace>
+    <AssemblyName>Markel.GlobalRe.Service.Underwriting.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.DbContextScope, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.DbContextScope.1.0.0\lib\net46\EntityFramework.DbContextScope.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BatchCommand\BatchCommandTypeEnum.cs" />
+    <Compile Include="BatchCommand\BatchEntityConfiguration.cs" />
+    <Compile Include="BatchCommand\BatchParameter.cs" />
+    <Compile Include="BatchCommand\BatchQuery.cs" />
+    <Compile Include="Enums\ERMSDBEnums.generated.cs" />
+    <Compile Include="Enums\ERMSDBEnums1.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERMSDBEnums.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\GRSEnums.cs" />
+    <Compile Include="Enums\Rules.cs" />
+    <Compile Include="Interfaces\ITblClausesDealRepository.cs" />
+    <Compile Include="Interfaces\IWorkbenchDealsRepository.cs" />
+    <Compile Include="Interfaces\IBrokerRepository.cs" />
+    <Compile Include="Interfaces\ICedantRepository.cs" />
+    <Compile Include="Interfaces\IDealCoveragesRepository.cs" />
+    <Compile Include="Interfaces\IDealDocumentsRepository.cs" />
+    <Compile Include="Interfaces\IEntityLockRepository.cs" />
+    <Compile Include="Interfaces\IExposureTreeRepository.cs" />
+    <Compile Include="Interfaces\INotesRepository.cs" />
+    <Compile Include="Interfaces\IDealRepository.cs" />
+    <Compile Include="Interfaces\IDealStatusSummariesRepository.cs" />
+    <Compile Include="Interfaces\IPersonRepository.cs" />
+    <Compile Include="Interfaces\ITbDealNotesRepository.cs" />
+    <Compile Include="Interfaces\ITbDocChkValueRepository.cs" />
+    <Compile Include="Interfaces\ITblCheckListRepository.cs" />
+    <Compile Include="Interfaces\ITblDealRepository.cs" />
+    <Compile Include="Interfaces\IUserViewRepository.cs" />
+    <Compile Include="Interfaces\IUserViewScreenRepository.cs" />
+    <Compile Include="Interfaces\IWritingCompanyRepository.cs" />
+    <Compile Include="Interfaces\Lookups\IAttachmentBasisLookupRepository.cs" />
+    <Compile Include="Interfaces\Lookups\IContractTypesLookupRepository.cs" />
+    <Compile Include="Interfaces\Lookups\ICoverageBasisLookupRepository.cs" />
+    <Compile Include="Interfaces\Lookups\IDealStatusesLookupRepository.cs" />
+    <Compile Include="Interfaces\Lookups\INoteTypesLookupRepository.cs" />
+    <Compile Include="Interfaces\Lookups\IRolePersonsLookupRepository.cs" />
+    <Compile Include="Models\ERMSDatabase1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERMSDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CodeTemplates\DbHelper.ttinclude" />
+    <None Include="CodeTemplates\Manager.ttinclude" />
+    <None Include="Enums\Enum.Generator.Core.ttinclude" />
+    <None Include="Enums\Enum.Generator.ttinclude" />
+    <None Include="Models\EF.ERMS.ttinclude" />
+    <None Include="Models\EF.Reverse.POCO.Core.ttinclude" />
+    <None Include="Models\EF.Reverse.POCO.ttinclude" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Enums\ERMSDBEnums.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ERMSDBEnums1.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ERMSDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ERMSDatabase1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.Core\Markel.Pricing.Service.Infrastructure.Core.csproj">
+      <Project>{4bef6fff-c688-45ed-99f0-b89ff79994b9}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.Data\Markel.Pricing.Service.Infrastructure.Data.csproj">
+      <Project>{f2d26a8a-2464-424d-99aa-44faee64abf5}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF EXIST "$(SolutionDir)\Runtime\bin" DEL "$(SolutionDir)\Runtime\bin\*.*" /Q/S/F</PostBuildEvent>
+  </PropertyGroup>
+</Project>

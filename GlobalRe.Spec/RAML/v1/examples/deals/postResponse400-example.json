@@ -1,0 +1,11 @@
+{
+  "url": "URL",
+  "errors": [
+    {
+      "field": "Field A",
+      "title": "Value too short",
+      "detail": "Value must contain at least three characters.",
+      "severity": "Error"
+    }
+  ]
+}

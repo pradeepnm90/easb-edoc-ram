@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AuthenticationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="IAuthenticationService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CoreVelocity.Core.Security" />
+      <xsd:import schemaLocation="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CoreVelocity.Security.Model" />
+      <xsd:import schemaLocation="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAuthenticationService_Authenticate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_Authenticate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_AuthenticateWithParams_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateWithParams" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_AuthenticateWithParams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateWithParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_ValidateAuthenticationToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAuthenticationToken" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_ValidateAuthenticationToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAuthenticationTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_ValidateAuthenticationTokenWithParams_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAuthenticationTokenWithParams" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_ValidateAuthenticationTokenWithParams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAuthenticationTokenWithParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_GetIdentityFromToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentityFromToken" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_GetIdentityFromToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentityFromTokenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAuthenticationService">
+    <wsdl:operation name="Authenticate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticationService/Authenticate" message="tns:IAuthenticationService_Authenticate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticationService/AuthenticateResponse" message="tns:IAuthenticationService_Authenticate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateWithParams">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticationService/AuthenticateWithParams" message="tns:IAuthenticationService_AuthenticateWithParams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticationService/AuthenticateWithParamsResponse" message="tns:IAuthenticationService_AuthenticateWithParams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAuthenticationToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticationService/ValidateAuthenticationToken" message="tns:IAuthenticationService_ValidateAuthenticationToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticationService/ValidateAuthenticationTokenResponse" message="tns:IAuthenticationService_ValidateAuthenticationToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAuthenticationTokenWithParams">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticationService/ValidateAuthenticationTokenWithParams" message="tns:IAuthenticationService_ValidateAuthenticationTokenWithParams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticationService/ValidateAuthenticationTokenWithParamsResponse" message="tns:IAuthenticationService_ValidateAuthenticationTokenWithParams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentityFromToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticationService/GetIdentityFromToken" message="tns:IAuthenticationService_GetIdentityFromToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticationService/GetIdentityFromTokenResponse" message="tns:IAuthenticationService_GetIdentityFromToken_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IAuthenticationService" type="tns:IAuthenticationService">
+    <wsp:PolicyReference URI="#IAuthenticationService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="http://tempuri.org/IAuthenticationService/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateWithParams">
+      <soap:operation soapAction="http://tempuri.org/IAuthenticationService/AuthenticateWithParams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAuthenticationToken">
+      <soap:operation soapAction="http://tempuri.org/IAuthenticationService/ValidateAuthenticationToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAuthenticationTokenWithParams">
+      <soap:operation soapAction="http://tempuri.org/IAuthenticationService/ValidateAuthenticationTokenWithParams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentityFromToken">
+      <soap:operation soapAction="http://tempuri.org/IAuthenticationService/GetIdentityFromToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthenticationService">
+    <wsdl:port name="IAuthenticationService" binding="tns:IAuthenticationService">
+      <soap:address location="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

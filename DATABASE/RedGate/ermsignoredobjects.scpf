@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--
+SQL Compare
+SQL Compare
+Version:10.3.8.406-->
+<NamedFilter version="1" type="SQLCompareFilter">
+  <!--This filter can be loaded using the SQL Compare UI or used with a SQL Compare command line session using the /filter switch-->
+  <FilterName>ErmsIgnoredObjects</FilterName>
+  <Filter version="1" type="DifferenceFilter">
+    <FilterCaseSensitive>False</FilterCaseSensitive>
+    <Filters version="1">
+      <None version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </None>
+      <Assembly version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </Assembly>
+      <AsymmetricKey version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </AsymmetricKey>
+      <Certificate version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </Certificate>
+      <Contract version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </Contract>
+      <DdlTrigger version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </DdlTrigger>
+      <Default version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </Default>
+      <ExtendedProperty version="1">
+        <Include>True</Include>
+        <Expression />
+      </ExtendedProperty>
+      <EventNotification version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </EventNotification>
+      <FullTextCatalog version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </FullTextCatalog>
+      <FullTextStoplist version="1">
+        <Include>True</Include>
+        <Expression />
+      </FullTextStoplist>
+      <Function version="1">
+        <Include>False</Include>
+        <Expression>(@NAME = 'fn_ERMSCompany') OR (@NAME = 'fn_ProductionDbName')</Expression>
+      </Function>
+      <MessageType version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </MessageType>
+      <PartitionFunction version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </PartitionFunction>
+      <PartitionScheme version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </PartitionScheme>
+      <Queue version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </Queue>
+      <Role version="1">
+        <Include>True</Include>
+        <Expression />
+      </Role>
+      <Route version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </Route>
+      <Rule version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </Rule>
+      <Schema version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </Schema>
+      <SearchPropertyList version="1">
+        <Include>True</Include>
+        <Expression />
+      </SearchPropertyList>
+      <Sequence version="1">
+        <Include>True</Include>
+        <Expression />
+      </Sequence>
+      <Service version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </Service>
+      <ServiceBinding version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </ServiceBinding>
+      <StoredProcedure version="1">
+        <Include>False</Include>
+        <Expression>(@NAME LIKE 'zz_merge%') OR (@NAME LIKE 'pr_merge%') OR (@NAME LIKE 'sp_MS%') OR (@NAME LIKE 'old_%') OR (@NAME = 'pr_WS_UpdMetaData') OR (@NAME LIKE 'pr_ReconciliationBrokerageProperty%') OR (@NAME LIKE 'pr_UpdatePropertyPortfolioDistributions%') OR (@NAME LIKE 'pr_FetchAllSCMMessagesForMessageUUID%') OR (@NAME LIKE 'pr_MovePortfolioRMInformationToHistory%')</Expression>
+      </StoredProcedure>
+      <SymmetricKey version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </SymmetricKey>
+      <Synonym version="1">
+        <Include>True</Include>
+        <Expression />
+      </Synonym>
+      <Table version="1">
+        <Include>False</Include>
+        <Expression>(@NAME LIKE 'tb_airline%') OR (@NAME LIKE 'tb_acctmast%') OR (@NAME LIKE 'tb_banktrans%') OR (@NAME LIKE 'tb_currhist%') OR (@NAME LIKE 'tb_idxval%') OR (@NAME LIKE 'tb_indtab%') OR (@NAME LIKE 'tb_yhist%') OR (@NAME LIKE '_USDRev_%')</Expression>
+      </Table>
+      <User version="1">
+        <Include>True</Include>
+        <Expression />
+      </User>
+      <UserDefinedType version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </UserDefinedType>
+      <View version="1">
+        <Include>False</Include>
+        <Expression>(@NAME LIKE 'tb_prop%') OR (@NAME = '_sys_deleted_prop') OR (@NAME = 'ALM_Profile') OR (@NAME = 'atl_hurtrack') OR (@NAME = 'PropCoverZone') OR (@NAME = 'propexps_updates') OR (@NAME = 'PropLayerNotes') OR (@NAME = 'RMS_CONSTRUCTION') OR (@NAME = 'RMS_OCCUPANCY') OR (@NAME = 'tb_landfall_details') OR (@NAME = 'tmp_proplayer_analysis') OR (@NAME = 'tmp_proplayer_dist') OR (@NAME LIKE 'hp%') OR (@NAME LIKE 'RSG_%') OR (@NAME = 'v_glcatagory_MAXRE') OR (@NAME = 'wslandfallparameters') OR (@SCHEMA = 'rsg') OR (@NAME = 'PropertyModelDealExclusions')</Expression>
+      </View>
+      <XmlSchemaCollection version="1">
+        <Include>True</Include>
+        <Expression>TRUE</Expression>
+      </XmlSchemaCollection>
+    </Filters>
+  </Filter>
+</NamedFilter>

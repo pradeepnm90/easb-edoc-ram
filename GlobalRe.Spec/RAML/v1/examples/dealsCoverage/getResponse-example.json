@@ -1,0 +1,16 @@
+{
+    "url": "/v1/DealsCoverage/{dealNumber}",
+    "results": [
+        {
+          "dealNumber": 123456,
+          "coverageId": 111,
+          "coverageName": "Fire"
+        },
+        {
+          "dealNumber": 123456,
+          "coverageId": 222,
+          "coverageName": "Earthquake"
+        }
+    ],
+    "totalRecords": 2
+}

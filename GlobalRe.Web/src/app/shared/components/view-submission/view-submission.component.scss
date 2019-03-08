@@ -1,0 +1,126 @@
+.mySubmission {
+  box-sizing: border-box;
+  text-align: center;
+  color: #3d70b2;
+  width: 170px;
+  border: 1px solid #3d70b2;
+  border-radius: 18px;
+  background-color: #ffffff;
+  cursor: pointer;
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
+  // overflow: hidden;
+  .btn-text{
+    position: relative;
+    top: -4px;
+    width: 72%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+
+  }
+
+  .arrow-drop-down {
+    padding-left: 11px;
+   // vertical-align: bottom;
+    width:20%;
+  }
+
+}
+
+.mySubmission:focus {
+  outline-width: 0px;
+}
+
+
+.submissio_dropdown_popover li {
+  border-bottom: 1px solid #979797;
+}
+
+// .addButtonview {
+//   text-align: center;
+//   color: white;
+//   font-size: 18px;
+//   height: 43px;
+//   width: 100%;
+//   border-radius: 2px;
+//   background-color: #669509;
+//   /*   
+//   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24); */
+
+// }
+
+.submissio_dropdown_popover {
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  z-index: 1005;
+  width: 196px;
+  box-sizing: border-box !important;
+
+  left: 147px;
+  top: 56px;
+  /*  
+  box-shadow: 0px 6px 21px 5px rgba(0, 0, 0, 0.52); */
+
+}
+
+.inputfield {
+  width: calc(100% - 48px);
+  border-bottom: 1px solid grey;
+  padding: 10px 0px;
+  margin-bottom: 3px;
+  margin-left: 1px;
+  border-left: none;
+  border-right: none;
+}
+
+.inputfield::focus {
+  outline: none;
+}
+
+.submissio_dropdown_popover::before {
+  top: -10px;
+  content: "";
+  height: 0;
+  position: absolute;
+  left: 79%;
+  width: 0;
+  z-index: 2000;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+
+.listdeatil {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-items {
+  text-decoration: none;
+  padding: 10px;
+  width: 100%;
+  display: inline-block;
+
+}
+
+.dropDownOptions {
+  color: #009AA6;
+  vertical-align: super;
+  font-size: 18px;
+  display: inline-block;
+  cursor: pointer;
+  width: 18px !important;
+}
+
+.addCircle {
+  padding-right: 23px;
+}
+
+.addButtonView__containe {
+  border-bottom: 1px solid grey;
+  width: 100%
+}

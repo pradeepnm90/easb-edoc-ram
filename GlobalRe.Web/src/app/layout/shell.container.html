@@ -1,0 +1,183 @@
+<!-- <div class="page-wrap" style="padding-top:0"> -->
+  <!-- <header role="banner">
+    <div class="container topHeaderCommon">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="siteLogoWrap" style="color: white" >
+            <a class="navbar-brand" href="#" id="shellContainer_ApplicationName"></a>
+            <h2>
+              <strong>GRS</strong>
+            </h2>
+          </div>
+        </div>
+        <div *ngIf="loginUser$" class="col-lg-8 col-md-8 col-sm-8">
+          <div class="loginAdminWrap" style="color: white" id="shellContainer_LoginUser">
+            <h6>{{(loginUser$ | async)?.displayName}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="row mat-nav-fixmanubar" id="shell_navBar" >
+      <button mat-button id="shell_navBar_dashboard" href="/dashboard">Dashboard</button>
+      <button mat-button id="shell_navBar_qlikview" class="qlikview" (click)="openQlikView()">Qlik View</button>
+      <button mat-button id="shell_navBar_ERMS" class="ermslink" (click)="openERMS()">ERMS</button>
+    </nav>
+  </header> -->
+  <!-- start  fixed header & dashboard panel here -->
+  <mat-card class="mat-header grs-header">
+    <!-- start header panel here -->
+    <mat-card class="header">
+      <!-- start Header left panel-->
+  
+      <mat-card class="header_left_panel">
+        <div class="logo">
+          <img src="./assets/images/bitmap.png" />
+          <span>Global Reinsurance System <strong>(GRS)</strong></span>
+        </div>
+        <!-- <button mat-button>Click me!</button> -->
+  
+        <!-- <div class="global-re-sec" (click)="onGlobalReClick($event)"> -->
+            <div class="global-re-sec">
+            Global Re
+          <!-- <span class="global_icon"><i class="material-icons">&#xE037;</i></span> -->
+          <!-- <div class="arrow_drop_up" style="display:block;"><i class="material-icons">arrow_drop_up</i></div> -->
+          
+  
+        </div>
+        <!--<mat-card class="global-re-sec" ng-model="globalre">
+        <button mat-button [matMenuTriggerFor]="menu">Global Re <i class="material-icons">arrow_drop_down</i></button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Global Re</button>
+          <button mat-menu-item>CATCO</button>
+          <button mat-menu-item>Fed Fronted</button>
+          <button mat-menu-item>Fed Fronted</button>
+          <button mat-menu-item>MINT</button>
+          <button mat-menu-item>Markel Assurance</button>
+        </mat-menu>
+        </mat-card>-->
+  
+      </mat-card>
+  
+      <!-- End header left panel here -->
+      <!-- start Header right panel here -->
+      <div class="header-right-panel">
+  
+          <div class="signout_sec" >
+              <!-- <div class="signput-popup" [ngClass]="showsignoutpopup == true ? 'showPanel_signout_sec' : 'hidePanel_signout_sec'"> -->
+                  <div class="signput-popup" style="display:none;">
+                  <!-- <i class="material-icons">arrow_drop_up</i> -->
+                  <ul>
+                    <li><a href="#">preference</a></li>
+                    <li><a href="#">sign out</a></li>
+  
+                  </ul>
+  
+              </div>
+  
+              <div class="imgsec">
+                <span class="signout-txt" id="shellContainer_LoginUser">{{(loginUser$ | async)?.displayName}}</span>
+                <img src="./assets/images/no-image.png" />
+                <i class="material-icons">arrow_drop_down</i>
+  
+              </div>
+  
+          </div>
+      </div>
+  
+  
+    </mat-card>
+  
+      <mat-card class="dashboard-links">
+  
+        <mat-card class="dashboard-left-panel">
+          <div>
+              <a href="#"><i class="fa fa-home home-icon"></i></a>
+              <span class="line-break-css"></span>
+          </div>
+        </mat-card>
+        
+        <mat-card class="dashboard-right-panel" (click)="onquicklinksClick($event)">  
+          <div class="quick-link-icon-panel" style="margin-top:-15%;">
+            <div><i class="fa fa-th-large menu-ssbutton"></i></div>
+            <div  class="text-quick-links">Quick Links</div>
+          </div>
+          <div class="quick-links-panel" style="height: 420px; width:432px;" [ngClass]="showquicklinkscontent == true ? 'showPanel_quick_links' : 'hidePanel_quick_links'">
+              <!-- <i class="material-icons">arrow_drop_up</i> -->
+           
+                <mat-card-header  style="background-color:#DFDDDF; width: 100%; margin-top: 2%; height:9%">
+                
+                    <mat-card-title><i class="title fa fa-th-large"></i>&nbsp;&nbsp; Quick Links </mat-card-title>
+                </mat-card-header>
+             
+                  <div class="row inline-block" style="margin-top:-5%;">
+                <div class="quicklinks-content-block">
+                   
+                  <h2>Markel Apps</h2>
+                  <ul style="margin-top:-10%">
+                  <a href="#" (click)="openERMS()">ERMS</a><br>
+                  <a  href="#" (click)="openCM()">ERMS - Claims Mgmt</a><br>
+                  <a  href="#" (click)="openQlikView()">QlikView</a><br>
+                 
+                  
+               
+                  </ul>
+                </div>
+                  <div class="quicklinks-content-block">
+                      <h2>Broker Portals</h2>
+                      <ul style="margin-top:-10%">
+                        <a href="#" (click)="openAON()">AON Benfield </a><br>
+                        <a href="#" (click)="openGUYCARPENTER()">Guy Carpenter</a>
+                      </ul>
+                    </div>
+                 <!-- <div class="quicklinks-content-block">
+                      <h2>Calculators</h2>
+                      <ul>
+                        <a href="" (click)="OpenPremiumCalculator()">Premium Calculator</a><br>
+                        <a href="" (click)="OpenReturnCalculator()">Returns Calculator</a>
+                       </ul>
+    
+                    </div> -->
+                    <div class="quicklinks-content-block" style="margin-top:-7%">
+                        <h2>Markel Admin</h2>
+                        <ul style="margin-top:-6%; margin-bottom:20%">
+                          <a href="#" (click)="openMyMarkel()">My Markel</a><br>
+                          <a href="#" (click)="openMarklExternal()">Markel – External</a><br>
+                          <a href="#" (click)="openWorkday()">Workday</a><br>
+                          <a href="#" (click)="openExpenses()" >Expenses (T&E)</a><br>
+                          <a href="mailto:servicedesk@markelcorp.com">Service Desk Request</a>
+                  
+                        </ul>
+                      </div>
+                      <div class="quicklinks-content-block" style=" margin-top:6%">
+                        <h2 style="margin-top:-148%;">Misc.</h2>
+                        <ul style="margin-top:-10%">
+                          <a href="#" (click)="openAMBEST()">A.M. Best</a><br>
+                          <a href="#" (click)="openSNL()">SNL</a>
+                        </ul>
+                      </div>
+  
+            </div>
+  
+          </div>
+  
+        </mat-card>
+      </mat-card>
+  
+        <!-- End dashboard quick panel-->
+  
+  </mat-card>
+  
+    <main class="content content-pd-top">
+        <router-outlet></router-outlet>
+    </main>
+  
+    <div class="footer">
+      <a href="http://www.markelcorp.com" style="color: white">Markel Corp</a> &copy; 2018
+      Powered by
+      <a *ngIf="loginUser$" href="http://www.markelcorp.com"  style="color: white">
+        GRS -{{(loginUser$ | async)?.applicationVersion}}
+      </a>
+    </div>
+    <user-notification-panel></user-notification-panel>
+  <!-- </div> -->
+  

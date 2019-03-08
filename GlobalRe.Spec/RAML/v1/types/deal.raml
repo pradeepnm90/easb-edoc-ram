@@ -1,0 +1,77 @@
+#%RAML 1.0  DataType
+##### DEAL #####
+type: object
+displayName: Deal
+
+properties:
+  dealNumber: integer
+  dealName?:
+    type: string
+    maxLength: 100
+  statusCode?: integer
+  status?:
+    type: string
+    maxLength: 100
+  contractNumber?: integer
+  inceptionDate?: string
+  targetDate?: string
+  priority?: integer
+  submittedDate?: string
+  primaryUnderwriterCode?: integer
+  primaryUnderwriterName?:
+    type: string
+    maxLength: 200
+  secondaryUnderwriterCode?: integer
+  secondaryUnderwriterName?:
+    type: string
+    maxLength: 200
+  technicalAssistantCode?: integer
+  technicalAssistantName?:
+    type: string
+    maxLength: 200
+  modellerCode?: integer
+  modellerName?:
+    type: string
+    maxLength: 200
+  actuaryCode?: integer
+  actuaryName?:
+    type: string
+    maxLength: 200
+  expiryDate?: string
+  brokerCode?: integer
+  brokerName?:
+    type: string
+    maxLength: 200
+  brokerContactCode?: integer
+  brokerContactName?:
+    type: string
+    maxLength: 200
+  cedantCode?: integer
+  cedantName?:
+      type: string
+      maxLength: 200
+  continuous?: boolean
+  cedantLocationCode?: integer
+  cedantLocationName?:
+    type: string
+    maxLength: 200
+  brokerLocationCode?: integer
+  brokerLocationName?:
+    type: string
+    maxLength: 200
+  paper?: string
+  renewal?: integer
+  expiresAtEndOfDate?: boolean
+  exposureTypeCode?: integer
+  dealTypeCode?: integer
+  dealTypeName?: string
+  coverageType?: integer
+  coverageName?: string
+  policyBasis?: integer
+  policyBasisName?: string
+  currencyCode?: integer
+  currencyName?: string
+  domicileCode?: integer
+  domicileName?: string
+  regionCode?: integer
+  regionName?: string

@@ -1,0 +1,6 @@
+<div class="selected-item-panel" matTooltip="{{selectedOptionItem.name}}" [matTooltipPosition]="'above'">
+    <div class="item-text">{{selectedOptionItem.name}}</div>
+    <div class="close-section">
+        <i class="material-icons" (click)="closeClickHandler($event, selectedOptionItem)">close</i>
+    </div>
+</div>

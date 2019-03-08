@@ -1,0 +1,37 @@
+#%RAML 1.0 ResourceType
+##### READ ONLY MEMBER #####
+get:
+  description: <<description>>
+  responses:
+    200:
+      body:
+        application/json:
+          description: "<<item>> and Links"
+          type: object
+          properties:
+            url: string
+            data: <<item>>
+            links?: !include ../types/links.raml
+            messages?:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example: <<getResponse_example>>
+
+    404: # Not Found
+      body:
+        application/json:
+          type: object
+          properties:
+            url: string
+            errors:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example:
+            url: "{Requested URL}"
+            errors: [
+              {
+                title: "Not Found",
+                detail: "<<item>> not found.",
+                severity: "Fatal"
+              }
+            ]

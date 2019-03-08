@@ -1,0 +1,33 @@
+<div class="custom-select-main-container">
+    <div class="select-lbl-panel">
+        <div class="select-lbl" (click)="showOptionPanelHandler($event)">
+            <span>Select</span>
+            <i class="fa fa-sort-desc triangle-icon" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="select-option-container" *ngIf="showOptionPanel">
+        <div class="select-option-subcontainer">
+            <div class="selct-search-panel">
+                <mat-form-field style="width: 100%;" class="form-group" [floatLabel]="'never'" >
+                    <i class="material-icons search-icon" matPrefix>search</i>
+                    <input matInput type="text" placeholder="{{placeholderTxt}}" [(ngModel)]="searchKeyWord" (input)="onSearchKeyWordChange($event)"/>
+                    <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="clearKeyWordText($event)">
+                        <i class="material-icons close-icon">close</i>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div class="select-option-panel">
+                <mat-selection-list #customSelectDropdown>
+                    <mat-list-option style="font-weight: 400;" [checkboxPosition]="'before'" 
+                    [selected]="selectAll.isSelected" [value]="selectAll.name" (click)="customSelectAllOptionChange($event, selectAll)" >
+                        {{selectAll.name}}
+                    </mat-list-option>
+                    <mat-list-option [checkboxPosition]="'before'" *ngFor="let option of optionItemList" 
+                    [selected]="option.isSelected" [value]="option.name" (click)="customSelectOptionChange($event, option)" >
+                        {{option.name}}
+                    </mat-list-option>
+                </mat-selection-list>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,222 @@
+{
+    "url": "/v1/writingcompany/true",
+    "results": [
+        {
+            "data": {
+                "papernum": 33,
+                "companyname": "Evanston Insurance Company",
+                "cpnum": 246383,
+                "relatedcompany": "Evanston Insurance Company",
+                "address1": "Ten Parkway North",
+                "address2": "",
+                "address3": "",
+                "city": "Deerfield",
+                "state": "IL",
+                "postalcode": "60015",
+                "country": "",
+                "phone": "(804)287-6900",
+                "fax": "(804)287-6933",
+                "imagefilename": "images\\Markel.jpg",
+                "companyshortname": "EIC",
+                "sltrequired": 1,
+                "iptrequired": 0,
+                "policynumbertoken": "V",
+                "currency": null,
+                "territory": null,
+                "active": 1,
+                "hideunusedclaimcategory": true,
+                "jecode": null,
+                "isgrsdisplay": 1
+            },
+            "links": [
+                {
+                    "type": "Entity",
+                    "rel": "Self",
+                    "href": "v1/writingcompany/33",
+                    "method": "GET"
+                },
+                {
+                    "type": "Action",
+                    "rel": "Self",
+                    "href": "v1/writingcompany/33",
+                    "method": "PUT"
+                }
+            ],
+            "messages": []
+        },
+        {
+            "data": {
+                "papernum": 1,
+                "companyname": "Markel Bermuda Limited",
+                "cpnum": 201178,
+                "relatedcompany": "Markel Bermuda Limited",
+                "address1": "Markel House",
+                "address2": "2 Front Street",
+                "address3": null,
+                "city": "Hamilton",
+                "state": "",
+                "postalcode": "HM 11",
+                "country": "Bermuda",
+                "phone": "441-296-8800",
+                "fax": "",
+                "imagefilename": "images\\Markel.jpg",
+                "companyshortname": "ABL",
+                "sltrequired": 0,
+                "iptrequired": 1,
+                "policynumbertoken": null,
+                "currency": null,
+                "territory": null,
+                "active": 1,
+                "hideunusedclaimcategory": true,
+                "jecode": "202",
+                "isgrsdisplay": 1
+            },
+            "links": [
+                {
+                    "type": "Entity",
+                    "rel": "Self",
+                    "href": "v1/writingcompany/1",
+                    "method": "GET"
+                },
+                {
+                    "type": "Action",
+                    "rel": "Self",
+                    "href": "v1/writingcompany/1",
+                    "method": "PUT"
+                }
+            ],
+            "messages": []
+        },
+        {
+            "data": {
+                "papernum": 16,
+                "companyname": "Markel Global Reinsurance Company",
+                "cpnum": 201178,
+                "relatedcompany": "Markel Bermuda Limited",
+                "address1": "535 Springfield Avenue",
+                "address2": "",
+                "address3": "",
+                "city": "Summit",
+                "state": "NJ",
+                "postalcode": "07901-2608",
+                "country": "United States",
+                "phone": "",
+                "fax": "",
+                "imagefilename": "images\\Markel.jpg",
+                "companyshortname": "ARUI",
+                "sltrequired": 0,
+                "iptrequired": 0,
+                "policynumbertoken": null,
+                "currency": null,
+                "territory": null,
+                "active": 1,
+                "hideunusedclaimcategory": true,
+                "jecode": "102",
+                "isgrsdisplay": 1
+            },
+            "links": [
+                {
+                    "type": "Entity",
+                    "rel": "Self",
+                    "href": "v1/writingcompany/16",
+                    "method": "GET"
+                },
+                {
+                    "type": "Action",
+                    "rel": "Self",
+                    "href": "v1/writingcompany/16",
+                    "method": "PUT"
+                }
+            ],
+            "messages": []
+        },
+        {
+            "data": {
+                "papernum": 34,
+                "companyname": "Markel Insurance Company",
+                "cpnum": null,
+                "relatedcompany": null,
+                "address1": "10 Parkway N #100",
+                "address2": null,
+                "address3": null,
+                "city": "Deerfield",
+                "state": "IL",
+                "postalcode": "60015-2526",
+                "country": "United States",
+                "phone": "(847) 572-6000",
+                "fax": null,
+                "imagefilename": "images\\Markel.jpg",
+                "companyshortname": "MIC",
+                "sltrequired": null,
+                "iptrequired": null,
+                "policynumbertoken": "C",
+                "currency": 1,
+                "territory": 1,
+                "active": 1,
+                "hideunusedclaimcategory": true,
+                "jecode": "104",
+                "isgrsdisplay": 1
+            },
+            "links": [
+                {
+                    "type": "Entity",
+                    "rel": "Self",
+                    "href": "v1/writingcompany/34",
+                    "method": "GET"
+                },
+                {
+                    "type": "Action",
+                    "rel": "Self",
+                    "href": "v1/writingcompany/34",
+                    "method": "PUT"
+                }
+            ],
+            "messages": []
+        },
+        {
+            "data": {
+                "papernum": 29,
+                "companyname": "Markel International Insurance Company Limited",
+                "cpnum": 204596,
+                "relatedcompany": "Markel International Ireland",
+                "address1": null,
+                "address2": "20 Fenchurch Street",
+                "address3": "",
+                "city": "London",
+                "state": "",
+                "postalcode": "EC3M 3AZ",
+                "country": "United Kingdom",
+                "phone": "+44 (0)20 7953 6000",
+                "fax": "+44 (0)20 7953 6001",
+                "imagefilename": "images\\Markel.jpg",
+                "companyshortname": "MIICL",
+                "sltrequired": 0,
+                "iptrequired": 1,
+                "policynumbertoken": null,
+                "currency": null,
+                "territory": null,
+                "active": 1,
+                "hideunusedclaimcategory": true,
+                "jecode": "301",
+                "isgrsdisplay": 1
+            },
+            "links": [
+                {
+                    "type": "Entity",
+                    "rel": "Self",
+                    "href": "v1/writingcompany/29",
+                    "method": "GET"
+                },
+                {
+                    "type": "Action",
+                    "rel": "Self",
+                    "href": "v1/writingcompany/29",
+                    "method": "PUT"
+                }
+            ],
+            "messages": []
+        }
+    ],
+    "totalRecords": 5,
+    "messages": []
+}

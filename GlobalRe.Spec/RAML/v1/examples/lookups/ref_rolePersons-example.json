@@ -1,0 +1,54 @@
+{
+    "url": "/v1/lookups/rolepersons?roles=GlobalRe.Actuary,GlobalRe.Actuary%20Manager",
+    "results": [
+        {
+            "name": "Bruce Stocker",
+            "value": "48629",
+            "group": "GlobalRe.Actuary",
+            "isActive": true
+        },
+        {
+            "name": "Ernie Tistan",
+            "value": "59716",
+            "group": "GlobalRe.Actuary",
+            "isActive": true
+        },
+        {
+            "name": "Kari Falcone",
+            "value": "59717",
+            "group": "GlobalRe.Actuary",
+            "isActive": true
+        },
+        {
+            "name": "Kari Falcone",
+            "value": "44093",
+            "group": "GlobalRe.Actuary",
+            "isActive": true
+        },
+        {
+            "name": "Laurie Slader",
+            "value": "774222",
+            "group": "GlobalRe.Actuary",
+            "isActive": true
+        },
+        {
+            "name": "Richard Millilo",
+            "value": "66099",
+            "group": "GlobalRe.Actuary",
+            "isActive": true
+        },
+        {
+            "name": "Steve Meyer",
+            "value": "520443",
+            "group": "GlobalRe.Actuary",
+            "isActive": true
+        },
+        {
+            "name": "Todd Glassman",
+            "value": "63184",
+            "group": "GlobalRe.Actuary Manager",
+            "isActive": true
+        }
+    ],
+    "totalRecords": 8
+}

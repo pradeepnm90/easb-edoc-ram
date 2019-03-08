@@ -1,0 +1,15 @@
+
+    <mat-card [ngClass]="data.severity">
+        <mat-card-content>
+            <div class="msg-panel">
+                <div class="icon-block">
+                    <i class="fa custom-icon-cls" [ngClass]="data.iconCls" aria-hidden="true"></i>
+                </div>
+                <div class="msg-block">{{data.detail}}</div>
+                <div class="action-block">
+                    <i class="fa fa-close custom-close user-notification-panel-close-btn" aria-hidden="true"  (click)="closeHandler()"></i>
+                    <!-- <mat-icon class="material-icons close-btn" (click)="closeHandler()">clear</mat-icon> -->
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>

@@ -1,0 +1,187 @@
+<Elements>
+  <GRSHomePage>
+    <StatusPanel>
+      <PanelButtonClass>mat-button-toggle</PanelButtonClass>
+      <OnHoldPanelButton>dashboard_dashBoardComponent_matButtonToggle_1</OnHoldPanelButton>
+      <BoundPendingActionsPanelButton>dashboard_dashBoardComponent_matButtonToggle_2</BoundPendingActionsPanelButton>
+      <InProgressPanelButton>dashboard_dashBoardComponent_matButtonToggle_0</InProgressPanelButton>
+      <Renewable6MonthsPanelButton>dashboard_dashBoardComponent_matButtonToggle_3</Renewable6MonthsPanelButton>
+      <InProgress_UnderReviewCheckBox>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_0</InProgress_UnderReviewCheckBox>
+      <InProgress_AuthorizeCheckBox>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_1</InProgress_AuthorizeCheckBox>
+      <InProgress_OutStandingQuoteCheckBox>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_2</InProgress_OutStandingQuoteCheckBox>
+      <InProgress_ToBeDeclinedCheckBox>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_3</InProgress_ToBeDeclinedCheckBox>
+      <InProgress_BoundPendingDataEntryCheckBox>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_4</InProgress_BoundPendingDataEntryCheckBox>
+      <InProgress_UnderReviewCheckBoxInput>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_0-input</InProgress_UnderReviewCheckBoxInput>
+      <InProgress_AuthorizeCheckBoxInput>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_1-input</InProgress_AuthorizeCheckBoxInput>
+      <InProgress_OutStandingQuoteCheckBoxInput>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_2-input</InProgress_OutStandingQuoteCheckBoxInput>
+      <InProgress_ToBeDeclinedCheckBoxInput>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_3-input</InProgress_ToBeDeclinedCheckBoxInput>
+      <InProgress_BoundPendingDataEntryCheckBoxInput>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_4-input</InProgress_BoundPendingDataEntryCheckBoxInput>
+      <DummywithSubstatusButton>dashboard_dashBoardComponent_matButtonToggle_5</DummywithSubstatusButton>
+      <DummywithnoSubstatusButton>dashboard_dashBoardComponent_matButtonToggle_4</DummywithnoSubstatusButton>
+      <DummyInquiredsubstatus>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_0</DummyInquiredsubstatus>
+      <DummyInDueDiligencesubstatus>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_1</DummyInDueDiligencesubstatus>
+      <DummyInformationalAgreementsubstatus>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_2</DummyInformationalAgreementsubstatus>
+      <DummyInquiredsubstatusinput>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_0-input</DummyInquiredsubstatusinput>
+      <DummyInDueDiligencesubstatusinput>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_1-input</DummyInDueDiligencesubstatusinput>
+      <DummyInformationalAgreementsubstatusinput>dashboard_dashBoardComponent_dealStatusSubType_matChkSubType_2-input</DummyInformationalAgreementsubstatusinput>
+      <!--<QlikViewButton>shell_navBar_qlikview</QlikViewButton>-->
+      <QlikViewButton>ermslink</QlikViewButton>
+      <QuickLinks>Quick Links</QuickLinks>
+      <QuickLinksClassEle>fa fa-th-large</QuickLinksClassEle>
+      <ERMSButton>ERMS</ERMSButton>
+      <TeamButtonid>dashboard_subdivision_btn</TeamButtonid>
+      <SubDivisionOverlayPaneid>cdk-overlay-0</SubDivisionOverlayPaneid>
+      <SubDivisionLabelClass>mat-checkbox-label</SubDivisionLabelClass>
+      <SubDivisionCasualtyText>Casualty</SubDivisionCasualtyText>
+      <SubDivisionCasualtyTreatyText>Casualty Treaty</SubDivisionCasualtyTreatyText>
+      <SubDivisionCasFacText>Cas Fac</SubDivisionCasFacText>
+      <SubDivisionPropertyText>Property</SubDivisionPropertyText>
+      <SubDivisionIntlPropertyText>Intl Property</SubDivisionIntlPropertyText>
+      <SubDivisionNAPropertyText>NA Property</SubDivisionNAPropertyText>
+      <SubDivisionSpecialtyText>Specialty</SubDivisionSpecialtyText>
+      <SubDivisionSpecialtyNonPEText>Specialty Non-PE</SubDivisionSpecialtyNonPEText>
+      <SubDivisionPublicEntityText>Public Entity</SubDivisionPublicEntityText>
+      <CasualtyCheckbox>dashboard_subdivision_matChk_1-input</CasualtyCheckbox>
+    </StatusPanel>
+    <GRID>
+      <GridLoadingEle>//span[contains(text(),'Loading...')]</GridLoadingEle>
+      <StatusGrid>ag-body-container</StatusGrid>
+      <GridDealNameText>Deal Name</GridDealNameText>
+      <GridContractNumberText>Contract</GridContractNumberText>
+      <GridInceptionText>Inception</GridInceptionText>
+      <GridTargetDateText>Target Date</GridTargetDateText>
+      <GridPriorityText>Priority</GridPriorityText>
+      <GridSubmittedText>Submitted</GridSubmittedText>
+      <GridStatusText>Status</GridStatusText>
+      <GridDealNumberText>Deal Number</GridDealNumberText>
+      <GridUnderwriterNameText>Underwriter</GridUnderwriterNameText>
+      <GridUnderwriter2NameText>Underwriter 2</GridUnderwriter2NameText>
+      <GridTANameText>TA</GridTANameText>
+      <GridModelerNameText>Modeler</GridModelerNameText>
+      <GridActuaryNameText>Actuary</GridActuaryNameText>
+      <GridExpirationText>Expiration</GridExpirationText>
+      <GridBrokerNameText>Broker Name</GridBrokerNameText>
+      <GridBrokerContactText>Broker Contact</GridBrokerContactText>
+      <GridFieldNameClass>ag-cell-label-container</GridFieldNameClass>
+      <!--<GridFieldNameClass>ag-header-cell-label</GridFieldNameClass>-->
+      <!--<GridFieldNameClass>ag-header-cell-text</GridFieldNameClass>-->
+      <DealGridContainer>ag-body-container</DealGridContainer>
+      <DealGridList>AG-GRID-LIST</DealGridList>
+      <DealGridHeaderColumns>//*[@id ='grdList_Deals']//div[@class='ag-header-cell ag-header-cell-sortable']</DealGridHeaderColumns>
+      <!--<AgToolMenuHeader>tabHeader</AgToolMenuHeader>-->
+      <AgToolMenuHeader>ag-tab-header</AgToolMenuHeader>
+      <!--<AgToolMenuBody>tabBody</AgToolMenuBody>-->
+      <AgToolMenuBody>ag-tab-body</AgToolMenuBody>
+      <AgToolMenuHeaderTab>ag-icon-columns</AgToolMenuHeaderTab>
+      <!--<AgToolMenuHeaderTab>ag-side-button ag-selected</AgToolMenuHeaderTab>-->
+      <AgToolMenuColumnSelectPanel>ag-column-select-panel</AgToolMenuColumnSelectPanel>
+      <!--<AgToolMenuColSelPanelFieldClass>ag-toolpanel-indent-0</AgToolMenuColSelPanelFieldClass>-->
+      <AgToolMenuColSelPanelFieldClass>ag-column-tool-panel-column ag-toolpanel-indent-0</AgToolMenuColSelPanelFieldClass>
+      <AgToolMenuToolPanelOptionID>eName</AgToolMenuToolPanelOptionID>
+      <!--<AgToolMenuToolPanelOptionText>Tool Panel</AgToolMenuToolPanelOptionText>-->
+      <AgToolMenuToolPanelOptionText>ag-icon ag-icon-columns</AgToolMenuToolPanelOptionText>
+      <AgGridRightFloatingBottomClass>ag-pinned-right-floating-bottom</AgGridRightFloatingBottomClass>
+      <AgGridRowclass>ag-row</AgGridRowclass>
+      <AgGridCellclass>ag-cell-value</AgGridCellclass>
+      <AgRowLevel0Class>ag-row-level-0</AgRowLevel0Class>
+      <AgIconFilterClass>ag-icon-filter</AgIconFilterClass>
+      <AgColumnFilterID>filterType</AgColumnFilterID>
+      <AgColumnFilterEqualOption>equals</AgColumnFilterEqualOption>
+      <AgColumnFilterGTOption>greaterThan</AgColumnFilterGTOption>
+      <AgColumnFilterLTOption>lessThan</AgColumnFilterLTOption>
+      <AgColumnFilterNEOption>notEqual</AgColumnFilterNEOption>
+      <AgColumnFilterIROption>inRange</AgColumnFilterIROption>
+      <AgColumnFilterLTOEqualOption>lessThanOrEqual</AgColumnFilterLTOEqualOption>
+      <AgColumnFilterGTOEqualOption>greaterThanOrEqual</AgColumnFilterGTOEqualOption>
+      <AgColumnFilterContainsOption>contains</AgColumnFilterContainsOption>
+      <AgColumnFilternotContainsOption>notContains</AgColumnFilternotContainsOption>
+      <AgColumnFilterSelectAllId>selectAllContainer</AgColumnFilterSelectAllId>
+      <AgColumnFilterSelectClass>ag-virtual-list-item</AgColumnFilterSelectClass>
+      <AgColumnFilterSelectAuthorizetext>Authorize</AgColumnFilterSelectAuthorizetext>
+      <AgColumnFilterSelectURtext>Under Review</AgColumnFilterSelectURtext>
+      <AgColumnFilterSelectBPDEtext>Bound Pending Data Entry</AgColumnFilterSelectBPDEtext>
+      <AgColumnFilterSelectOQtext>Outstanding Quote</AgColumnFilterSelectOQtext>
+      <AgColumnFilterSelectTBDtext>To Be Declined</AgColumnFilterSelectTBDtext>
+      <AgColumnFilterSelectOHtext>On Hold</AgColumnFilterSelectOHtext>
+      <AgColumnFilterSelectBoundtext>Bound</AgColumnFilterSelectBoundtext>
+      <AgColumnFilterStatusInputID>ag-mini-filter</AgColumnFilterStatusInputID>
+      <AgColumnFilterInputClass>ag-filter-filter</AgColumnFilterInputClass>
+      <AgColumnFilterApplyButtonID>applyButton</AgColumnFilterApplyButtonID>
+      <AgColumnFilterTextInputID>filterText</AgColumnFilterTextInputID>
+      <AgColumnFilterDateInputID>filterDateFromPanel</AgColumnFilterDateInputID>
+      <AgColumnFilterApplyButtonText>APPLY FILTER</AgColumnFilterApplyButtonText>
+      <AgColumnFilterTextInputClass>ag-filter-filter</AgColumnFilterTextInputClass>
+      <AgColumnFilterDateInputClass>ag-filter-date-from</AgColumnFilterDateInputClass>
+      <AgMenuClass>ag-menu</AgMenuClass>
+      <AgMenuExportOptionID>eName</AgMenuExportOptionID>
+      <AgMenuExportOptionText>Export</AgMenuExportOptionText>
+      <AgMenuExcelExportOptionText>Excel Export</AgMenuExcelExportOptionText>
+      <AgGridRootClass>ag-root</AgGridRootClass>
+    </GRID>
+    <NOTES>
+      <SubmitButton>deal_dealdetails_btn_Submit</SubmitButton>
+      <NotesButton>Notes</NotesButton>
+      <!--<NotesButton>//div[@class='inlineIcon']//span</NotesButton>-->
+      <NotesWindow>Notes</NotesWindow>
+      <NoteAuthor>floatR </NoteAuthor>
+      <NoteInoTextArea>noteInfo</NoteInoTextArea>
+      <NoteReadonly></NoteReadonly>
+      <EditNoteWindow>cdk-overlay-pane</EditNoteWindow>
+      <CancelButtonClass>ave_links mat-dialog-actions</CancelButtonClass>
+      <buttonType>button</buttonType>
+      <NotesCancelPopup>//cancel-popup//span[contains(text(),'</NotesCancelPopup>
+      <AddNotesButton>Add Note</AddNotesButton>
+      <!--<AddNoteType>Select...</AddNoteType>-->
+      <AddNoteType>//mat-select[@formcontrolname='noteTypes']</AddNoteType>
+      <SelectNoteType>mat-option-text</SelectNoteType>
+      <NoteCrossIcon>clear</NoteCrossIcon>
+    </NOTES>
+
+    <Documents>
+      <DocumentsButton>Documents</DocumentsButton>
+      <DocumentFolders>drop-area</DocumentFolders>
+      <KeyDocument>//deal-key-document</KeyDocument>
+      <KeyViewDocuments>//deal-document</KeyViewDocuments>
+      <KeyDocumentViewDocsList>//deal-document</KeyDocumentViewDocsList>
+      <TreeViewLink>//div[contains(text(),'Tree View')]</TreeViewLink>
+      <KeyDocumentViewKeyDocsList>//i[contains(@class,'fa-star green')]//following-sibling::span[1]</KeyDocumentViewKeyDocsList>
+    </Documents>
+    <EditableDealForm>
+      <EditableDealFormDealNameId>deal_dealdetails_matInput_dealname</EditableDealFormDealNameId>
+      <EditableDealFormContactNumberID>deal_dealdetails_matInput_contractnumber</EditableDealFormContactNumberID>
+      <EditableDealFormDealStatusID>deal_dealdetails_matSelect_statuscode</EditableDealFormDealStatusID>
+      <EditableDealFormDealNumberID>deal_dealdetails_matInput_dealnumber</EditableDealFormDealNumberID>
+      <EditableDealFormInceptionDateID>deal_dealdetails_matInput_inceptiondate</EditableDealFormInceptionDateID>
+      <EditableDealFormInceptionDateToggleID>deal_dealdetails_matDatePickerToggle_inceptiondate</EditableDealFormInceptionDateToggleID>
+      <EditableDealFormInceptionDatepickerID>deal_dealdetails_matDatePicker_inceptiondate</EditableDealFormInceptionDatepickerID>
+      <EditableDealFormTargetDateID>deal_dealdetails_matInput_targetdate</EditableDealFormTargetDateID>
+      <EditableDealFormTargetDateToggleID>deal_dealdetails_matDatePickerToggle_target</EditableDealFormTargetDateToggleID>
+      <EditableDealFormTargetDatePickerID>deal_dealdetails_matDatePicker_target</EditableDealFormTargetDatePickerID>
+      <EditableDealFormTargetDatePickerClass>mat-datepicker-toggle</EditableDealFormTargetDatePickerClass>
+      <EditableDealFormSubmittedID>deal_dealdetails_matInput_submitted</EditableDealFormSubmittedID>
+      <EditableDealFormSubmittedToggleID>deal_dealdetails_matDatePickerToggle_submitted</EditableDealFormSubmittedToggleID>
+      <EditableDealFormSubmittedDatePickerID>deal_dealdetails_matDatePicker_submitted</EditableDealFormSubmittedDatePickerID>
+      <EditableDealFormPriorityID>deal_dealdetails_matInput_priority</EditableDealFormPriorityID>
+      <EditableDealFormUnderwritterID>deal_dealdetails_matSelect_underwritter</EditableDealFormUnderwritterID>
+      <EditableDealFormUnderwritter2ID>deal_dealdetails_matSelect_underwritter2</EditableDealFormUnderwritter2ID>
+      <EditableDealFormTechAsstID>deal_dealdetails_matSelect_techasst</EditableDealFormTechAsstID>
+      <EditableDealFormActuaryID>deal_dealdetails_matSelect_actuary</EditableDealFormActuaryID>
+      <EditableDealFormModelerID>deal_dealdetails_matSelect_modeler</EditableDealFormModelerID>
+      <EditableDealFormCancelButtonID>deal_dealdetails_btnCancel</EditableDealFormCancelButtonID>
+      <EditableDealFormSubmitButtonID>deal_dealdetails_btn_Submit</EditableDealFormSubmitButtonID>
+      <EditableDealFormmatoptionclass>mat-option</EditableDealFormmatoptionclass>
+      <EditableDealFormDealDetailsContainerClass>deal-details-container</EditableDealFormDealDetailsContainerClass>
+      <EditableDealFormTargetDateMATCalendarPeriodClass>mat-calendar-period-button mat-button</EditableDealFormTargetDateMATCalendarPeriodClass>
+      <EditableDealFormTargetDateMATCalendarPeriodCellContentClass>mat-calendar-body-cell-content</EditableDealFormTargetDateMATCalendarPeriodCellContentClass>
+      <EditableDealFormTargetDateMATCalendarNextButtonClass>mat-calendar-next-button</EditableDealFormTargetDateMATCalendarNextButtonClass>
+      <EditableDealFormTargetDateMATCalendarPreviousButtonClass>mat-calendar-previous-button</EditableDealFormTargetDateMATCalendarPreviousButtonClass>
+    </EditableDealForm>
+    <TimeElement>
+      <AllID>deal-dealfilter-al</AllID>
+      <PastInceptionID>deal-dealfilter-pastinception</PastInceptionID>
+      <Witin30daysID>deal-dealfilter-within30days</Witin30daysID>
+      <Over30daysID>deal-dealfilter-over30days</Over30daysID>
+      <RefreshButton>material-icons refresh-btn-cls</RefreshButton>
+    </TimeElement>
+  </GRSHomePage>
+</Elements>

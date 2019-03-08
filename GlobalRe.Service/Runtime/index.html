@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Markel.GlobalRe.Service.Runtime</title>
+	<meta charset="utf-8" />
+</head>
+<body style="font=Calibri (Body)">
+    <h1>Markel Enterprise GlobalRe API Services</h1>
+    <hr />
+    <p>Assembly Version: <label id="version"></label></p>
+    <p>Environment: <label id="environment"></label></p>
+    <hr />
+    <table cellspacing="0" cellpadding="5">
+        <thead style="width=55px;">
+            <tr style="background-color:lightgray">
+                <th align="left">Route Template</th>
+                <th align="left">Method(s)</th>
+            </tr>
+        </thead>
+        <tbody id="endpoints"></tbody>
+    </table>
+
+    <br />
+    <hr />
+    <footer>
+        <small>Server Time: <time id="serverTime"></time></small>
+    </footer>
+
+    <script>
+        serviceCall('serverTime', 'ping');
+        serviceCall('version', 'version');
+        serviceCall('environment', 'environment');
+        serviceCall('endpoints', 'endpoints', function (response) {
+            var endpoints = "";
+            
+            for (var id in response) {
+                endpoints += '<tr><td>' + response[id].routeTemplate + '</td><td>' + response[id].methods + '<td></tr>';
+            }
+
+            return endpoints;
+        });
+
+        function serviceCall(tagName, url, successHandler) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    var response = this.responseText != "" ? JSON.parse(this.responseText) : "";
+                    if (successHandler != undefined) {
+                        set(tagName, successHandler(response));
+                    }
+                    else {
+                        set(tagName, response);
+                    }
+                }
+            }
+
+            xmlHttp.open("GET", url, true); // true for asynchronous request
+            xmlHttp.send();
+        }
+
+        function set(tag, data) {
+            document.getElementById(tag).innerHTML = data;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+{
+    "url": "/v1/lookups/coveragebasis",
+    "results": [
+        {
+            "name": "Cat Excess Loss",
+            "value": "6",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Surplus Treaty (Per Occ)",
+            "value": "25",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Surplus Treaty (Per Risk)",
+            "value": "24",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Variable Quota Share (Per Occurrence)",
+            "value": "30",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Variable Quota Share (Per Risk)",
+            "value": "31",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Per Occurrence Excess loss",
+            "value": "2",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Per Risk  Excess Loss",
+            "value": "7",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Aggregate Excess Loss",
+            "value": "28",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "ILW",
+            "value": "16",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "LPT",
+            "value": "4",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Primary / Quota Share (Per Occurrence)",
+            "value": "1",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Primary / Quota Share (Per Risk)",
+            "value": "18",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Excess / Quota Share (Per Occurrence)",
+            "value": "29",
+            "group": null,
+            "isActive": true
+        }
+    ],
+    "totalRecords": 13
+}

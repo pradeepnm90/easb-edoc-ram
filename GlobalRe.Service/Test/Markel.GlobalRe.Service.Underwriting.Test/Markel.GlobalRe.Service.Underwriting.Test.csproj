@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\NUnit3TestAdapter.3.12.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\..\packages\NUnit3TestAdapter.3.12.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\..\packages\NUnit.3.11.0\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FBA5262B-A8BD-4E13-886A-2AE35975017B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Markel.GlobalRe.Service.Underwriting.Test</RootNamespace>
+    <AssemblyName>Markel.GlobalRe.Service.Underwriting.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="Moq, Version=4.10.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moq.4.10.1\lib\net45\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Configuration.ConfigurationManager.4.5.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.AccessControl.4.5.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Permissions.4.5.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Principal.Windows.4.5.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CedantsControllerTest.cs" />
+    <Compile Include="Controllers\DealDocumentsControllerTests.cs" />
+    <Compile Include="Controllers\DealLocksControllerTests.cs" />
+    <Compile Include="Controllers\Lookups\ContractTypesLookupControllerTest.cs" />
+    <Compile Include="Controllers\Lookups\NoteTypesLookupControllerTest.cs" />
+    <Compile Include="Controllers\ExposureTreeControllerTest.cs" />
+    <Compile Include="Controllers\NotesControllerTests.cs" />
+    <Compile Include="Controllers\DealCoveragesControllerTests.cs" />
+    <Compile Include="Controllers\Lookups\AttachmentBasisLookupControllerTest.cs" />
+    <Compile Include="Controllers\Lookups\RolePersonsLookupControllerTest.cs" />
+    <Compile Include="Controllers\DealsControllerTests.cs" />
+    <Compile Include="Controllers\DealStatusSummariesControllerTests.cs" />
+    <Compile Include="Controllers\Lookups\DealStatusesLookupTest.cs" />
+    <Compile Include="Controllers\ChecklistsControllerTests.cs" />
+    <Compile Include="Controllers\PersonsControllerTest.cs" />
+    <Compile Include="Controllers\UserViewControllerTests.cs" />
+    <Compile Include="Controllers\WritingCompanyControllerTest.cs" />
+    <Compile Include="Helpers\AppSettings.cs" />
+    <Compile Include="Helpers\Assertions.cs" />
+    <Compile Include="Helpers\TestUserProfile.cs" />
+    <Compile Include="Managers\EntityLockManagerTest.cs" />
+    <Compile Include="Managers\DealManagerTests.cs" />
+    <Compile Include="Managers\DealsCoverageManagerTests.cs" />
+    <Compile Include="Managers\Lookups\DealStatusesLookupManagerTests.cs" />
+    <Compile Include="Managers\DealStatusSummariesManagerTests.cs" />
+    <Compile Include="Managers\PersonsManagerTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\Lookups\CoverageBasisLookupControllerTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Markel.GlobalRe.Service.Underwriting.API.v1\Markel.GlobalRe.Service.Underwriting.API.v1.csproj">
+      <Project>{6B272150-A78E-4F48-AE20-472BFA2B0EE0}</Project>
+      <Name>Markel.GlobalRe.Service.Underwriting.API.v1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Markel.GlobalRe.Service.Underwriting.BLL.Implementation\Markel.GlobalRe.Service.Underwriting.BLL.Implementation.csproj">
+      <Project>{46A19EED-4905-4DED-84AD-79FC557A3CEB}</Project>
+      <Name>Markel.GlobalRe.Service.Underwriting.BLL.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Markel.GlobalRe.Service.Underwriting.BLL\Markel.GlobalRe.Service.Underwriting.BLL.csproj">
+      <Project>{7DBE533A-FF18-4DDA-9634-E82A95705F4C}</Project>
+      <Name>Markel.GlobalRe.Service.Underwriting.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Markel.GlobalRe.Service.Underwriting.Data\Markel.GlobalRe.Service.Underwriting.Data.csproj">
+      <Project>{0eab0b4d-7707-4eb7-8a7b-235c0f85e6e4}</Project>
+      <Name>Markel.GlobalRe.Service.Underwriting.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Markel.Pricing.Service.Infrastructure.BLL\Markel.Pricing.Service.Infrastructure.BLL.csproj">
+      <Project>{c1c9e3b1-bf21-41ef-b9e8-bca0730edf92}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Markel.Pricing.Service.Infrastructure.Core\Markel.Pricing.Service.Infrastructure.Core.csproj">
+      <Project>{4bef6fff-c688-45ed-99f0-b89ff79994b9}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Markel.Pricing.Service.Infrastructure.Data\Markel.Pricing.Service.Infrastructure.Data.csproj">
+      <Project>{f2d26a8a-2464-424d-99aa-44faee64abf5}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Markel.Pricing.Service.Infrastructure.WebAPI\Markel.Pricing.Service.Infrastructure.WebAPI.csproj">
+      <Project>{E364DF31-E439-4B1F-B2F0-FC65DAEC5085}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.WebAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Content Include="Log4Net.config" />
+    <None Include="CodeCoverage.runsettings" />
+    <None Include="packages.config" />
+    <Content Include="Unity.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>xcopy "$(SolutionDir)Assemblies\*.*" "$(TargetDir)" /V/H/R/K/Y/F</PreBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\NUnit.3.11.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\..\packages\NUnit3TestAdapter.3.12.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\NUnit3TestAdapter.3.12.0\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

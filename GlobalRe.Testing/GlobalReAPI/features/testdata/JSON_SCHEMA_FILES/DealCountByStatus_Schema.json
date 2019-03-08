@@ -1,0 +1,9 @@
+{
+  "type" => "object",
+  "required" => ["statusid","statusName","count"],
+"properties" => {
+"statusid" => {"type" => "String"},
+"statusName" => {"type" => "String"},
+"count" => {"type" => "integer"}
+}
+}

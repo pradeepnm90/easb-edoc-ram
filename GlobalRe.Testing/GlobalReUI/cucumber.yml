@@ -1,0 +1,5 @@
+#default: --profile html_report
+default: --profile json_report
+#html_report: --format progress --format html --out=features/GRS_POC/Cucumber_Results/features_report.html
+json_report: --format progress --format json --out=features/GRS/Cucumber_Results/results.json
+#parallel: scenarios --format pretty -x --format json --out reports/jard_report<%= ENV['TEST_ENV_NUMBER'] %>.json

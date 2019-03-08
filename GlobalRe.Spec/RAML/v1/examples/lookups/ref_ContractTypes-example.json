@@ -1,0 +1,27 @@
+{
+    "url": "/v1/lookups/ContractTypes/{AssumedCededAllFlag}",
+    "results": [
+        {
+          "Level1ExposureTypeCode": 1,
+          "Level1ExposureTypeValue": "SP - A&H",
+          "Level1ContractTypeCode":  1,
+          "Level1ContractTypeValue": "Treaty",
+          "AssumedCededAllFlag": "Assumed"
+        },
+        {
+          "Level1ExposureTypeCode": 2,
+          "Level1ExposureTypeValue": "SP - Agri",
+          "Level1ContractTypeCode":  1,
+          "Level1ContractTypeValue": "Treaty",
+          "AssumedCededAllFlag": "Assumed"
+        },
+        {
+          "Level1ExposureTypeCode": 3,
+          "Level1ExposureTypeValue": "SP - Agri - Arc",
+          "Level1ContractTypeCode":  1,
+          "Level1ContractTypeValue": "Treaty",
+          "AssumedCededAllFlag": "Assumed"
+        }
+    ],
+    "totalRecords": 3
+}

@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/GlobalRe.Service/.vs
+/.vs
+/GlobalRe.Spec/RAML/v1/grs_service.html
+/GlobalRe.Web/.vs/config/applicationhost.config
+/GlobalRe.Web/.vs/slnx.sqlite
+/GlobalRe.Web/.vs/VSWorkspaceState.json
+/GlobalRe.Web/.vs/GlobalRe.Web/v15/.suo
+/GlobalRe.Web/.vs/slnx.sqlite-journal

@@ -1,0 +1,85 @@
+<div class="extended-search">
+    <div class="extended-search-btn-panel">
+        <div class="search-lbl-panel">
+            <span class="search-label">Search</span>
+            <span class="serach-icon" (click)="openBtnPanel($event)">
+                <i class="fa fa-search search-icn" aria-hidden="true"></i>
+            </span>
+        </div>
+        <div class="search-btn-panel save_links fr" *ngIf="showBtnPanel">
+            <button mat-button type="button" (click)="clearChanges($event)" class="mat-button" [disabled]="!isClearBtnEnabled">Clear</button>
+            <button mat-button type="button" (click)="applyChanges($event)" class="save_btn mat-button" [disabled]="!isSearchPanelDataChanged">Apply</button>
+        </div>
+    </div>
+    <div class="extended-search-option-panel" *ngIf="showBtnPanel">
+        <div class="extended-search-main-container">
+            <div class="sub-pl-eg-en-panel">
+                <div class="search-panel-col subdivision-panel">
+                    <div class="subdivision-label">Subdivision</div>
+                    <div class="subdivision-list-panel">
+                        <mat-selection-list>
+                            <mat-list-option [checkboxPosition]="'before'" *ngFor="let subdivision of subdivisionList" 
+                            [selected]="subdivision.isSelected" [value]="subdivision.name" (click)="subdivisionOptionChange($event, subdivision)" >
+                                {{subdivision.name}}
+                            </mat-list-option>
+                        </mat-selection-list>
+                    </div>
+                </div>
+                <div class="search-panel-col product-line-panel">
+                    <div class="pl-lbl">Product Line 2</div>
+                    <div class="pl-selct-container">
+                        <custom-select-dropdown [customId]="pl2CustomId" [optionList]="plOptionList" [selectedOptionList]="plSelectedList" [placeholderText]="'Enter Product Line 2'" (optionSelectionChange)="plOptionSelectionChange($event)" (optionPanelClosed)="optionPanelCloseHandler($event)"></custom-select-dropdown>
+                    </div>
+                    <div class="pl-selection-list-panel">
+                        <div class="pl-selection-list-sub-panel">
+                            <div *ngFor="let plItem of plSelectedList">
+                                <selected-item-card [optionItem]="plItem" (optionCloseClicked)="selectedplCloseHandler($event)"></selected-item-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-panel-col exposure-group-panel">
+                    <div class="eg-lbl">Exposure Group</div>
+                    <div class="eg-selct-container">
+                        <custom-select-dropdown [customId]="egCustomId" [optionList]="egOptionList" [selectedOptionList]="egSelectedList" [placeholderText]="'Enter Exposure Group'" (optionSelectionChange)="egOptionSelectionChange($event)" (optionPanelClosed)="optionPanelCloseHandler($event)"></custom-select-dropdown>
+                    </div>
+                    <div class="eg-selection-list-panel">
+                        <div class="eg-selection-list-sub-panel">
+                            <div *ngFor="let egItem of egSelectedList">
+                                <selected-item-card [optionItem]="egItem" (optionCloseClicked)="selectedegCloseHandler($event)"></selected-item-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-panel-col exposure-name-panel">
+                    <div class="en-lbl">Exposure Name</div>
+                    <div class="en-selct-container">
+                        <custom-select-dropdown [customId]="enCustomId" [optionList]="enOptionList" [selectedOptionList]="enSelectedList" [placeholderText]="'Enter Exposure Name'" (optionSelectionChange)="enOptionSelectionChange($event)" (optionPanelClosed)="optionPanelCloseHandler($event)"></custom-select-dropdown>
+                    </div>
+                    <div class="en-selection-list-panel">
+                        <div class="en-selection-list-sub-panel">
+                            <div *ngFor="let enItem of enSelectedList">
+                                <selected-item-card [optionItem]="enItem" (optionCloseClicked)="selectedenCloseHandler($event)"></selected-item-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="key-mem-name-main-panel">
+                <div class="search-panel-col key-member-name-panel">
+                    <div class="kmn-lbl">Key Member Name</div>
+                    <div class="kmn-selct-container">
+                        <custom-select-dropdown [customId]="kmnCustomId" [optionList]="kmnOptionList"  [selectedOptionList]="kmnSelectedList" [placeholderText]="'Enter Key Member Name'" (optionSelectionChange)="kmnOptionSelectionChange($event)" (optionPanelClosed)="optionPanelCloseHandler($event)"></custom-select-dropdown>
+                    </div>
+                    <div class="kmn-selection-list-panel">
+                        <div class="kmn-selection-list-sub-panel">
+                            <div *ngFor="let kmnItem of kmnSelectedList">
+                                <selected-item-card [optionItem]="kmnItem" (optionCloseClicked)="selectedkmnCloseHandler($event)"></selected-item-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

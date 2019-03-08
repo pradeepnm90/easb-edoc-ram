@@ -1,0 +1,104 @@
+<div class="checkList-panel-container">
+  <div class="checkList-panel">
+    <div class="relative">
+      <div class="checklist_header">
+        <span>
+          <i class="fa fa-list-ul textSize 23"></i>
+        </span>
+        <span class="textSize18 pad-10-l">Checklist</span>
+        <span class="floatR">
+          <i area-hidden="true" [ngStyle]="{'transform':onPin ===true ? 'rotate(0deg)' : 'rotate(324deg)' }" 
+          (click)="pinChecked()" class="fa fa-thumb-tack txtSize20" ></i>
+          <i (click)="allExpandState = !allExpandState" area-hidden="true" 
+             [ngClass]="allExpandState? 'fa fa-chevron-circle-down':'fa fa-chevron-circle-right'"
+             class="txtSize20"
+          ></i>
+        </span>
+      </div>
+      <div class="checklist-inner-container">
+        <mat-expansion-panel
+          *ngFor="let checklist of dealCheckList; let i =index "
+          [expanded]="allExpandState">
+          
+          <mat-expansion-panel-header>
+
+            <label class="textSize14 fontWeight">{{checklist.data.categoryName}}</label>
+            <!-- <mat-icon class="floatR">{{allExpandState === true  ? 'keyboard_arrow_down':'keyboard_arrow_right'  }}</mat-icon> -->
+          </mat-expansion-panel-header>
+          
+          <div class="inner-tasks" *ngFor="let tasks of checklist.data.checklists; let j=index">
+            <!-- here is the loop-->
+                <mat-checkbox 
+                [(ngModel)]="dealCheckList[i].data.checklists[j].checked" 
+                (change)="onTask(tasks,checklist.data,$event)"
+                [checked]="tasks.checked" [disabled]="tasks.readOnly">
+              </mat-checkbox>
+            <label class="textSize12 tasksTitle">{{tasks.chkListName}}</label>
+            <span class="floatR" *ngIf="!tasks.readOnly">
+              <span *ngIf="notes(tasks.note)" class="txtSize20">
+                <i area-hidden="true"
+                style="cursor: pointer;"
+                class="fa fa-pencil-square-o"
+                *ngIf="dealCheckList[i].data.checklists[j].checked && (personId === tasks.personId)"
+                (click)="opencheckListAdd(dealCheckList[i],j)"
+                ></i>
+                <i area-hidden="true"
+                  class="disable-add fa fa-pencil-square-o"
+                  *ngIf="dealCheckList[i].data.checklists[j].checked && (personId !== tasks.personId)"></i>
+              </span>
+              <span *ngIf="!notes(tasks.note)" class="txtSize20">
+                <i area-hidden="true"
+                  style="cursor: pointer;"
+                  class="fa fa-plus-circle"
+                  *ngIf="dealCheckList[i].data.checklists[j].checked && (personId === tasks.personId)"
+                  (click)="opencheckListAdd(dealCheckList[i],j)"
+                  ></i>
+                <i area-hidden="true" 
+                *ngIf="!dealCheckList[i].data.checklists[j].checked || (personId !== tasks.personId && tasks.personId != null)" 
+                class="disable-add fa fa-plus-circle"
+                ></i>
+             
+              </span>
+
+             <span class="txtSize20">
+                <i area-hidden="true" *ngIf="notes(tasks.note)" style="cursor: pointer;" [ngClass]="innerloop == j && outerLoop == i? 'fa fa-chevron-circle-down': 'fa fa-chevron-circle-right'"
+                (click)="noteShow(i,j)"></i>
+
+                <i area-hidden="true" *ngIf="!notes(tasks.note)" style="color:#DFE0E0" class="fa fa-chevron-circle-right"></i>
+             </span>
+            </span>
+
+            <span class="floatR txtSize20" *ngIf="tasks.readOnly">
+              <!-- <i area-hidden="true" *ngIf="dealCheckList[i].data.checklists[j].checked" class="fa fa-plus-circle"></i> -->
+              <i area-hidden="true" 
+              class="disable-add fa fa-plus-circle"
+              *ngIf="!notes(tasks.note)"
+              ></i>
+              <i area-hidden="true"
+              class="disable-add fa fa-pencil-square-o"
+              *ngIf="notes(tasks.note)"></i>
+
+              <i area-hidden="true" *ngIf="notes(tasks.note)" [ngClass]="innerloop == j && outerLoop == i? 'fa fa-chevron-circle-down': 'fa fa-chevron-circle-right'"
+                (click)="noteShow(i,j)"></i><!-- readOnly -->
+                <i area-hidden="true" *ngIf="!notes(tasks.note)" style="color:#DFE0E0;" class="fa fa-chevron-circle-right"></i>
+            </span>
+
+            <div *ngIf="dealCheckList[i].data.checklists[j].checked" class="textSize10">
+              <span class="pad-20-r" *ngIf="tasks.checkedDateTime">{{checkDate(tasks.checkedDateTime)}}</span>
+              <span *ngIf="tasks.checkedDateTime">{{checkTime(tasks.checkedDateTime)}}</span>
+              <span class="pad-20-l" *ngIf="tasks.personName">{{tasks.personFirstName + ' ' +tasks.personLastName}}</span>
+            </div>
+          
+              <div  style="background: #fff;padding:5px;" *ngIf="outerLoop == i && innerloop == j">
+                <strong >Note</strong>
+                <p class="showNote">
+                {{tasks.note}}</p>
+              </div>
+           
+
+          </div>
+        </mat-expansion-panel>
+      </div>
+    </div>
+  </div>
+</div>

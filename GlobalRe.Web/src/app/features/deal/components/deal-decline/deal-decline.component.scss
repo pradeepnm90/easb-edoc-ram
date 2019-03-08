@@ -1,0 +1,214 @@
+.common-scss {
+
+
+    .viewlinecontianer {
+      height: 85px;
+      width: 615px;
+      border-radius: 4px;
+      background-color: rgba(122, 184, 0, 0.15);
+      display: block;
+      color: black;
+      padding: 10px;
+      margin-bottom: 15px;
+      .submission-name{
+        width: 350px;
+        height: 65px;
+        display: inline-block;
+        float: left;
+        .submission-name-block{
+          display: flex;
+          width: 100%;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          font-size: 17px;
+          height: 45px;
+          .submission-name-value{
+            height: 24px;
+            color: gray;
+            font-size: 17px;
+            line-height: 24px;
+            max-width: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            width: max-content;
+            width: -moz-max-content;
+            width: -webkit-max-content;
+            width: -o-max-content;
+            width: -ms-max-content;
+            display: inline-block;
+          }
+          .submission-name-label{
+            font-size: 12px;
+            padding-top: 5px;
+          }
+        }
+        .author-block{
+          height: 12px;
+          width: 100%;
+          color: #070707;
+          font-size: 12px;
+          padding-top: 5px;
+        }
+        .approver-name-section{
+          height: 40px;
+          width: 100%;
+          color: #070707;
+          font-size: 12px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .author-title{
+            display: inline-block;
+            float: left;
+            width: 70px;
+          }
+          .approver-name-select{
+            display: inline-block;
+            float: left;
+            width: 180px;
+            position: relative;
+            top: -3px;
+          }
+        }
+      }
+      .Contract{
+        height: 65px;
+        width: 145px;
+        display: inline-block;
+        float: left;
+        .contractnumber-block{
+          display: flex;
+          width: 100%;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          font-size: 17px;
+          height: 45px;
+          .contract-number{
+            height: 24px;
+            color: gray;
+            font-size: 17px;
+            line-height: 24px;
+          }
+          .contract-number-label{
+            font-size: 12px;
+            padding-top: 5px;
+          }
+        }
+        .date-block{
+          height: 12px;
+          width: 100%;
+          color: #070707;
+          font-size: 12px;
+          padding-top: 5px;
+        }
+      }
+      .grid-id{
+        display: inline-block;
+        height: 65px;
+        width: 100px;
+        .grs-id-block{
+          display: flex;
+          width: 100%;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          font-size: 17px;
+          height: 45px;
+          .grs-id-value{
+            height: 24px;
+            color: gray;
+            font-size: 18px;
+            line-height: 24px;
+          }
+          .grs-id-label{
+            font-size: 12px;
+            padding-top: 5px;
+          }
+        }
+      }
+    }
+    .addNote {
+    height: 19px;
+    width: 66px;
+    color: #434547;
+    font-size: 14px;
+    font-weight:bold;
+    line-height: 19px;
+    }
+    .notesdeals {
+      height: 22px;
+      width: 447px;
+      color: #070707;
+      font-size: 12px;
+      margin-bottom: -1px;
+      line-height: 12px;
+    }
+  
+    .notetypetilte {
+      height: 16px;
+      width: 63px;
+      color: #5e5959;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  
+    .notes {
+      height: 22px;
+      width: 256px;
+      color: #4a4a4a;
+      font-size: 11px;
+      margin-bottom: 5px;
+      margin-top: 0px;
+      line-height: 12px;
+    }
+  
+    .mat-raised-button.mat-primary[disabled] {
+      background-color: #979797;
+    }
+    .mat-raised-button.mat-primary {
+      background-color: #669509;
+    }
+    
+    .textarea {
+      resize: none;
+      height: 85px;
+    }
+    .textarea-form-elem{
+      width: 610px;
+    }
+    .line {
+      border: 0.5px solid #dfe0e0;
+      width: 645px;
+      background-color: #ffffff;
+      margin-bottom: 2px;
+      margin-left: -23px;
+      display: flex;
+      box-sizing: border-box;
+      margin-right: 3px;
+    }
+  
+    .clear-btn-cls {
+      float: right;
+      margin-right: -10px;
+      margin-top: -60px;
+      font-size: 24px;
+      position: relative;
+      top: 5px;
+      cursor: pointer;
+    }
+    .required-class::after{
+      content: " *";
+      color: red;
+     }
+  }
+  #noEllipseDropDown {
+    ::ng-deep{
+        .mat-form-field-infix {
+    width: 220px;
+        }
+    }
+  }
+  .save_btn
+  {
+    margin-left:8px;
+  }

@@ -1,0 +1,37 @@
+.custom-date-filter a {
+  position: relative;
+  // right: 30px;
+  color: rgb(22, 21, 21);
+  cursor: pointer;
+}
+
+.custom-date-filter:after {
+  content: '\f073';
+  font-weight: 400;
+  font-family: 'Font Awesome 5 Free';
+  position: relative;
+  // right: 25px;
+  pointer-events: none;
+  color: rgb(22, 21, 21);
+
+}
+.ag-theme-material 
+   .ag-floating-filter-body .ag-input-text-wrapper .custom-date-filter {
+      float: left;
+      height: 100%;
+
+      background-color: white;
+}
+.ag-theme-material .ag-menu.ag-filter .ag-filter-body-wrapper .ag-filter-body .ag-filter-date-from ag-calendar-component .ag-input-text-wrapper .flatpickr-input-active {
+  background: transparent;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: inherit;
+  font-size: inherit;
+  height: 24px;
+  padding-bottom: 8px;
+  border-width: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding-left: 40%;
+}
+

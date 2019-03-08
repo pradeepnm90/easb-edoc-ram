@@ -1,0 +1,85 @@
+
+
+.panel-datafilter {
+
+  float: right;
+
+}
+
+ .panel-datafilter.panel-datafilter-hide {
+  display: none;
+
+}
+
+.panel-datafilter.mat-card {
+
+  float: right;
+
+  box-shadow: none;
+
+  border-radius: 0;
+
+  background: none;
+
+  padding: 0;
+
+  width: 41%;
+  margin-top:10px;
+
+}
+
+ .panel-datafilter ul {
+
+  margin: 0;
+
+  padding: 0;
+
+  float: right;
+
+}
+
+.panel-datafilter ul li {
+
+  padding: 0 10px;
+
+  display: inline-block;
+
+}
+
+.panel-datafilter ul li a {
+
+  font-size: 11px;
+
+  color: #434547;
+
+  letter-spacing: 0.3px;
+
+  font-weight: normal;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+}
+
+.panel-datafilter ul li a.active {
+
+  border-radius: 22.5px;
+
+  border: solid 1px #4b5054;
+
+  padding: 5px 20px;
+
+}
+
+.dealCount{
+  float: left;
+  width: 40%;
+  clear: both;
+  margin-top: 10px;
+}
+
+.count{
+  font-size: 14px;
+  word-spacing: 0.3px
+}

@@ -1,0 +1,17 @@
+{
+    "url": "/v1/deals/1392022/locks",
+    "data": {
+        "entityId": 1392022,
+        "entityTypeName": "Deal",
+        "lockedByDisplayName": "sergeyg@maxrebm.net",
+        "lockedTimestamp": "2019-02-21T20:56:22.087"
+    },
+    "links": null,
+    "messages": [
+        {
+            "severity": "Warn",
+            "field": "entityID",
+            "detail": "sergeyg@maxrebm.net has locked this deal for edit"
+        }
+    ]
+}

@@ -1,0 +1,223 @@
+.mySubmission {
+  box-sizing: border-box;
+  text-align: center;
+  color: #3d70b2;
+  padding-bottom: 10px;
+  width: 170px;
+  border: 1px solid #3d70b2;
+  border-radius: 18px;
+  background-color: #ffffff;
+
+}
+
+.main-view{
+  width:100%;
+}
+
+.mySubmission:focus {
+  border-radius: 18px
+}
+
+.arrow-drop-down {
+  padding-left: 11px;
+  padding-top: 4px;
+  vertical-align: bottom;
+}
+
+.submissio_dropdown_popover li {
+  border-bottom: 1px solid #979797;
+}
+
+.addButtonview {
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  height: 36px;
+  width: 100%;
+  border-radius: 7px;
+   background-color: #669509;
+
+}
+
+.icons_border {
+  border-radius: 3px;
+  background-color: rgba(216, 216, 216, 0.2);
+}
+
+.submissio_dropdown_popover {
+  position: fixed;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  z-index: 1005;
+  width: 243px;
+  box-sizing: border-box !important;
+  left: 445px;
+  top: 193px;
+  border-bottom-right-radius: 8px !important;
+  border-bottom-left-radius: 6px;
+
+}
+
+.addButtonView__container {
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.inputfield {
+  width: calc(100% - 48px);
+  border-bottom: 1px solid grey;
+  padding: 10px 0px;
+  margin-bottom: 3px;
+  border-left: none;
+  border-right: none;
+}
+
+.addButtonview, a:hover {
+  cursor: pointer;
+}
+
+.inputfield::focus {
+  outline: none;
+}
+
+
+
+.submissio_dropdown_popover::before {
+  top: -10px;
+  content: "";
+  height: 0;
+  position: absolute;
+  left: 79%;
+  width: 0;
+  z-index: 2000;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+
+.dropdownline {
+  border-top: 1px solid rgb(151, 151, 151);
+  padding-top:2px;
+  border-bottom:1px solid rgb(151, 151, 151);
+  padding-bottom:3px;
+}
+.dropdownlinelistitem {
+  border-bottom: 1px solid rgb(151, 151, 151);
+  padding: 0 5px;
+}
+.button_container {
+  border-top: 1px solid #979797;
+  padding: 4px;
+}
+.icon_style {
+  background-color: rgba(216, 216, 216, 0.2);
+    width: 25px;
+  border-radius: 3px;
+  height: 25px;
+  padding: 1.5px 6px;
+}
+.marginL15 {
+  margin-left: 10px
+}
+.bookmark_icon {
+  // margin-left: 1px;
+  // margin-right: 4px;
+}
+.bookmark_icon:hover
+{ cursor: pointer;}
+
+.listdeatil {
+  line-height: 15px;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 56vh;
+  overflow-x: hidden;
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 18px;
+}
+
+.menu-items {
+  text-decoration: none;
+  padding: 8px;
+  width: 100%;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+line-height: 30px;
+font-size: 14px;
+}
+
+.dropDownOptions {
+  color: #009AA6;
+
+  font-size: 18px;
+  display: inline-block;
+
+  width: 18px !important;
+}
+
+.addCircle {
+  padding-right: 23px;
+}
+
+.addButtonView__containe {
+  border-bottom: 1px solid grey;
+  width: 100%
+}
+
+.iconR {
+  float: right;
+  margin-top: 10px;
+  margin-right: 12px;
+}
+
+.viewCheck {
+  border-radius: 50%;
+  cursor: pointer;
+  vertical-align: super;
+  box-shadow: none;
+  border: none;
+  color: #009AA6;
+  padding: 0;
+  font-size: 20px;
+  background: transparent;
+}
+
+.viewCheck::focus, .disableView::focus {
+  outline: none;
+}
+
+.disableView{
+  background:transparent;
+  border-radius: 50%;
+  vertical-align: super;
+  box-shadow: none;
+  border: none;
+  color: #979797;
+  padding: 0;
+  font-size: 20px;
+}
+
+.addButtonview_Disable{
+  background:#979797;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  height: 36px;
+  width: 100%;
+  border-radius: 7px;
+}
+
+.onSubmission{
+  width:145px;
+}
+  
+.noSubmission{
+  width:54px;
+  padding-bottom: 10px;
+}

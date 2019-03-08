@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="ModuleRunConfigurationManager">
+    <shared />
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="jdk" jdkName="ruby-2.4.3-p205" jdkType="RUBY_SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="activemodel (v5.1.4, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activerecord (v5.1.4, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activerecord-sqlserver-adapter (v5.1.6, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activesupport (v5.1.4, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.5.2, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ansi (v1.5.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="arel (v8.0.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="backports (v3.11.4, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.3, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.16.6, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler-unload (v1.0.2, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.8.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.0.5, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="console_color (v0.0.4, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber (v3.1.2, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-core (v3.2.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-expressions (v6.0.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-tag_expressions (v1.1.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-wire (v0.0.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.3, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="domain_name (v0.5.20170404, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="executable-hooks (v1.3.2, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="facets (v3.1.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.18, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="gherkin (v5.1.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hashie (v3.5.7, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="http-cookie (v1.0.3, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.9.3, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v2.1.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json-compare (v0.1.8, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json-diff (v0.4.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json-schema (v2.8.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json-stream (v0.2.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json_expressions (v0.9.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jsonpath (v0.8.11, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v3.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types-data (v3.2016.0521, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mini_portile2 (v2.3.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.11.3, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.13.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_test (v0.1.2, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="net (v0.3.3, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="netrc (v0.11.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.8.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="parallel (v1.12.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="parallel_tests (v2.21.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="public_suffix (v3.0.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v12.3.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="redcard (v1.1.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="report_builder (v1.4, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rest-client (v2.0.2, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubyXL (v3.3.31, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubygems-bundler (v1.4.4, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubygems-update (v2.7.4, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubysl-rexml (v2.0.4, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubysl-uri (v2.0.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubysl-win32ole (v0.0.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubytest (v0.8.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubyzip (v1.2.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v3.8.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="test (v1.0.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.6, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tiny_tds (v2.1.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="to_regexp (v0.2.1, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.4, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="unf (v0.1.4, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="unf_ext (v0.0.7.4, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="watir (v6.10.3, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="win32ole-pp (v1.2.0, ruby-2.4.3-p205) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="xmlrpc (v0.3.0, ruby-2.4.3-p205) [gem]" level="application" />
+  </component>
+</module>

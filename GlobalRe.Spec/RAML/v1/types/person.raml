@@ -1,0 +1,16 @@
+#%RAML 1.0  DataType
+##### PERSON #####
+type: object
+displayName: Person
+
+properties:
+  personId: integer
+  firstName?:
+    type: string
+    maxLength: 100
+  lastName?:
+    type: string
+    maxLength: 100
+  displayName?:
+    type: string
+    maxLength: 100

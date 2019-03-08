@@ -1,0 +1,1379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f10fbfa7-f3d5-4213-8603-888ffa90c9e7" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_existing_note_created_by_me_can_be_able_to_edit_and_save_the_note__2_.coverage" NAME="Scenario: Verify the existing note created by me can be able to edit and save the note (2) Coverage Results" MODIFIED="1549039728070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_automatic_selection_of_default_team_options_used_by_Underwriter_Manager__3_.coverage" NAME="Scenario: Verify the automatic selection of default team options used by Underwriter Manager (3) Coverage Results" MODIFIED="1522714146772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_link_to_QlikView.coverage" NAME="Scenario: Verify the link to QlikView Coverage Results" MODIFIED="1549463286250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_automatic_selection_of_default_team_options_for_mentioned_user_type__3_.coverage" NAME="Scenario: Verify the automatic selection of default team options for mentioned user type (3) Coverage Results" MODIFIED="1522776293010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_columns_with_string_data__4_.coverage" NAME="Scenario: Verify the Filter Columns functionality for columns with string data (4) Coverage Results" MODIFIED="1522250394351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Time_counter_and__its_functionality_on_the_GRS_Homepage.coverage" NAME="Scenario: Verify the Time counter and  its functionality on the GRS Homepage Coverage Results" MODIFIED="1524245114156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_user_sees_first_name_and_last_name_when_logged_in_to_GRS__3_.coverage" NAME="Scenario: Verify whether user sees first name and last name when logged in to GRS (3) Coverage Results" MODIFIED="1522093499065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_all_the_key_documents.coverage" NAME="Scenario: Verify the all the key documents Coverage Results" MODIFIED="1549110938864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus__3_.coverage" NAME="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (3) Coverage Results" MODIFIED="1549555395901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_user_sees_the_needed_status_deals_when_the_corresponding_status_panel_is_clicked__5_.coverage" NAME="Scenario: Verify whether the user sees the needed status deals when the corresponding status panel is clicked (5) Coverage Results" MODIFIED="1522943709993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Refresh_button_and_Time_counter_and_its_functionality_by_selecting_the_status_panels_on_the_GRS_Homepage__1_.coverage" NAME="Scenario: Verify the Refresh button and Time counter and its functionality by selecting the status panels on the GRS Homepage (1) Coverage Results" MODIFIED="1547213255056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_panel_on_GRS_Homepage_with_the_needed_wording_and_the_count_of_Deals__4_.coverage" NAME="Scenario: Verify whether I see the panel on GRS Homepage with the needed wording and the count of Deals (4) Coverage Results" MODIFIED="1522696232907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_deals_of_selected_two_substatus_if_the_user_unselects_all_other_substatus_apart_from_the_two_substatus__3_.coverage" NAME="Scenario: Verify whether the deals displayed in grid are updated to show only deals of selected two substatus if the user unselects all other substatus apart from the two substatus (3) Coverage Results" MODIFIED="1522956876297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_cancel_verification_popup_remains_after_clicking_NO_option_in_Add_New_Note_window__1_.coverage" NAME="Scenario: Verify the cancel verification popup remains after clicking NO option in Add New Note window (1) Coverage Results" MODIFIED="1549366988001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_user_gets_navigated_to_GRS_Home_Page_without_login_in__4_.coverage" NAME="Scenario: Verify whether user gets navigated to GRS Home Page without login in (4) Coverage Results" MODIFIED="1546598920509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_list_of_In_Progress_statuses_when_I_click_on_the_In_Progress_panel.coverage" NAME="Scenario: Verify whether I see the list of In-Progress statuses when I click on the In-Progress panel Coverage Results" MODIFIED="1547051867870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_status_column_and_available_selection_based_on_status__3_.coverage" NAME="Scenario: Verify the Filter Columns functionality for status column and available selection based on status (3) Coverage Results" MODIFIED="1522270443656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_deals_of_selected_two_substatus_if_the_user_unselects_all_other_substatus_apart_from_the_two_substatus__2_.coverage" NAME="Scenario: Verify whether the deals displayed in grid are updated to show only deals of selected two substatus if the user unselects all other substatus apart from the two substatus (2) Coverage Results" MODIFIED="1522960385625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@grs_home_page.coverage" NAME="grs_home_page Coverage Results" MODIFIED="1522775424153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/features/GRS/Pages" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_that_if_I_apply_Teams_filter_and_export_the_data_in_Excel__the_data_is_exported_based_on_the_filter__2_.coverage" NAME="Scenario: Verify that if I apply Teams filter and export the data in Excel, the data is exported based on the filter (2) Coverage Results" MODIFIED="1524164902343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_team_options_and_sub_options_under_Team_field.coverage" NAME="Scenario: Verify the team options and sub options under Team field Coverage Results" MODIFIED="1546850393461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_count_of_deals_on_the_main_status_panel_changes_if_the_user_unselects_all_other_statuses_apart_from_two_substatus_selected__1_.coverage" NAME="Scenario: Verify whether the count of deals on the main status panel changes if the user unselects all other statuses apart from two substatus selected (1) Coverage Results" MODIFIED="1522949179524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_list_of_In_Progress_statuses_when_I_click_on_the_In_Progress_panel_and_multi_panel_selection__1_.coverage" NAME="Scenario: Verify whether I see the list of In-Progress statuses when I click on the In-Progress panel and multi panel selection (1) Coverage Results" MODIFIED="1547636574796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_needed_fields_are_editable_in_the_GRS_for_user_and_the_deal_details_are_successfully_updated_in_DB__5_.coverage" NAME="Scenario: Verify whether the needed fields are editable in the GRS for user and the deal details are successfully updated in DB (5) Coverage Results" MODIFIED="1524141727185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_count_of_deals_on_the_main_status_panel_changes_if_the_user_unselects_all_other_statuses_apart_from_two_substatus_selected__2_.coverage" NAME="Scenario: Verify whether the count of deals on the main status panel changes if the user unselects all other statuses apart from two substatus selected (2) Coverage Results" MODIFIED="1522952157961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_cancel_verification_popup_for_new_Note.coverage" NAME="Scenario: Verify the cancel verification popup for new Note Coverage Results" MODIFIED="1549290594545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_existing_note_created_by_me_can_be_able_to_edit_and_save_the_note__1_.coverage" NAME="Scenario: Verify the existing note created by me can be able to edit and save the note (1) Coverage Results" MODIFIED="1549039372976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Refresh_button_and_Time_counter_and__its_functionality_on_the_GRS_Homepage__2_.coverage" NAME="Scenario: Verify the Refresh button and Time counter and  its functionality on the GRS Homepage (2) Coverage Results" MODIFIED="1547198561139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_columns_with_string_data__3_.coverage" NAME="Scenario: Verify the Filter Columns functionality for columns with string data (3) Coverage Results" MODIFIED="1522257186776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_user_sees_first_name_and_last_name_when_logged_in_to_GRS__2_.coverage" NAME="Scenario: Verify whether user sees first name and last name when logged in to GRS (2) Coverage Results" MODIFIED="1522093148140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_automatic_selection_of_default_team_options_used_by_Underwriter_Manager__4_.coverage" NAME="Scenario: Verify the automatic selection of default team options used by Underwriter Manager (4) Coverage Results" MODIFIED="1522714288881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_user_sees_the_needed_status_deals_when_the_corresponding_status_panel_is_clicked__4_.coverage" NAME="Scenario: Verify whether the user sees the needed status deals when the corresponding status panel is clicked (4) Coverage Results" MODIFIED="1522947411779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_panel_on_GRS_Homepage_with_the_needed_wording_and_the_count_of_Deals__5_.coverage" NAME="Scenario: Verify whether I see the panel on GRS Homepage with the needed wording and the count of Deals (5) Coverage Results" MODIFIED="1522696286757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_needed_fields_are_editable_and_target_date_using_date_picker_in_the_GRS_for_user_and_the_deal_details_are_successfully_updated_in_DB.coverage" NAME="Scenario: Verify whether the needed fields are editable and target date using date picker in the GRS for user and the deal details are successfully updated in DB Coverage Results" MODIFIED="1524238485069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_that_if_I_apply_Teams_filter_and_export_the_data_in_Excel__the_data_is_exported_based_on_the_filter__1_.coverage" NAME="Scenario: Verify that if I apply Teams filter and export the data in Excel, the data is exported based on the filter (1) Coverage Results" MODIFIED="1524164755547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_automatic_selection_of_default_team_options_for_mentioned_user_type__4_.coverage" NAME="Scenario: Verify the automatic selection of default team options for mentioned user type (4) Coverage Results" MODIFIED="1522776482499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@EditExistingNotes_feature.coverage" NAME="EditExistingNotes.feature Coverage Results" MODIFIED="1549039854844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_needed_fields_are_editable_and_target_date_using_date_picker_in_the_GRS_for_user_and_the_deal_details_are_successfully_updated_in_DB__1_.coverage" NAME="Scenario: Verify whether the needed fields are editable and target date using date picker in the GRS for user and the deal details are successfully updated in DB (1) Coverage Results" MODIFIED="1524238613050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_existing__for_different_columns_and_applicable_operator_combinations_except_status.coverage" NAME="Scenario: Verify the existing  for different columns and applicable operator combinations except status Coverage Results" MODIFIED="1549006389591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_needed_fields_are_editable_in_the_GRS_for_user_and_the_deal_details_are_successfully_updated_in_DB.coverage" NAME="Scenario: Verify whether the needed fields are editable in the GRS for user and the deal details are successfully updated in DB Coverage Results" MODIFIED="1524173442419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_automatic_selection_of_default_team_options_used_by_Underwriter_Manager.coverage" NAME="Scenario: Verify the automatic selection of default team options used by Underwriter Manager Coverage Results" MODIFIED="1522714562435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_deals_of_selected_two_substatus_if_the_user_unselects_all_other_substatus_apart_from_the_two_substatus__4_.coverage" NAME="Scenario: Verify whether the deals displayed in grid are updated to show only deals of selected two substatus if the user unselects all other substatus apart from the two substatus (4) Coverage Results" MODIFIED="1522957983048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_status_column_and_available_selection_based_on_status__2_.coverage" NAME="Scenario: Verify the Filter Columns functionality for status column and available selection based on status (2) Coverage Results" MODIFIED="1522270269464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_count_of_deals_on_the_corresponding_status_panel_changes_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus__1_.coverage" NAME="Scenario: Verify whether the count of deals on the corresponding status panel changes if the user unselects all other substatus apart from corresponding substatus (1) Coverage Results" MODIFIED="1548089333949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_deals_of_selected_two_substatus_if_the_user_unselects_all_other_substatus_apart_from_the_two_substatus__1_.coverage" NAME="Scenario: Verify whether the deals displayed in grid are updated to show only deals of selected two substatus if the user unselects all other substatus apart from the two substatus (1) Coverage Results" MODIFIED="1522960208911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_that_if_I_apply_Teams_filter_and_export_the_data_in_Excel__the_data_is_exported_based_on_the_filter.coverage" NAME="Scenario: Verify that if I apply Teams filter and export the data in Excel, the data is exported based on the filter Coverage Results" MODIFIED="1524164205972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_list_of_In_Progress_statuses_are_not_displayed_when_I_click_on_the_Bound___Pending_Actions_On_Hold_Renewable___6_Months_panels_and_multi_panel_selection_other_than_In_progress_panel.coverage" NAME="Scenario: Verify whether the list of In-Progress statuses are not displayed when I click on the Bound - Pending Actions On Hold Renewable - 6 Months panels and multi panel selection other than In progress panel Coverage Results" MODIFIED="1547101445375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_previously_selected_panels_are_unselected_on_selecting_Renewawable___6_Months_panel_with_ctrl_select__1_.coverage" NAME="Scenario: Verify previously selected panels are unselected on selecting Renewawable - 6 Months panel with ctrl select (1) Coverage Results" MODIFIED="1523879510022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_previously_selected_panels_are_unselected_on_selecting_Renewawable___6_Months_panel_with_ctrl_select.coverage" NAME="Scenario: Verify previously selected panels are unselected on selecting Renewawable - 6 Months panel with ctrl select Coverage Results" MODIFIED="1523751517837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_list_of_In_Progress_statuses_are_not_displayed_when_I_click_on_the_Bound___Pending_Actions_On_Hold_Renewable___6_Months_panels_and_multi_panel_selection_other_than_In_progress_panel__1_.coverage" NAME="Scenario: Verify whether the list of In-Progress statuses are not displayed when I click on the Bound - Pending Actions On Hold Renewable - 6 Months panels and multi panel selection other than In progress panel (1) Coverage Results" MODIFIED="1547101169151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_user_gets_navigated_to_GRS_Home_Page_without_login_in__3_.coverage" NAME="Scenario: Verify whether user gets navigated to GRS Home Page without login in (3) Coverage Results" MODIFIED="1546609394736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_list_of_In_Progress_statuses_when_I_click_on_the_In_Progress_panel_and_multi_panel_selection.coverage" NAME="Scenario: Verify whether I see the list of In-Progress statuses when I click on the In-Progress panel and multi panel selection Coverage Results" MODIFIED="1547455388093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_user_sees_first_name_and_last_name_when_logged_in_to_GRS__5_.coverage" NAME="Scenario: Verify whether user sees first name and last name when logged in to GRS (5) Coverage Results" MODIFIED="1522106688177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_panel_on_GRS_Homepage_with_the_needed_wording_and_the_count_of_Deals__2_.coverage" NAME="Scenario: Verify whether I see the panel on GRS Homepage with the needed wording and the count of Deals (2) Coverage Results" MODIFIED="1522696053221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_deal_grid_is_populated_as_per_the_selected_multiple_panels_on_selecting.coverage" NAME="Scenario: Verify deal grid is populated as per the selected multiple panels on selecting Coverage Results" MODIFIED="1547054008754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_all_the_key_documents__2_.coverage" NAME="Scenario: Verify the all the key documents (2) Coverage Results" MODIFIED="1549262727137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_all_key_Document_present_in_the_key_Document_View_and_Tree_View_is_matched_correctly.coverage" NAME="Scenario: Verify the all key Document present in the key Document View and Tree View is matched correctly Coverage Results" MODIFIED="1549523636983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_link_to_ERMS_when_Citrix_and_ERMS_are_logged_in_only_once_per_a_day__1_.coverage" NAME="Scenario: Verify the link to ERMS when Citrix and ERMS are logged in only once per a day (1) Coverage Results" MODIFIED="1548322565918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Refresh_button_and_Time_counter_and__its_functionality_on_the_GRS_Homepage__5_.coverage" NAME="Scenario: Verify the Refresh button and Time counter and  its functionality on the GRS Homepage (5) Coverage Results" MODIFIED="1547199084907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_status_column_and_available_selection_based_on_status__4_.coverage" NAME="Scenario: Verify the Filter Columns functionality for status column and available selection based on status (4) Coverage Results" MODIFIED="1522268273186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_automatic_selection_of_default_team_options_for_mentioned_user_type__5_.coverage" NAME="Scenario: Verify the automatic selection of default team options for mentioned user type (5) Coverage Results" MODIFIED="1522777072621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Refresh_button_and_Time_counter_and__its_functionality_on_the_GRS_Homepage__1_.coverage" NAME="Scenario: Verify the Refresh button and Time counter and  its functionality on the GRS Homepage (1) Coverage Results" MODIFIED="1547130409289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_different_columns_and_applicable_operator_combinations_except_status__1_.coverage" NAME="Scenario: Verify the Filter Columns functionality for different columns and applicable operator combinations except status (1) Coverage Results" MODIFIED="1548952764449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_count_of_deals_on_the_main_status_panel_changes_if_the_user_unselects_all_other_statuses_apart_from_two_substatus_selected__3_.coverage" NAME="Scenario: Verify whether the count of deals on the main status panel changes if the user unselects all other statuses apart from two substatus selected (3) Coverage Results" MODIFIED="1522952269047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_user_sees_first_name_and_last_name_when_logged_in_to_GRS__1_.coverage" NAME="Scenario: Verify whether user sees first name and last name when logged in to GRS (1) Coverage Results" MODIFIED="1522093088374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_columns_with_string_data__2_.coverage" NAME="Scenario: Verify the Filter Columns functionality for columns with string data (2) Coverage Results" MODIFIED="1522255552573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@GRS_Home_Page.coverage" NAME="GRS_Home_Page Coverage Results" MODIFIED="1522265351429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/features/GRS/step_definitions" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Remove_Columns_functionality_within_the_grid_using_column_Tool_menu__2_.coverage" NAME="Scenario: Verify the Remove Columns functionality within the grid using column Tool menu (2) Coverage Results" MODIFIED="1547817268376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_all_key_Document_present_in_the_key_Document_View_and_Tree_View_is_matched_correctly__1_.coverage" NAME="Scenario: Verify the all key Document present in the key Document View and Tree View is matched correctly (1) Coverage Results" MODIFIED="1549532322642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Remove_Columns_functionality_within_the_grid_using_column_Tool_menu__1_.coverage" NAME="Scenario: Verify the Remove Columns functionality within the grid using column Tool menu (1) Coverage Results" MODIFIED="1547817451844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_user_sees_first_name_and_last_name_when_logged_in_to_GRS.coverage" NAME="Scenario: Verify whether user sees first name and last name when logged in to GRS Coverage Results" MODIFIED="1548318995533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus.coverage" NAME="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus Coverage Results" MODIFIED="1549533824282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Refresh_button_and_Time_counter_and__its_functionality_on_the_GRS_Homepage__4_.coverage" NAME="Scenario: Verify the Refresh button and Time counter and  its functionality on the GRS Homepage (4) Coverage Results" MODIFIED="1547199031384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_user_gets_navigated_to_GRS_Home_Page_without_login_in__2_.coverage" NAME="Scenario: Verify whether user gets navigated to GRS Home Page without login in (2) Coverage Results" MODIFIED="1546602617807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_automatic_selection_of_default_team_options_used_by_Underwriter_Manager__1_.coverage" NAME="Scenario: Verify the automatic selection of default team options used by Underwriter Manager (1) Coverage Results" MODIFIED="1522714682327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_status_column_and_available_selection_based_on_status__1_.coverage" NAME="Scenario: Verify the Filter Columns functionality for status column and available selection based on status (1) Coverage Results" MODIFIED="1522268544330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Time_Element_filter_functionality_on_GRS_Home_page.coverage" NAME="Scenario: Verify the Time Element filter functionality on GRS Home page Coverage Results" MODIFIED="1548234270339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_selected_panel_gets_unselected_on_selecting_other_panels_with_out_ctrl_for_the_second_selection__2_.coverage" NAME="Scenario: Verify the selected panel gets unselected on selecting other panels with out ctrl for the second selection (2) Coverage Results" MODIFIED="1523751401500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_GRS_Home_Page.coverage" NAME="Scenario: Verify the GRS Home Page Coverage Results" MODIFIED="1546850690579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_existing_note_created_by_me_can_be_able_to_edit_and_Can_able_to_cancel_and_validate_cancel_verification__1_.coverage" NAME="Scenario: Verify the existing note created by me can be able to edit and Can able to cancel and validate cancel verification (1) Coverage Results" MODIFIED="1549282989133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_columns_with_string_data__5_.coverage" NAME="Scenario: Verify the Filter Columns functionality for columns with string data (5) Coverage Results" MODIFIED="1522250480645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_user_sees_first_name_and_last_name_when_logged_in_to_GRS__4_.coverage" NAME="Scenario: Verify whether user sees first name and last name when logged in to GRS (4) Coverage Results" MODIFIED="1522106649838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_list_of_In_Progress_statuses_when_I_click_on_the_In_Progress_panel_and_multi_panel_selection__2_.coverage" NAME="Scenario: Verify whether I see the list of In-Progress statuses when I click on the In-Progress panel and multi panel selection (2) Coverage Results" MODIFIED="1547094954226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_automatic_selection_of_default_team_options_for_mentioned_user_type__2_.coverage" NAME="Scenario: Verify the automatic selection of default team options for mentioned user type (2) Coverage Results" MODIFIED="1522776980808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Remove_Columns_functionality_within_the_grid_using_column_Tool_menu.coverage" NAME="Scenario: Verify the Remove Columns functionality within the grid using column Tool menu Coverage Results" MODIFIED="1547880062408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_user_gets_navigated_to_GRS_Home_Page_without_login_in.coverage" NAME="Scenario: Verify whether user gets navigated to GRS Home Page without login in Coverage Results" MODIFIED="1548318972652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_columns_with_string_data.coverage" NAME="Scenario: Verify the Filter Columns functionality for columns with string data Coverage Results" MODIFIED="1522250673779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_needed_fields_are_editable_and_target_date_using_date_picker_in_the_GRS_for_user_and_the_deal_details_are_successfully_updated_in_DB__5_.coverage" NAME="Scenario: Verify whether the needed fields are editable and target date using date picker in the GRS for user and the deal details are successfully updated in DB (5) Coverage Results" MODIFIED="1524240729611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus__2_.coverage" NAME="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (2) Coverage Results" MODIFIED="1549548844164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_user_gets_navigated_to_GRS_Home_Page_without_login_in__5_.coverage" NAME="Scenario: Verify whether user gets navigated to GRS Home Page without login in (5) Coverage Results" MODIFIED="1546599473738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_deal_grid_is_populated_as_per_the_selected_multiple_panels_on_selecting_with_ctrl_select_and_also_unselection_with_ctrl__1_.coverage" NAME="Scenario: Verify deal grid is populated as per the selected multiple panels on selecting with ctrl select and also unselection with ctrl (1) Coverage Results" MODIFIED="1523751999037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_cancel_verification_popup_for_new_Note__2_.coverage" NAME="Scenario: Verify the cancel verification popup for new Note (2) Coverage Results" MODIFIED="1549293946126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_needed_fields_are_editable_and_target_date_using_date_picker_in_the_GRS_for_user_and_the_deal_details_are_successfully_updated_in_DB__2_.coverage" NAME="Scenario: Verify whether the needed fields are editable and target date using date picker in the GRS for user and the deal details are successfully updated in DB (2) Coverage Results" MODIFIED="1524237564358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_selected_Renewable___6_Months_panel_gets_unselected_on_selecting_other_panels.coverage" NAME="Scenario: Verify the selected Renewable - 6 Months panel gets unselected on selecting other panels Coverage Results" MODIFIED="1523751435248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_panel_on_GRS_Homepage_with_the_needed_status_wording__2_.coverage" NAME="Scenario: Verify whether I see the panel on GRS Homepage with the needed status wording (2) Coverage Results" MODIFIED="1548393869535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_that_if_I_apply_Teams_filter_and_export_the_data_in_Excel__the_data_is_exported_based_on_the_filter__3_.coverage" NAME="Scenario: Verify that if I apply Teams filter and export the data in Excel, the data is exported based on the filter (3) Coverage Results" MODIFIED="1524163902907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_automatic_selection_of_default_team_options_for_mentioned_user_type.coverage" NAME="Scenario: Verify the automatic selection of default team options for mentioned user type Coverage Results" MODIFIED="1523030480412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_user_sees_the_needed_status_deals_when_the_corresponding_status_panel_is_clicked__2_.coverage" NAME="Scenario: Verify whether the user sees the needed status deals when the corresponding status panel is clicked (2) Coverage Results" MODIFIED="1522944863104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Remove_Columns_functionality_within_the_grid_using_Tool_Panel.coverage" NAME="Scenario: Verify the Remove Columns functionality within the grid using Tool Panel Coverage Results" MODIFIED="1547820096405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Remove_Columns_functionality_within_the_grid_using_Tool_Panel__2_.coverage" NAME="Scenario: Verify the Remove Columns functionality within the grid using Tool Panel (2) Coverage Results" MODIFIED="1547879701518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_existing_note_created_by_me_can_be_able_to_edit_and_save_the_note.coverage" NAME="Scenario: Verify the existing note created by me can be able to edit and save the note Coverage Results" MODIFIED="1549031430599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_user_gets_navigated_to_GRS_Home_Page_without_login_in__1_.coverage" NAME="Scenario: Verify whether user gets navigated to GRS Home Page without login in (1) Coverage Results" MODIFIED="1546601797991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_cancel_verification_popup_remains_after_clicking_NO_option_in_Add_New_Note_window.coverage" NAME="Scenario: Verify the cancel verification popup remains after clicking NO option in Add New Note window Coverage Results" MODIFIED="1549366062085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_panel_on_GRS_Homepage_with_the_needed_wording_and_the_count_of_Deals.coverage" NAME="Scenario: Verify whether I see the panel on GRS Homepage with the needed wording and the count of Deals Coverage Results" MODIFIED="1549465870446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_needed_fields_are_editable_in_the_GRS_for_user_and_the_deal_details_are_successfully_updated_in_DB__2_.coverage" NAME="Scenario: Verify whether the needed fields are editable in the GRS for user and the deal details are successfully updated in DB (2) Coverage Results" MODIFIED="1524138865582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_columns_with_string_data__1_.coverage" NAME="Scenario: Verify the Filter Columns functionality for columns with string data (1) Coverage Results" MODIFIED="1522254202303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_list_of_In_Progress_statuses_when_I_click_on_the_In_Progress_panel__1_.coverage" NAME="Scenario: Verify whether I see the list of In-Progress statuses when I click on the In-Progress panel (1) Coverage Results" MODIFIED="1547053464927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_link_to_QlikView__2_.coverage" NAME="Scenario: Verify the link to QlikView (2) Coverage Results" MODIFIED="1547747799388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_cancel_verification_popup_appears_if_i_click_on_cross_icon_on_the_AddNote_window.coverage" NAME="Scenario: Verify the cancel verification popup appears if i click on cross icon on the AddNote window Coverage Results" MODIFIED="1549364271679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_deal_grid_is_populated_as_per_the_selected_multiple_panels_on_selecting_with_ctrl_select_and_also_unselection_with_ctrl__3_.coverage" NAME="Scenario: Verify deal grid is populated as per the selected multiple panels on selecting with ctrl select and also unselection with ctrl (3) Coverage Results" MODIFIED="1523879274146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_panel_on_GRS_Homepage_with_the_needed_status_wording__3_.coverage" NAME="Scenario: Verify whether I see the panel on GRS Homepage with the needed status wording (3) Coverage Results" MODIFIED="1548394166867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_user_sees_the_needed_status_deals_when_the_corresponding_status_panel_is_clicked__1_.coverage" NAME="Scenario: Verify whether the user sees the needed status deals when the corresponding status panel is clicked (1) Coverage Results" MODIFIED="1522944702437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_panel_on_GRS_Homepage_with_the_needed_wording_and_the_count_of_Deals__1_.coverage" NAME="Scenario: Verify whether I see the panel on GRS Homepage with the needed wording and the count of Deals (1) Coverage Results" MODIFIED="1522697650676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_needed_fields_are_editable_in_the_GRS_for_user_and_the_deal_details_are_successfully_updated_in_DB__3_.coverage" NAME="Scenario: Verify whether the needed fields are editable in the GRS for user and the deal details are successfully updated in DB (3) Coverage Results" MODIFIED="1524139391328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_all_DocumentType_page_number_count_in_the_key_Document_View_is_correctly_displayed.coverage" NAME="Scenario: Verify the all DocumentType page number count in the key Document View is correctly displayed Coverage Results" MODIFIED="1549451068580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Remove_Columns_functionality_within_the_grid_using_Tool_Panel__1_.coverage" NAME="Scenario: Verify the Remove Columns functionality within the grid using Tool Panel (1) Coverage Results" MODIFIED="1547820255308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Remove_Columns_functionality_within_the_grid_using_Tool_Panel__3_.coverage" NAME="Scenario: Verify the Remove Columns functionality within the grid using Tool Panel (3) Coverage Results" MODIFIED="1547881239587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_different_columns_and_applicable_operator_combinations_except_status.coverage" NAME="Scenario: Verify the Filter Columns functionality for different columns and applicable operator combinations except status Coverage Results" MODIFIED="1548937000426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_status_column_and_available_selection_based_on_status__5_.coverage" NAME="Scenario: Verify the Filter Columns functionality for status column and available selection based on status (5) Coverage Results" MODIFIED="1522270361841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_list_of_In_Progress_statuses_when_I_click_on_the_In_Progress_panel_and_multi_panel_selection__4_.coverage" NAME="Scenario: Verify whether I see the list of In-Progress statuses when I click on the In-Progress panel and multi panel selection (4) Coverage Results" MODIFIED="1547101152279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Remove_Column_functionality_within_the_In_Progress_grid_by_dragging_out_the_column_from_the_grid.coverage" NAME="Scenario: Verify the Remove Column functionality within the In Progress grid by dragging out the column from the grid Coverage Results" MODIFIED="1547817828820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_all_the_Tree_View_Page_numbers_count_is_correctly_displayed.coverage" NAME="Scenario: Verify the all the Tree View Page numbers count is correctly displayed Coverage Results" MODIFIED="1549381093079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_existing__for_different_columns_and_applicable_operator_combinations_except_status__1_.coverage" NAME="Scenario: Verify the existing  for different columns and applicable operator combinations except status (1) Coverage Results" MODIFIED="1549018536075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_panel_on_GRS_Homepage_with_the_needed_status_wording.coverage" NAME="Scenario: Verify whether I see the panel on GRS Homepage with the needed status wording Coverage Results" MODIFIED="1548488322257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_deals_of_selected_two_substatus_if_the_user_unselects_all_other_substatus_apart_from_the_two_substatus.coverage" NAME="Scenario: Verify whether the deals displayed in grid are updated to show only deals of selected two substatus if the user unselects all other substatus apart from the two substatus Coverage Results" MODIFIED="1522959981141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@RakeFile.coverage" NAME="RakeFile Coverage Results" MODIFIED="1540287972744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_that_if_I_apply_Teams_filter_and_export_the_data_in_Excel__the_data_is_exported_based_on_the_filter__5_.coverage" NAME="Scenario: Verify that if I apply Teams filter and export the data in Excel, the data is exported based on the filter (5) Coverage Results" MODIFIED="1524164464140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@GRSHomePagePanelValidation_feature.coverage" NAME="GRSHomePagePanelValidation.feature Coverage Results" MODIFIED="1548393918477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Refresh_button_and_Time_counter_and__its_functionality_on_the_GRS_Homepage.coverage" NAME="Scenario: Verify the Refresh button and Time counter and  its functionality on the GRS Homepage Coverage Results" MODIFIED="1547130154275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_automatic_selection_of_default_team_options_for_mentioned_user_type__1_.coverage" NAME="Scenario: Verify the automatic selection of default team options for mentioned user type (1) Coverage Results" MODIFIED="1539751952481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_existing_note_created_by_Others_cannot_be_able_to_edit.coverage" NAME="Scenario: Verify the existing note created by Others cannot be able to edit Coverage Results" MODIFIED="1549025408519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_needed_fields_are_editable_and_target_date_using_date_picker_in_the_GRS_for_user_and_the_deal_details_are_successfully_updated_in_DB__4_.coverage" NAME="Scenario: Verify whether the needed fields are editable and target date using date picker in the GRS for user and the deal details are successfully updated in DB (4) Coverage Results" MODIFIED="1524237939057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_deal_grid_is_populated_as_per_the_selected_multiple_panels_on_selecting_with_ctrl_select_and_also_unselection_with_ctrl.coverage" NAME="Scenario: Verify deal grid is populated as per the selected multiple panels on selecting with ctrl select and also unselection with ctrl Coverage Results" MODIFIED="1547054256804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_needed_fields_are_editable_in_the_GRS_for_user_and_the_deal_details_are_successfully_updated_in_DB__4_.coverage" NAME="Scenario: Verify whether the needed fields are editable in the GRS for user and the deal details are successfully updated in DB (4) Coverage Results" MODIFIED="1524140247122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_count_of_deals_on_the_main_status_panel_changes_if_the_user_unselects_all_other_statuses_apart_from_two_substatus_selected.coverage" NAME="Scenario: Verify whether the count of deals on the main status panel changes if the user unselects all other statuses apart from two substatus selected Coverage Results" MODIFIED="1548089998176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Filter_Columns_functionality_for_status_column_and_available_selection_based_on_status.coverage" NAME="Scenario: Verify the Filter Columns functionality for status column and available selection based on status Coverage Results" MODIFIED="1546935866995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Remove_Columns_functionality_within_the_grid_using_Tool_Panel__4_.coverage" NAME="Scenario: Verify the Remove Columns functionality within the grid using Tool Panel (4) Coverage Results" MODIFIED="1548061911937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_count_of_deals_on_the_corresponding_status_panel_changes_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus.coverage" NAME="Scenario: Verify whether the count of deals on the corresponding status panel changes if the user unselects all other substatus apart from corresponding substatus Coverage Results" MODIFIED="1548087954269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_link_to_ERMS_when_Citrix_and_ERMS_are_logged_in_only_once_per_a_day.coverage" NAME="Scenario: Verify the link to ERMS when Citrix and ERMS are logged in only once per a day Coverage Results" MODIFIED="1549465788386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_list_of_In_Progress_statuses_are_not_displayed_when_I_click_on_the_Bound___Pending_Actions_On_Hold_Renewable___6_Months_panels_and_multi_panel_selection_other_than_In_progress_panel__2_.coverage" NAME="Scenario: Verify whether the list of In-Progress statuses are not displayed when I click on the Bound - Pending Actions On Hold Renewable - 6 Months panels and multi panel selection other than In progress panel (2) Coverage Results" MODIFIED="1547101189482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_automatic_selection_of_default_team_options_used_by_Underwriter_Manager__5_.coverage" NAME="Scenario: Verify the automatic selection of default team options used by Underwriter Manager (5) Coverage Results" MODIFIED="1522714490244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_list_of_In_Progress_statuses_when_I_click_on_the_In_Progress_panel_and_multi_panel_selection__3_.coverage" NAME="Scenario: Verify whether I see the list of In-Progress statuses when I click on the In-Progress panel and multi panel selection (3) Coverage Results" MODIFIED="1547101104042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus__1_.coverage" NAME="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (1) Coverage Results" MODIFIED="1549540056882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_link_to_QlikView__1_.coverage" NAME="Scenario: Verify the link to QlikView (1) Coverage Results" MODIFIED="1548319237713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_panel_on_GRS_Homepage_with_the_needed_status_wording__1_.coverage" NAME="Scenario: Verify whether I see the panel on GRS Homepage with the needed status wording (1) Coverage Results" MODIFIED="1548393030000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_that_if_I_apply_Teams_filter_and_export_the_data_in_Excel__the_data_is_exported_based_on_the_filter__4_.coverage" NAME="Scenario: Verify that if I apply Teams filter and export the data in Excel, the data is exported based on the filter (4) Coverage Results" MODIFIED="1524164354225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_all_statuses_with_deal_count_greater_than_zero__are_selected_by_default.coverage" NAME="Scenario: Verify whether all statuses with deal count greater than zero  are selected by default Coverage Results" MODIFIED="1548089206784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_user_sees_the_needed_status_deals_when_the_corresponding_status_panel_is_clicked.coverage" NAME="Scenario: Verify whether the user sees the needed status deals when the corresponding status panel is clicked Coverage Results" MODIFIED="1548751284576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_user_sees_the_needed_status_deals_when_the_corresponding_status_panel_is_clicked__3_.coverage" NAME="Scenario: Verify whether the user sees the needed status deals when the corresponding status panel is clicked (3) Coverage Results" MODIFIED="1522945413428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_db.coverage" NAME="Scenario: Verify the db Coverage Results" MODIFIED="1549033108034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_needed_fields_are_editable_and_target_date_using_date_picker_in_the_GRS_for_user_and_the_deal_details_are_successfully_updated_in_DB__3_.coverage" NAME="Scenario: Verify whether the needed fields are editable and target date using date picker in the GRS for user and the deal details are successfully updated in DB (3) Coverage Results" MODIFIED="1524239069511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_deals_of_selected_two_substatus_if_the_user_unselects_all_other_substatus_apart_from_the_two_substatus__5_.coverage" NAME="Scenario: Verify whether the deals displayed in grid are updated to show only deals of selected two substatus if the user unselects all other substatus apart from the two substatus (5) Coverage Results" MODIFIED="1522958277273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_GRS_Login_Page_and_successful_login.coverage" NAME="Scenario: Verify the GRS Login Page and successful login Coverage Results" MODIFIED="1546850601759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_existing_note_created_by_me_can_be_able_to_edit_and_save_the_note__3_.coverage" NAME="Scenario: Verify the existing note created by me can be able to edit and save the note (3) Coverage Results" MODIFIED="1549088353745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_selected_panel_gets_unselected_on_selecting_other_panels_with_out_ctrl_for_the_second_selection.coverage" NAME="Scenario: Verify the selected panel gets unselected on selecting other panels with out ctrl for the second selection Coverage Results" MODIFIED="1523751092641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_cancel_verification_popup_for_new_Note__1_.coverage" NAME="Scenario: Verify the cancel verification popup for new Note (1) Coverage Results" MODIFIED="1549292269558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_automatic_selection_of_default_team_options_used_by_Underwriter_Manager__2_.coverage" NAME="Scenario: Verify the automatic selection of default team options used by Underwriter Manager (2) Coverage Results" MODIFIED="1522713838928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_all_the_key_documents__1_.coverage" NAME="Scenario: Verify the all the key documents (1) Coverage Results" MODIFIED="1549119213448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_I_see_the_panel_on_GRS_Homepage_with_the_needed_wording_and_the_count_of_Deals__3_.coverage" NAME="Scenario: Verify whether I see the panel on GRS Homepage with the needed wording and the count of Deals (3) Coverage Results" MODIFIED="1522696142735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_whether_the_needed_fields_are_editable_in_the_GRS_for_user_and_the_deal_details_are_successfully_updated_in_DB__1_.coverage" NAME="Scenario: Verify whether the needed fields are editable in the GRS for user and the deal details are successfully updated in DB (1) Coverage Results" MODIFIED="1524172343541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_sort_functionality_of_the_needed_status_grid.coverage" NAME="Scenario: Verify the sort functionality of the needed status grid Coverage Results" MODIFIED="1548068474746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_selected_Renewable___6_Months_panel_gets_unselected_on_selecting_other_panels_with_ctrl_select.coverage" NAME="Scenario: Verify the selected Renewable - 6 Months panel gets unselected on selecting other panels with ctrl select Coverage Results" MODIFIED="1523751481916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Remove_Columns_functionality_within_the_grid_using_column_Tool_menu__3_.coverage" NAME="Scenario: Verify the Remove Columns functionality within the grid using column Tool menu (3) Coverage Results" MODIFIED="1547817378734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_existing_note_created_by_me_can_be_able_to_edit_and_Can_able_to_cancel_and_validate_cancel_verification.coverage" NAME="Scenario: Verify the existing note created by me can be able to edit and Can able to cancel and validate cancel verification Coverage Results" MODIFIED="1549278220850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_link_to_ERMS_when_Citrix_and_ERMS_are_logged_in_only_once_per_a_day__2_.coverage" NAME="Scenario: Verify the link to ERMS when Citrix and ERMS are logged in only once per a day (2) Coverage Results" MODIFIED="1548391874534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Refresh_button_and_Time_counter_and_its_functionality_by_selecting_the_status_panels_on_the_GRS_Homepage.coverage" NAME="Scenario: Verify the Refresh button and Time counter and its functionality by selecting the status panels on the GRS Homepage Coverage Results" MODIFIED="1547208928548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_selected_panel_gets_unselected_on_selecting_other_panels_with_out_ctrl_for_the_second_selection__1_.coverage" NAME="Scenario: Verify the selected panel gets unselected on selecting other panels with out ctrl for the second selection (1) Coverage Results" MODIFIED="1523751126430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalRe" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_GRS_Login_Page_and_successful_login__1_.coverage" NAME="Scenario: Verify the GRS Login Page and successful login (1) Coverage Results" MODIFIED="1546600272361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+    <SUITE FILE_PATH="coverage/GlobalReUI@Scenario__Verify_the_Refresh_button_and_Time_counter_and__its_functionality_on_the_GRS_Homepage__3_.coverage" NAME="Scenario: Verify the Refresh button and Time counter and  its functionality on the GRS Homepage (3) Coverage Results" MODIFIED="1547198613970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GlobalReUI" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="GlobalReUI" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GRS_Home_page.feature" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/GRS/feature/GRS-Home-Page/GRS_Home_page.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="209" column="48" lean-forward="false" selection-start-line="209" selection-start-column="48" selection-end-line="209" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/GRS/support/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grs_home_page.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/GRS/Pages/grs_home_page.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="173" column="49" lean-forward="false" selection-start-line="173" selection-start-column="49" selection-end-line="173" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notes.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/GRS/step_definitions/notes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="105" column="44" lean-forward="true" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fetch_element_details.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/GRS/support/fetch_element_details.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="456" column="40" lean-forward="false" selection-start-line="456" selection-start-column="26" selection-end-line="456" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Element_Details.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/features/GRS/support/Element_Details.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2192">
+              <caret line="137" column="12" lean-forward="true" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditExistingNotes.feature" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/GRS/feature/Notes/EditExistingNotes.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Ruby Class Template" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>@noteInfo</find>
+      <find>@@notesAuthorElement</find>
+      <find>@Fullname</find>
+      <find>UserFullName</find>
+      <find>FetchUserName</find>
+      <find>fetchLoginUsersName</find>
+      <find>@noteSaveButton</find>
+      <find>@@notesSaveButton</find>
+      <find>@@gridHeaderCol</find>
+      <find>@dealGridTableColumns</find>
+      <find>@@DealGridloc</find>
+      <find>@@quickEditNotesButtonElement</find>
+      <find>@quickEditNotesButtonClass</find>
+      <find>@brow</find>
+      <find>DealGridHeaderColumns</find>
+      <find>getNotesCancelPopupXpath</find>
+      <find>count</find>
+      <find>ERMS</find>
+      <find>TreeViewLink</find>
+      <find>compare</find>
+      <find>Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus</find>
+      <find>@Inprogress_underreviewcheckboxInput</find>
+      <find>@Inprogress_underreviewcheckboxInput1</find>
+      <find>@@Inprogress_URCheckboxInputlocator1</find>
+      <find>InProgress_UnderReviewCheckBoxInput</find>
+      <find>@@Inprogress_URCheckboxInputlocator</find>
+      <find>@Inprogress_underreviewcheckbox</find>
+      <find>@@Inprogress_URCheckboxlocator</find>
+      <find>InProgress_UnderReviewCheckBox</find>
+      <find>DealGridList</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>MM-dd-yyyy</replace>
+      <replace>&quot;</replace>
+      <replace>print &quot;Step</replace>
+      <replace>Laurie Slader</replace>
+      <replace>$dataAvailability</replace>
+    </replaceStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/features/GRS_POC/step_definitions/LoginPageSteps.rb" />
+        <option value="$PROJECT_DIR$/features/GRS_POC/step_definitions/Instantiate.rb" />
+        <option value="$PROJECT_DIR$/features/GRS_POC/Pages/login_page.rb" />
+        <option value="$PROJECT_DIR$/features/GRS_POC/Pages/home_page.rb" />
+        <option value="$PROJECT_DIR$/features/GRS_POC/Base/browser_container.rb" />
+        <option value="$PROJECT_DIR$/features/GRS_POC/support/hooks.rb" />
+        <option value="$PROJECT_DIR$/cucumber.yml" />
+        <option value="$PROJECT_DIR$/features/GRS/Base/grs_site_factory.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/support/Elements.xml" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/Order2_HomePage.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/step_definitions/HomePageVerification.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/Base/element_mouse.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/Base/WindowsInput.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/Base/element.rb" />
+        <option value="$PROJECT_DIR$/features/support/element.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/Order3_GRS_Home_page.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/step_definitions/Instantiate.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/step_definitions/GRS_Teams.rb" />
+        <option value="$PROJECT_DIR$/RakeFile.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/support/ie.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/Order2_GRS_Teams_page.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/Order1_GRS_Home_page.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/HomePage.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/LoginPage.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/RefreshButton_TimeFunctionality.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/MultiplePanelSelection.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/support/config.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/Pages/home_page.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/Pages/login_page.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/GRS-Home-Page/RefreshButton_TimeFunctionality.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/GRS-Home-Page/MultiplePanelSelection.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/GRS-Home-Page/Order1_GRS_Home_page.feature" />
+        <option value="$PROJECT_DIR$/features/ToBe_Deleted/LoginPage.feature" />
+        <option value="$PROJECT_DIR$/features/ToBe_Deleted/HomePage.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/GRS-Home-Page/GRSHomePagePanelValidation.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/support/hooks.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/GRS-Home-Page/GRS_Home_page.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/Notes/EditExistingNotes.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/support/DBQueries.xml" />
+        <option value="$PROJECT_DIR$/features/GRS/support/db_queries.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/Notes/CancelNotes.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/feature/Documents/KeyDocuments.feature" />
+        <option value="$PROJECT_DIR$/features/GRS/step_definitions/documents.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/support/config.xml" />
+        <option value="$PROJECT_DIR$/features/GRS/support/Element_Details.xml" />
+        <option value="$PROJECT_DIR$/features/GRS/support/fetch_element_details.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/step_definitions/GRS_Home_Page.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/Base/browser_container.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/Pages/grs_home_page.rb" />
+        <option value="$PROJECT_DIR$/features/GRS/step_definitions/notes.rb" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="352" />
+    <option name="width" value="1280" />
+    <option name="height" value="626" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GlobalReUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GlobalReUI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GlobalReUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GlobalReUI" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GlobalReUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GlobalReUI" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="GRS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GlobalReUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GlobalReUI" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="GRS" type="462c0819:PsiDirectoryNode" />
+              <item name="Base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GlobalReUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GlobalReUI" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="GRS" type="462c0819:PsiDirectoryNode" />
+              <item name="feature" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GlobalReUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GlobalReUI" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="GRS" type="462c0819:PsiDirectoryNode" />
+              <item name="feature" type="462c0819:PsiDirectoryNode" />
+              <item name="Documents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GlobalReUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GlobalReUI" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="GRS" type="462c0819:PsiDirectoryNode" />
+              <item name="feature" type="462c0819:PsiDirectoryNode" />
+              <item name="GRS-Home-Page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GlobalReUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GlobalReUI" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="GRS" type="462c0819:PsiDirectoryNode" />
+              <item name="feature" type="462c0819:PsiDirectoryNode" />
+              <item name="Notes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GlobalReUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GlobalReUI" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="GRS" type="462c0819:PsiDirectoryNode" />
+              <item name="step_definitions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GlobalReUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GlobalReUI" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="ToBe_Deleted" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GlobalReAPI" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vboya\RubymineProjects\GlobalReUI\features\ToBe_Deleted" />
+      <recent name="C:\Users\vboya\RubymineProjects\GlobalReUI\features\GRS\feature\GRS-Home-Page" />
+      <recent name="C:\Users\vboya\RubymineProjects\GlobalReUI\features\GRS\feature\GRS-Teams-Page" />
+      <recent name="C:\GlobalReUI\features\support" />
+      <recent name="C:\GlobalRe\features\GRS_POC\feature" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vboya\RubymineProjects\GlobalReUI\features\GRS\feature\Notes" />
+      <recent name="C:\Users\vboya\RubymineProjects\GlobalReUI\features\GRS\feature\Documents" />
+      <recent name="C:\Users\vboya\RubymineProjects\GlobalReUI\features\GRS\feature\GRS-Home-Page" />
+      <recent name="C:\Users\vboya\RubymineProjects\GlobalReUI\features\GRS\feature" />
+      <recent name="C:\GlobalReUI\features\GRS\Config" />
+    </key>
+  </component>
+  <component name="RubyModuleManagerSettings">
+    <option name="blackListedRootsPaths">
+      <list>
+        <option value="$PROJECT_DIR$" />
+      </list>
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Cucumber.Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (3)">
+    <configuration name="Scenario: Verify the all key Document present in the key Document View and Tree View is matched correctly (1)" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="GlobalReUI" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/features/GRS/feature/Documents/KeyDocuments.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Verify the all key Document present in the key Document View and Tree View is matched correctly$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+    </configuration>
+    <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (1)" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="GlobalReUI" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/features/GRS/feature/GRS-Home-Page/GRS_Home_page.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+    </configuration>
+    <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (2)" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="GlobalReUI" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/features/GRS/feature/GRS-Home-Page/GRS_Home_page.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+    </configuration>
+    <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (3)" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="GlobalReUI" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/features/GRS/feature/GRS-Home-Page/GRS_Home_page.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+    </configuration>
+    <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="GlobalReUI" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/features/GRS/feature/GRS-Home-Page/GRS_Home_page.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Cucumber.Scenario: Verify the all key Document present in the key Document View and Tree View is matched correctly (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Cucumber.Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus" />
+      <item index="2" class="java.lang.String" itemvalue="Cucumber.Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Cucumber.Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (2)" />
+      <item index="4" class="java.lang.String" itemvalue="Cucumber.Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (3)" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Cucumber.Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (3)" />
+        <item index="1" class="java.lang.String" itemvalue="Cucumber.Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (2)" />
+        <item index="2" class="java.lang.String" itemvalue="Cucumber.Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Cucumber.Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus" />
+        <item index="4" class="java.lang.String" itemvalue="Cucumber.Scenario: Verify the all key Document present in the key Document View and Tree View is matched correctly (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f10fbfa7-f3d5-4213-8603-888ffa90c9e7" name="Default" comment="" />
+      <created>1516788051691</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1516788051691</updated>
+      <workItem from="1516788052932" duration="58345000" />
+      <workItem from="1516992946538" duration="7725000" />
+      <workItem from="1517230341401" duration="13795000" />
+      <workItem from="1517249397878" duration="1818000" />
+      <workItem from="1517253224806" duration="13023000" />
+      <workItem from="1517583493667" duration="9157000" />
+      <workItem from="1517833785357" duration="5964000" />
+      <workItem from="1517851879597" duration="18136000" />
+      <workItem from="1517952053451" duration="2444000" />
+      <workItem from="1518038979063" duration="556000" />
+      <workItem from="1518041340578" duration="84000" />
+      <workItem from="1518108155751" duration="5358000" />
+      <workItem from="1518304798251" duration="26782000" />
+      <workItem from="1518524991864" duration="142355000" />
+      <workItem from="1519128949381" duration="30539000" />
+      <workItem from="1519215665144" duration="20053000" />
+      <workItem from="1519325449045" duration="44024000" />
+      <workItem from="1519432803336" duration="4799000" />
+      <workItem from="1519441875155" duration="2551000" />
+      <workItem from="1519517440746" duration="3665000" />
+      <workItem from="1519529158273" duration="3485000" />
+      <workItem from="1519534374107" duration="3490000" />
+      <workItem from="1519600453143" duration="8367000" />
+      <workItem from="1519654778296" duration="7285000" />
+      <workItem from="1519664989137" duration="36544000" />
+      <workItem from="1519820677641" duration="20625000" />
+      <workItem from="1519849930041" duration="343000" />
+      <workItem from="1519850305133" duration="16621000" />
+      <workItem from="1519917956695" duration="9093000" />
+      <workItem from="1519928007512" duration="11850000" />
+      <workItem from="1519952435585" duration="10708000" />
+      <workItem from="1520004279511" duration="31304000" />
+      <workItem from="1520200052519" duration="3625000" />
+      <workItem from="1520252827632" duration="667000" />
+      <workItem from="1520253526523" duration="18739000" />
+      <workItem from="1520282557078" duration="16070000" />
+      <workItem from="1520339070844" duration="25013000" />
+      <workItem from="1521046119185" duration="3764000" />
+      <workItem from="1521113792496" duration="7593000" />
+      <workItem from="1521136492615" duration="8535000" />
+      <workItem from="1521148112731" duration="5265000" />
+      <workItem from="1521161590035" duration="1223000" />
+      <workItem from="1521163905002" duration="7000" />
+      <workItem from="1521198992494" duration="2569000" />
+      <workItem from="1521207863191" duration="17233000" />
+      <workItem from="1521297008746" duration="8973000" />
+      <workItem from="1521308434619" duration="3828000" />
+      <workItem from="1521312308585" duration="5700000" />
+      <workItem from="1521319860348" duration="893000" />
+      <workItem from="1521320968723" duration="36000" />
+      <workItem from="1521383655250" duration="1558000" />
+      <workItem from="1521385252050" duration="111000" />
+      <workItem from="1521385387664" duration="10502000" />
+      <workItem from="1521396697201" duration="16000" />
+      <workItem from="1521459723040" duration="20963000" />
+      <workItem from="1521492706825" duration="10835000" />
+      <workItem from="1521505495653" duration="25000" />
+      <workItem from="1521545104834" duration="14185000" />
+      <workItem from="1521574219322" duration="2638000" />
+      <workItem from="1521648306792" duration="7380000" />
+      <workItem from="1521743349076" duration="729000" />
+      <workItem from="1521765945316" duration="388000" />
+      <workItem from="1521817837174" duration="5483000" />
+      <workItem from="1521837714109" duration="2072000" />
+      <workItem from="1521906125812" duration="3182000" />
+      <workItem from="1521909354741" duration="2014000" />
+      <workItem from="1521913929796" duration="640000" />
+      <workItem from="1521997201768" duration="1470000" />
+      <workItem from="1522000197342" duration="7446000" />
+      <workItem from="1522009345948" duration="126000" />
+      <workItem from="1522063693233" duration="3256000" />
+      <workItem from="1522080157566" duration="13570000" />
+      <workItem from="1522149575326" duration="31176000" />
+      <workItem from="1522196914693" duration="25000" />
+      <workItem from="1522235660995" duration="29048000" />
+      <workItem from="1522322314443" duration="5580000" />
+      <workItem from="1522668281924" duration="495000" />
+      <workItem from="1522668801778" duration="19930000" />
+      <workItem from="1522709035549" duration="36885000" />
+      <workItem from="1522842561936" duration="49586000" />
+      <workItem from="1523016026694" duration="5397000" />
+      <workItem from="1523209686225" duration="11007000" />
+      <workItem from="1523223916001" duration="148000" />
+      <workItem from="1523226857034" duration="2381000" />
+      <workItem from="1523274427702" duration="12729000" />
+      <workItem from="1523307568469" duration="293000" />
+      <workItem from="1523360402724" duration="11365000" />
+      <workItem from="1523543250676" duration="2485000" />
+      <workItem from="1523619884975" duration="1025000" />
+      <workItem from="1523746019934" duration="5868000" />
+      <workItem from="1523752330723" duration="2855000" />
+      <workItem from="1523879149721" duration="8818000" />
+      <workItem from="1523895584230" duration="233000" />
+      <workItem from="1523895826987" duration="840000" />
+      <workItem from="1523896677169" duration="15563000" />
+      <workItem from="1523923571029" duration="28994000" />
+      <workItem from="1524053223095" duration="22633000" />
+      <workItem from="1524096507803" duration="3222000" />
+      <workItem from="1524138026967" duration="16259000" />
+      <workItem from="1524159752296" duration="25912000" />
+      <workItem from="1524243897046" duration="20000" />
+      <workItem from="1524243946712" duration="1400000" />
+      <workItem from="1539695256347" duration="939000" />
+      <workItem from="1539696397395" duration="4652000" />
+      <workItem from="1539702409698" duration="1855000" />
+      <workItem from="1539705021235" duration="559000" />
+      <workItem from="1539705611127" duration="731000" />
+      <workItem from="1539706369977" duration="70000" />
+      <workItem from="1539707461060" duration="773000" />
+      <workItem from="1539751633533" duration="7403000" />
+      <workItem from="1539773680722" duration="798000" />
+      <workItem from="1540287879321" duration="240000" />
+      <workItem from="1540547995537" duration="238000" />
+      <workItem from="1541156761220" duration="578000" />
+      <workItem from="1543573011500" duration="1246000" />
+      <workItem from="1543898760309" duration="991000" />
+      <workItem from="1546594790878" duration="13671000" />
+      <workItem from="1546613082480" duration="12000" />
+      <workItem from="1546850350348" duration="7441000" />
+      <workItem from="1546863984829" duration="1725000" />
+      <workItem from="1546932350162" duration="700000" />
+      <workItem from="1546934632314" duration="2691000" />
+      <workItem from="1547051388114" duration="1109000" />
+      <workItem from="1547052529381" duration="8650000" />
+      <workItem from="1547100225836" duration="308000" />
+      <workItem from="1547100556065" duration="101000" />
+      <workItem from="1547100683128" duration="16327000" />
+      <workItem from="1547269449991" duration="2261000" />
+      <workItem from="1547455304169" duration="292000" />
+      <workItem from="1547456392351" duration="3357000" />
+      <workItem from="1547623221949" duration="9604000" />
+      <workItem from="1547715076687" duration="57480000" />
+      <workItem from="1548065393535" duration="18719000" />
+      <workItem from="1548133514407" duration="147000" />
+      <workItem from="1548166974000" duration="156000" />
+      <workItem from="1548234021307" duration="3782000" />
+      <workItem from="1548301417616" duration="7269000" />
+      <workItem from="1548391245920" duration="10983000" />
+      <workItem from="1548488130668" duration="16853000" />
+      <workItem from="1548731081198" duration="9088000" />
+      <workItem from="1548921973748" duration="66582000" />
+      <workItem from="1549088336710" duration="106961000" />
+      <workItem from="1549608131123" duration="1383000" />
+      <workItem from="1549637926753" duration="1391000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus_(2) - 2019.02.07 at 07h 17m 16s.xml">
+      <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (2)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus_(2) - 2019.02.07 at 08h 36m 29s.xml">
+      <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (2)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus_(2) - 2019.02.07 at 08h 50m 30s.xml">
+      <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (2)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus_(2) - 2019.02.07 at 09h 06m 45s.xml">
+      <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (2)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus_(2) - 2019.02.07 at 09h 13m 48s.xml">
+      <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (2)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus_(2) - 2019.02.07 at 09h 20m 42s.xml">
+      <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (2)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus_(3) - 2019.02.07 at 10h 12m 20s.xml">
+      <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (3)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus_(3) - 2019.02.07 at 10h 33m 09s.xml">
+      <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (3)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus_(3) - 2019.02.07 at 10h 36m 53s.xml">
+      <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (3)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__Verify_whether_the_deals_displayed_in_grid_are_updated_to_show_only_corresponding_substatus_deals_if_the_user_unselects_all_other_substatus_apart_from_corresponding_substatus_(3) - 2019.02.07 at 11h 12m 58s.xml">
+      <configuration name="Scenario: Verify whether the deals displayed in grid are updated to show only corresponding substatus deals if the user unselects all other substatus apart from corresponding substatus (3)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1554993000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1" y="1" width="1534" height="818" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2203504" sideWeight="0.49476832" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32562277" sideWeight="0.4978701" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19217081" sideWeight="0.3529887" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0857295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37818697" sideWeight="0.6470113" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29181495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4036827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17891374" sideWeight="0.5052317" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29038283" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18622696" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32492432" sideWeight="0.22949947" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3259334" sideWeight="0.4978701" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29038283" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23902895" sideWeight="0.77050054" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2921536" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21565495" sideWeight="0.49476832" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31839404" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17891374" sideWeight="0.5052317" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/features/GRS/Pages/grs_home_page.rb</url>
+          <line>4687</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/features/GRS/Pages/grs_home_page.rb</url>
+          <line>4764</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/features/GRS/Pages/grs_home_page.rb</url>
+          <line>2710</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/features/GRS/step_definitions/notes.rb</url>
+          <line>79</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/features/GRS/step_definitions/notes.rb</url>
+          <line>87</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/features/GRS/step_definitions/documents.rb</url>
+          <line>23</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="42" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-core-3.1.0/lib/cucumber/core/test/filters/tag_filter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-core-3.1.0/lib/cucumber/core/compiler.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-core-3.1.0/lib/cucumber/core/gherkin/parser.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-core-3.1.0/lib/cucumber/core.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-3.1.0/lib/cucumber/runtime.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-3.1.0/lib/cucumber/cli/main.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/support/Intialize_page_classes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/env.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/Base/WindowsInput.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-176">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/Base/grs_site_factory.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/2.4.0/net/http.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="1475" column="0" lean-forward="false" selection-start-line="1475" selection-start-column="0" selection-end-line="1475" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/watir-6.14.0/lib/watir/elements/element.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="766" column="0" lean-forward="false" selection-start-line="766" selection-start-column="0" selection-end-line="766" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/feature/GRS-Home-Page/RefreshButton_TimeFunctionality.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/support/env.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/support/HtmlReporter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1680">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/ToBe_Deleted/LoginPage.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/ToBe_Deleted/HomePage.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/ToBe_Deleted/Order1_GRS_Home_page.feature" />
+    <entry file="file://$PROJECT_DIR$/features/GRS/feature/GRS-Home-Page/GRSHomePagePanelValidation.feature" />
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-3.1.0/lib/cucumber/glue/invoke_in_world.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-3.1.0/lib/cucumber/glue/step_definition.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/Output_Files/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/support/element.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-3.1.0/lib/cucumber/filters/prepare_world.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-core-3.1.0/lib/cucumber/core/test/around_hook.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-3.1.0/lib/cucumber/filters/quit.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-core-3.1.0/lib/cucumber/core/filter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-3.1.0/lib/cucumber/filters/broadcast_test_run_started_event.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-core-3.1.0/lib/cucumber/core/test/runner.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-core-3.1.0/lib/cucumber/core/test/case.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/support/hooks.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="179" column="52" lean-forward="false" selection-start-line="179" selection-start-column="44" selection-end-line="179" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/support/config.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="105" column="4" lean-forward="false" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Ruby24-x64/lib/ruby/gems/2.4.0/gems/cucumber-core-3.1.0/lib/cucumber/core/test/action.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/support/DBQueries.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="72" column="49" lean-forward="false" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/feature/Notes/CancelNotes.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="896">
+          <caret line="56" column="31" lean-forward="false" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/support/db_queries.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="883" column="6" lean-forward="false" selection-start-line="883" selection-start-column="6" selection-end-line="883" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/feature/GRS-Home-Page/MultiplePanelSelection.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/step_definitions/documents.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="110" column="3" lean-forward="false" selection-start-line="110" selection-start-column="3" selection-end-line="110" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/feature/Documents/KeyDocuments.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="56" column="37" lean-forward="false" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/support/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/Base/browser_container.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2093">
+          <caret line="250" column="69" lean-forward="false" selection-start-line="250" selection-start-column="69" selection-end-line="250" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/step_definitions/GRS_Home_Page.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="612" column="29" lean-forward="false" selection-start-line="612" selection-start-column="29" selection-end-line="612" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/feature/GRS-Home-Page/GRS_Home_page.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="209" column="48" lean-forward="false" selection-start-line="209" selection-start-column="48" selection-end-line="209" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/step_definitions/notes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="105" column="44" lean-forward="true" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/Pages/grs_home_page.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="173" column="49" lean-forward="false" selection-start-line="173" selection-start-column="49" selection-end-line="173" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/support/fetch_element_details.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="456" column="40" lean-forward="false" selection-start-line="456" selection-start-column="26" selection-end-line="456" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/feature/Notes/EditExistingNotes.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/GRS/support/Element_Details.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2192">
+          <caret line="137" column="12" lean-forward="true" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

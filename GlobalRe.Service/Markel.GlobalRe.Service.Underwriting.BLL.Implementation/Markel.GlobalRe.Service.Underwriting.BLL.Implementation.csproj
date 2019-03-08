@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46A19EED-4905-4DED-84AD-79FC557A3CEB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Markel.GlobalRe.Underwriting.Service.BLL</RootNamespace>
+    <AssemblyName>Markel.GlobalRe.Service.Underwriting.BLL.Implementation</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Managers\APIManagers\CompanyAPIManager.cs" />
+    <Compile Include="Managers\APIManagers\PersonAPIManager.cs" />
+    <Compile Include="Managers\APIManagers\UserPreferencesAPIManager.cs" />
+    <Compile Include="Managers\BaseGlobalReManager.cs" />
+    <Compile Include="Managers\BrokerManager.cs" />
+    <Compile Include="Managers\CedantManager.cs" />
+    <Compile Include="Managers\CheckListsManager.cs" />
+    <Compile Include="Managers\DealCoveragesManager.cs" />
+    <Compile Include="Managers\DealDocumentsManager.cs" />
+    <Compile Include="Managers\DealManager.cs" />
+    <Compile Include="Managers\ExposureTreeManager.cs" />
+    <Compile Include="Managers\Lookups\NotetypesLookupManager.cs" />
+    <Compile Include="Managers\NotesManager.cs" />
+    <Compile Include="Managers\DealStatusSummariesManager.cs" />
+    <Compile Include="Managers\APIManagers\DealAPIManager.cs" />
+    <Compile Include="Managers\EntityLockManager.cs" />
+    <Compile Include="Managers\Lookups\AttachmentBasisLookupManager.cs" />
+    <Compile Include="Managers\Lookups\ContractTypesManager.cs" />
+    <Compile Include="Managers\Lookups\RolePersonsManager.cs" />
+    <Compile Include="Managers\PersonsManager.cs" />
+    <Compile Include="Managers\Lookups\CoverageBasisLookupManager.cs" />
+    <Compile Include="Managers\Lookups\DealStatusesLookupManager.cs" />
+    <Compile Include="Managers\Transformations\BrokerTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\CedantTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\CheckListsTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\ContractTypesTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\DealCoveragesTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\DealDocumentsTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\DealStatusSummariesTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\DealTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\EntityLockTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\ExposureTreeTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\NotesTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\PersonTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\TransformationManager.cs" />
+    <Compile Include="Managers\Transformations\UserViewTransformationManager.cs" />
+    <Compile Include="Managers\Transformations\WritingCompanyTransformationManager.cs" />
+    <Compile Include="Managers\UserViewManager.cs" />
+    <Compile Include="Managers\WritingCompanyManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Markel.GlobalRe.Service.Underwriting.BLL\Markel.GlobalRe.Service.Underwriting.BLL.csproj">
+      <Project>{7DBE533A-FF18-4DDA-9634-E82A95705F4C}</Project>
+      <Name>Markel.GlobalRe.Service.Underwriting.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.GlobalRe.Service.Underwriting.Data\Markel.GlobalRe.Service.Underwriting.Data.csproj">
+      <Project>{0EAB0B4D-7707-4EB7-8A7B-235C0F85E6E4}</Project>
+      <Name>Markel.GlobalRe.Service.Underwriting.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.BLL\Markel.Pricing.Service.Infrastructure.BLL.csproj">
+      <Project>{c1c9e3b1-bf21-41ef-b9e8-bca0730edf92}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.Core\Markel.Pricing.Service.Infrastructure.Core.csproj">
+      <Project>{4bef6fff-c688-45ed-99f0-b89ff79994b9}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.Data\Markel.Pricing.Service.Infrastructure.Data.csproj">
+      <Project>{f2d26a8a-2464-424d-99aa-44faee64abf5}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.WebAPI\Markel.Pricing.Service.Infrastructure.WebAPI.csproj">
+      <Project>{E364DF31-E439-4B1F-B2F0-FC65DAEC5085}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.WebAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.AccountingCloseDatesByDeal.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.Broker.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.CatalogItem.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.CessionDetail.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.CessionRule.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.CompositeDeal.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.CounterPartyBreakdown.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.CreateDealResponse.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.CurrencyDetail.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.DealContact.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.DealDetailResponse.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.DealLayer.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.DealNote.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.DealWorksheet.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.InsuredItem.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.InsuredItemSchedule.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.InsuredItemSearchResponse.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.InsuredItemType.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.Layer.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.ListData.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.Name.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.Offer.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.OfferDeductible.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.OfferFormURLMapping.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.OfferLayerCover.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.OfferSublimits.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.PolicyForm.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.PropertyPricingNote.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.Reinsurer.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.RetroGroupDetail.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.UDFAttribute.datasource" />
+    <None Include="Properties\DataSources\Markel.Pricing.Service.Infrastructure.ERMSDealService.YearPeriod.datasource" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF EXIST "$(SolutionDir)\Runtime\bin" DEL "$(SolutionDir)\Runtime\bin\*.*" /Q/S/F</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

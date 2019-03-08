@@ -1,0 +1,33 @@
+<APIProperties>
+<BrowserMode>Firefox</BrowserMode>
+<ReleaseNumber>0.0</ReleaseNumber>
+<Environments>
+	<RunEnvironment>DEV</RunEnvironment>
+	<DevUrl>http://d-rdc-core01:50090</DevUrl>
+	<!--<QAUrl>http://d-rdc-core01:50090</QAUrl>-->
+	<DevDatabasehost></DevDatabasehost>
+	<Devdatabase>ERMSDB_DEV</Devdatabase>
+	<DevDBport></DevDBport>
+	<DevDBusername>vboya</DevDBusername>
+	<username>vboya</username>
+	<DevDBpassword></DevDBpassword>
+	<DevDBazure></DevDBazure>
+
+	<QAUrl>http://q-rdc-core01:50090</QAUrl>
+	<QADatabasehost></QADatabasehost>
+	<QAdatabase>ERMSDB_QA</QAdatabase>
+	<QADBport></QADBport>
+	<QADBusername>vboya</QADBusername>
+	<!--<username>vboya</username>-->
+	<QADBpassword></QADBpassword>
+	<QADBazure></QADBazure>
+</Environments>
+<DirectoryPaths>
+	<CommonDirectory>..\Common\</CommonDirectory>
+	<SupportDirectory>..\features\support</SupportDirectory>
+	<UtilityDirectory>..\Api\features\utilities</UtilityDirectory>
+	<PageClassesDirectory>..\Api\features\pages</PageClassesDirectory>
+	<ResultsDirectory>..\Api\features\TestResults</ResultsDirectory>
+	<ActionModuleDirectory>..\Api\features\ActionModules</ActionModuleDirectory>
+</DirectoryPaths>
+</APIProperties>

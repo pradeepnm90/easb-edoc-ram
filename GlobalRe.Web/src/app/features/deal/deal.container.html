@@ -1,0 +1,74 @@
+<div class="upper_contianer">
+
+  <div class=" main-container " [ngClass]="isEditMode === true ? 'main-container main-container_responsive' : 'main-container'">
+    <div class="dashboard-container">
+      <div class="workbench-toolbar">
+        <div class="title-panel">
+          <span class="workbench-title">Workbench</span>
+          <span class="line-break-css"></span>
+        </div>
+        <div class="extended-search-header-panel">
+          <div class="my-submission-select-panel">
+            <div class="view-submission-panel">
+              
+              <view-submission [closeViewDropDown]="closeViewDropDown">
+                <extended-search #extendedSearchRef [activeStateData]="extendedSearchActiveState" (onApply)="applyBtnHandler($event)"></extended-search>
+                <view (addView)="addView($event)" [currentView]="closeViewDropDown"  (closeCurrentView)="closeCurrentView($event)" (getUserViewState)="getUserViewState($event)"> </view>
+              </view-submission>
+            </div>
+
+            <!-- <div class="my-submission-box fl" (click)="openSearchPanel($event)">
+                  <span>My Submission</span>
+                  <i class="fa fa-sort-desc triangle-icon" aria-hidden="true"></i>
+                </div>
+                <div style="position: fixed; Width: 230px; height: auto; top: 165px;left: 170px;" [hidden]="!showExtendedSerchPanel">
+                  <extended-search></extended-search>
+                </div> -->
+                <span class="line-break-css fr"></span>
+            </div>
+            <div class="extended-search-title">
+              <div class="lbl-text-container">
+                <div class="lbl-text-sub-container">
+                  <div class="lbl-txt" *ngIf="lblTextObj && lblTextObj.lblText" [ngClass]="lblTextObj.className" matTooltip="{{lblTextObj.tooltipText}}" [matTooltipPosition]="'above'" aria-label="label text tooltip">
+                    <span class="lbl">{{lblTextObj.lblText}}</span>
+                    <span *ngIf="lblTextObj && lblTextObj.kmn" class="line-break-css-lbl fr"></span>
+                  </div>
+                  <div class="lbl-txt ellipsis-cls" *ngIf="lblTextObj && lblTextObj.kmn" [ngClass]="lblTextObj.kClassname" matTooltip="{{lblTextObj.tooltipText}}" [matTooltipPosition]="'above'" aria-label="label text tooltip">
+                    <span class="lbl">{{lblTextObj.kmn}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="timer-panel">
+          <i class="material-icons refresh-btn-cls fr" (click)="refreshView($event)">refresh</i>
+          <i class="material-icons fr" id="deal_lastUpdatedTime_icon" style="font-size: 18px; position: relative;top: 2px;">access_time</i>
+
+          <span class="display-time fr" id="deal_lastUpdatedTime">
+            <time>{{lastUpdated | amTimeAgo}}</time>
+          </span>
+          <span class="line-break-css fr" style="position: relative; top: -2px;"></span>
+          
+        </div>
+      </div>
+
+      <div style="clear:both;"></div>
+      <deal-status (dealStatus)="onClickDealStatus($event)" [dealStatusList]="dealStatusList$ | async"></deal-status>
+
+      <deal-substatus-type [dealStatusList]="dealSubStatusList$ | async" (apiurlEmitEvent)="onClickSubDealStatus($event)"
+        *ngIf="showSubDealstatus"></deal-substatus-type>
+      <deal-filter [inputSelectedFilter]="filterSelectedForView" [resetSelection]="resetTimeSelection" [rowDealCount]="totalDealcount"
+        (filterSelected)="onFilterClick($event)" *ngIf="showGridDetails"></deal-filter>
+      <deal-list [apiURL]="apiUrl" [updateCurrentDeal]="updatedDeal" [filter]="filterSelected" (rowDoubleClicked)="onRowClicked($event)"
+        [hidden]="!showGridDetails" (DealCountRow)="dealCountRow($event)"></deal-list>
+
+    </div>
+  </div>
+  <div class="deal-details-container hide_div" [ngClass]="isEditMode == true ? 'hide_div show_div' : 'hide_div'">
+    <deal-details (isSaveClicked)="onSaveDealDetail();" (isCancelClicked)="onCancelDealDetail($event);" [canEditDealByRole]="canEditDealPermission"
+      [lookupListValue]="lookupList$ | async" (submitDealDetail)="onSubmitDealDetail($event)" [dealGridRowData]="dealGridRowData" 
+      [isDealDetailCompVisible]="isEditMode" (isDealChecklist)="onCheckListtShow($event)">
+    </deal-details>
+
+  </div>
+</div>

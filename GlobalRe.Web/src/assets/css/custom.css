@@ -1,0 +1,924 @@
+/*Fonts Rubik Start*/
+@font-face {
+    font-family: 'RubikRegular';
+    src: url('../fonts/Rubik-Regular.eot');
+    src: url('../fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Rubik-Regular.woff2') format('woff2'),
+        url('../fonts/Rubik-Regular.woff') format('woff'),
+        url('../fonts/Rubik-Regular.ttf') format('truetype'),
+        url('../fonts/Rubik-Regular.svg#Rubik-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RubikMedium';
+    src: url('../fonts/Rubik-Medium.eot');
+    src: url('../fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Rubik-Medium.woff2') format('woff2'),
+        url('../fonts/Rubik-Medium.woff') format('woff'),
+        url('../fonts/Rubik-Medium.ttf') format('truetype'),
+        url('../fonts/Rubik-Medium.svg#Rubik-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RubikLight';
+    src: url('../fonts/Rubik-Light.eot');
+    src: url('../fonts/Rubik-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Rubik-Light.woff2') format('woff2'),
+        url('../fonts/Rubik-Light.woff') format('woff'),
+        url('../fonts/Rubik-Light.ttf') format('truetype'),
+        url('../fonts/Rubik-Light.svg#Rubik-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RubikBold';
+    src: url('../fonts/Rubik-Bold.eot');
+    src: url('../fonts/Rubik-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Rubik-Bold.woff2') format('woff2'),
+        url('../fonts/Rubik-Bold.woff') format('woff'),
+        url('../fonts/Rubik-Bold.ttf') format('truetype'),
+        url('../fonts/Rubik-Bold.svg#Rubik-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+/*Fonts Rubik End*/
+/*Fonts Open Sane Start*/
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../fonts/OpenSans-Regular.eot');
+    src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('../fonts/OpenSans-Regular.woff') format('woff'),
+        url('../fonts/OpenSans-Regular.ttf') format('truetype'),
+        url('../fonts/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('../fonts/OpenSans-Light.eot');
+    src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSans-Light.woff2') format('woff2'),
+        url('../fonts/OpenSans-Light.woff') format('woff'),
+        url('../fonts/OpenSans-Light.ttf') format('truetype'),
+        url('../fonts/OpenSans-Light.svg#OpenSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('../fonts/OpenSans-Bold.eot');
+    src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('../fonts/OpenSans-Bold.woff') format('woff'),
+        url('../fonts/OpenSans-Bold.ttf') format('truetype'),
+        url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+/*Fonts Open Sane End*/
+
+
+body {
+    margin: 0;
+    font-family:"RubikLight";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1d1f20;
+    text-align: left;
+    background-color: #fff;
+}
+.container{
+    /*max-width: 1440px;*/
+    width:100%
+}
+h1,h2,ul{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style-type: none;
+}
+strong{
+    font-weight: normal;
+}
+.dividerLine{
+    border: 1px solid #979797;
+    margin: 0 -15px;
+    opacity: 0.6;
+}
+textarea{
+    resize: none;
+    min-height:70px;
+}
+*,
+:focus{outline: none!important;}
+
+/*TopHeader Common*/
+.topHeaderCommon{
+    background-color:#aa032f;
+    /*height: 80px;*/
+    padding-top:4px;
+    padding-bottom: 4px;
+    position:fixed;
+    left:0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+}
+.topFooterCommon{
+  background-color: grey;
+  /*height: 80px;*/
+  padding-top:4px;
+  padding-bottom: 4px;
+  position:fixed;
+  left:0;
+  right: 0;
+  margin: auto;
+  z-index: 100;
+}
+.siteLogoWrap .siteLogo{
+    height: 42px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.siteLogoWrap h1 a{
+    text-decoration: none;
+}
+.siteLogoWrap h1 a strong{
+    font-family: 'OpenSansRegular';
+    color: #ffffff;
+    font-size: 24px;
+}
+.loginAdminWrap{
+    text-align: right;
+    /*padding-right: 25px;*/
+}
+.loginInfoWrap{
+    text-align: left;
+    display: inline-block;
+    cursor: pointer;
+}
+.loginInfoWrap .caret{
+    color:#fff;
+}
+.menuAdminPanelWrap{
+    position: relative
+}
+.menuAdminPanel{
+  left: auto;
+  right: 5px;
+  text-align: left;
+  padding: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  width: 235px;
+  top: 50px;
+}
+.menuAdminPanel .arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #fff;
+  position: absolute;
+  top: -10px;
+  right: 5px;
+}
+.menuAdminPanel li{
+    border-bottom:1px solid #cc1640;
+}
+.menuAdminPanel li:last-child{
+    border-bottom:0 solid #cc1640;
+}
+.menuAdminPanel li a{
+    font-family: 'RubikRegular';
+    font-size: 17px;
+    text-align: left;
+    color: #616161;
+    text-decoration: none;
+    color: #616161;
+    padding: 20px 16px;
+    display: block;
+}
+.menuAdminPanel li:last-child a{
+    padding-bottom: 12px;
+}
+.menuAdminPanel li:first-child a{
+    padding-top: 12px;
+}
+.menuAdminPanel li a i{
+    font-size: 20px;
+    color: #cc1640;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.greetPanel{
+    vertical-align: middle;
+    display: inline-block;
+    color:#fff;
+    font-size: 12px;
+    color: #ede6e6;
+}
+.userLogin{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    color: #ffffff;
+    font-family: "RubikRegular"
+}
+.userImg{
+    width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 8px;
+}
+.midContentCommon{
+    padding-top: 80px;
+    background-image: linear-gradient(to bottom, #383838, #656565);
+}
+h2.pageName{
+    font-family: 'RubikMedium';
+    font-size: 22px;
+    font-weight: 500;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-left: 7px solid #519ea3;
+    padding-left: 10px;
+    line-height: 26px;
+    /*width: 45%;*/
+}
+/*Task Slider Start*/
+.commonJcaroselWrapper{
+    position: relative;
+}
+.commonJcaroselWrapper .jcarousel{
+    padding: 15px 0;
+    margin-left: -8px;
+}
+.commonJcaroselWrapper .jcarousel li{
+    max-width: 333px!important;
+    border: none;
+}
+.commonJcaroselWrapper .jcarousel-control-prev,
+.commonJcaroselWrapper .jcarousel-control-next{
+    top: 39%;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    font-size: 52px;
+    line-height: 24px;
+    cursor: pointer;
+    opacity: 0.6
+}
+.commonJcaroselWrapper .jcarousel-control-prev{
+    left: 15px;
+}
+.commonJcaroselWrapper .jcarousel-control-next{
+    right: 10px;
+}
+.commonJcaroselWrapper .nextPrevCommon:hover{
+    opacity: 0.9
+}
+.tileCommon{
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #818990, #4e555b);
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.15);
+    position: relative;
+    color:#fff;
+    padding: 35px 15px 0;
+    cursor: pointer
+}
+.tileCommon .statusBook{
+    background-image: linear-gradient(to bottom, #3e474f, #515b65);
+    padding:15px 30px;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #e7eff6;
+    font-family: 'RubikRegular';
+    margin: 0 -15px;
+    border-radius: 0 0 5px 5px;
+}
+.tileCommon.active{
+    background-image: linear-gradient(to bottom, #dd254a, #931830);
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.tileCommon.active .statusBook{
+    background-image: none;
+    border-radius: 0;
+}
+.countWrap{
+    text-align: center;
+    padding-bottom:30px;
+}
+.tileCommon.active .countWrap{
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.tileIcon {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 30px;
+    border-right: 1px solid rgba(255,255,255,0.5);
+    /*opacity: 0.15;*/
+    margin-right: 20px;
+}
+.tileIcon img{
+    width:48px;
+    display: inline-block;
+    vertical-align:top;
+    opacity: 1
+}
+.countWrap .count{
+    font-family: 'RubikLight';
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    text-align: center;
+    color: #e7eff6;
+    vertical-align: top;
+    display: inline-block;
+    line-height: normal;
+    margin-top: -13px;
+}
+.tileCommon.active .arrow-down{
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #8b0e28;
+  margin: 0 auto;
+  /*top: 9px;
+  position: relative;*/
+  position: absolute;
+  left: 50%;
+}
+/*.tileCommon .filterBtn{
+    display:none;
+    text-align: center;
+}
+.tileCommon.active .filterBtn{
+    display:block;
+    padding: 15px 0;
+}*/
+main.commonMain{
+    position: relative;
+    padding-top: 10px;
+}
+.filterBtn{
+    /*position: absolute;
+    right: 15px;
+    top: 35px;*/
+    margin: 22px 0;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    border: none;
+}
+.filterBtn .filterC{
+    padding: 5px 19px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'RubikLight';
+    cursor: pointer;
+}
+.filterBtn li.active .filterC{
+    border: 1px solid #fff;
+    border-radius: 11px;
+}
+/*Task Slider End*/
+/*Task List*/
+/*Task Gird Start*/
+.taskGridWrap{
+    margin-top: 20px;
+}
+.commonGridContentWrap{
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+}
+.commonGridContentWrap table{
+    font-family: 'RubikLight';
+    background-color: #fff;
+    border-radius: 5px 5px;
+    /*table-layout: fixed;*/
+    table-layout:auto;
+    border-collapse: collapse;
+    margin: 0;
+}
+.commonGridContentWrap table tr{
+    border-bottom: solid 2px #dde4e9;
+}
+.commonGridContentWrap table tr:last-child{
+    border-bottom: solid 0 #dde4e9;
+}
+.commonGridContentWrap .table > thead > tr > th{
+    padding:18px 10px;
+}
+/*.commonGridContentWrap .table > thead > tr > th .gridHeader{
+    padding:18px 10px;
+}*/
+.commonGridContentWrap .table > thead > tr:first-child > th:last-child{
+    text-align: center;
+}
+.commonGridContentWrap thead tr:first-child{
+    background-color: #838688;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #ffffff;
+    text-transform: uppercase
+}
+.commonGridContentWrap thead tr:last-child{
+    background-color: #e2ebf3;
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: left;
+    color: #95a6b6;
+}
+.commonGridContentWrap thead th input{
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: solid 1px #95a6b6;
+    padding: 0 5px;
+    line-height: 22px;
+    height: 22px;
+    background: url(../images/iconSearchBg.png) no-repeat 97% center #fff;
+    background-size: 14px;
+    font-family: "RubikLight";
+    color: #95a6b6;
+    font-size: 12px;
+    padding-right:25px;
+    width: 80%
+}
+.commonGridContentWrap thead tr:last-child th:last-child input{
+    width: 35%
+}
+.commonGridContentWrap tbody tr td{
+    font-size: 16px;
+    text-align: left;
+    color: #1d1f20;
+    background: transparent!important;
+    color:#95a6b6;
+    padding: 0;
+}
+.commonGridContentWrap tbody tr td .gridCellContent{
+    padding:18px 10px;
+}
+.clearanceGridWrap tbody tr td:first-child .gridCellContent,
+.clearanceGridWrap tbody tr td:last-child .gridCellContent{
+    text-align: center
+}
+/*.commonGridContentWrap tbody tr.active {
+    background:linear-gradient(to right, #84bf41 0.5%,#f7fcf1 0.5%);
+}*/
+.commonGridContentWrap tbody tr.active td:first-child div{
+    border-left:4px solid #84bf41;
+}
+.commonGridContentWrap tbody tr.active td div.gridCellContent{
+    color: #3a556d;
+    background-color:#f7fcf1;
+}
+.commonGridContentWrap tbody tr td i{
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    font-size: 10px;
+    line-height: 22px;
+}
+.clearanceGridWrap i.fa-circle{
+    color:#f1c435
+}
+/*.commonGridContentWrap tbody tr td:last-child i{
+    font-size: 16px;
+}*/
+/*.commonGridContentWrap tbody tr.active td i{
+    color:#84bf41;
+}*/
+.commonControlPanle .entityCntrl{
+    margin: 0 15px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    line-height: 22px;
+    width:24px;
+    height: 24px;
+}
+.taskControlPanel .editEntiity{
+    background: url(../images/iconAssignTo.png) no-repeat 0 0 transparent;
+}
+.taskControlPanel .saveEntiity{
+    background: url(../images/iconRevertEntity.png) no-repeat 0 0 transparent;
+}
+.taskControlPanel .revertEntiity{
+    background: url(../images/iconDelete.png) no-repeat 0 0 transparent;
+}
+.taskControlPanel .deleteEntiity{
+    background: url(../images/iconDelete.png) no-repeat 0 0 transparent;
+}
+.taskControlPanel .editEntiity:hover{background-image: url(../images/iconAssignToA.png);}
+.taskControlPanel .saveEntiity:hover{background-image: url(../images/iconRevertEntityA.png);}
+.taskControlPanel .deleteEntiity:hover{background-image: url(../images/iconDeleteA.png);}
+/*Task Gird End*/
+/*Task Details Start*/
+.commonFieldsInfo{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(to bottom, #383838, #656565);
+    margin: -8px -15px 0;
+    padding: 0 15px;
+    /*max-width: 1440px;*/
+}
+.commonDetailInfo{
+    position: relative;
+    z-index: 0;
+}
+.taskId{
+    transform: rotate(-90deg);
+    color: #000;
+    width: auto;
+    height: 26px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    top: 55px;
+    left:-45px;
+    letter-spacing: 1.8px;
+}
+.commonFieldsContentWrap{
+    padding-left: 25px;
+    padding-top: 15px;
+    position: relative
+}
+.commonDetailWrap .form-group label{
+    font-weight: 300;
+    font-size: 12px;
+    color: #efefef;
+    display: block;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin:0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.commonDetailWrap .form-group strong{
+    font-weight: 300;
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    display: block;
+    width:100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.commonFieldsWrap{
+    margin: 0 -15px;
+    padding: 15px 15px 0;
+    background: #fff;
+    margin-top:210px;
+}
+.commonFieldsWrap h3{
+    margin: 0 0 20px 0;
+    font-family: 'RubikMedium';
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.9px;
+    color: #519ea3;
+    border-left: 5px solid #519ea3;
+    padding-left: 10px;
+    line-height: 20px;
+    text-transform: uppercase
+}
+.commonFieldsWrap .form-group label,
+.commonFieldsWrap .form-group strong{
+    color:#223f49;
+    opacity: 1
+}
+.commonFields{
+    border-bottom: solid 1px #e2e2e2;
+    padding: 20px 0 5px 25px;
+}
+.activityTab{
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.21);
+    padding: 0;
+    display: inline-block
+}
+.activityTab li span{
+    font-family: 'RubikRegular';
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.83;
+    color: #223f49;
+    text-transform: uppercase;
+    padding: 10px 15px 10px;
+    display: block;
+    border-width:0;
+    border-color:#ccc;
+    border-style: solid;
+    width: 115px;
+    text-align: center;
+    cursor: pointer;
+}
+.activityTab li:first-child span{
+    border-right-width:1px;
+}
+.activityTab li:last-child span{
+    border-left-width:1px;
+}
+.activityTab li:hover span,
+.activityTab li:focus span,
+.activityTab li.active span{
+    font-family: 'RubikMedium';
+    color: #519ea3;
+    outline: none;
+    font-weight: 500;
+    box-shadow: none!important;
+    background: transparent!important
+}
+.activityTab li .arrow-down{
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #fff;
+    position: absolute;
+    bottom: -8px;
+    margin: 0px auto;
+    display: none;
+    left: 44%;
+}
+.activityTab li.active .arrow-down{
+    display: block;
+}
+.activityTabContent{
+    color: #fff;
+    margin-top: 10px;
+    font-family: 'RubikLight';
+    font-size: 14px;
+    font-weight: 300;
+    color: #223f49;
+    min-height: 200px;
+}
+.activityEntityWrap li{
+    border-bottom: solid 2px rgba(226, 226, 226, 0.7);
+    margin-bottom: 10px;
+ }
+ .activityEntityWrap li:last-child{
+     border: none;
+ }
+ .activityEntity{
+    padding: 12px 10px;
+ }
+ .activityEntity .glyphicon-user{
+     color: #979797;
+     margin-right: 10px;
+     display: inline-block;
+ }
+ .activityEntity .loggerName{
+    font-weight: 500;
+    font-family: 'RubikMedium';
+    width: 200px;
+    display: inline-block;
+    margin-right: 20px;
+ }
+ .activityEntity .logStatus{
+    display: inline-block;
+    margin-right: 20px;
+ }
+ .activityEntity .logProgress{
+    border-radius: 11px;
+    padding: 5px 25px;
+    font-family: 'RubikMedium';
+ }
+ .activityEntity .logProgress.approved{
+    background-color: #b8e986;
+ }
+.activityEntity .logProgress.inprogress{
+    background-color: #f4d39c;
+ }
+ .activityCommentField{
+     resize: none;
+     height: 90px;
+     width:45%;
+ }
+ .commonFieldsContent{
+     padding-bottom:20px;
+ }
+ .commonProcessWrap{
+     position: relative;
+ }
+ .commonProcessContent{
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.21);
+    display: inline-block;
+    border-radius: 20px;
+    position: absolute;
+    bottom: -17px;
+    padding: 0 15px;
+    right:0;
+    z-index: 1;
+    cursor: pointer
+ }
+ .commonProcessContent.act{
+     background-color: #e2ebf3;
+     background-image: linear-gradient(to bottom, #383838, #656565);
+     /*background-image: linear-gradient(to bottom, #818990, #4e555b);*/
+ }
+ .commonProcessContent li{
+     border-right: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 5px 10px 5px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 35px;
+ }
+ .commonProcessContent li img{
+     width: 22px;
+    cursor: pointer;
+    margin: 2px 0;
+ }
+ .commonProcessContent li:last-child{
+     border-right:none;
+ }
+ .commonProcessContent li img{
+ }
+ /*.detailTaskRow{
+     height: 0;
+     display: none;
+     transition:all 1s ease;
+ }
+ .detailTaskRow.active{
+     height: auto;
+     display: block;
+     transition:all 1s ease;
+ }*/
+ .commonSummaryWrap{
+    background-color: #e2ebf3;
+    padding: 10px;
+    padding-top: 50px;
+    width: 300px;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    top: -18px;
+    border-radius: 15px 15px 0 0;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+ }
+ .commonSummaryWrap.show{
+     height: auto;
+     opacity: 1;
+     -webkit-transition: all 1 ease;
+     -moz-transition: all 1 ease;
+     transition: all 0.5 ease;
+ }
+ .commonSummaryWrap h3{
+    font-family: 'RubikMedium';
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    color: #525252;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+ }
+ .commonSummaryWrap .form-control{
+    background-color: #fff;
+    border: solid 1px #979797;
+ }
+ .commonSummaryWrap input{
+    border-radius: 17px;
+    height: 35px;
+    line-height: 24px;
+    font-size: 18px;
+    color: #525252;
+    font-family: "RubikLight";
+    text-transform: capitalize;
+ }
+ .commonSummaryWrap input.btn{
+    font-family: 'OpenSansLight';
+    font-size: 15px;
+    padding: 0px 25px;
+    margin-right: 20px;
+    outline: none!important;
+ }
+ .commonSummaryWrap .btnWrap{
+     margin-bottom:0;
+ }
+.commonSummaryWrap input.btn.moreInfoBtn{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.11);
+    border: solid 2px rgba(119, 127, 134, 0.54);
+}
+ .commonDetailWrap .commonSummaryWrap .form-group strong,
+ .commonDetailWrap .commonSummaryWrap .form-group label{
+     color:#1d1f20;
+     opacity: 0.8;
+ }
+ /*Task Details End*/
+/*Theme Css For White Bg Start*/
+.whiteBg .midContentCommon{
+     background: #f2f2f2;
+ }
+.whiteBg .midContentCommon h2.pageName{
+    color: #393535;
+    border-left:none;
+ }
+.whiteBg .filterBtn{
+    color: #545454;
+ }
+.whiteBg .filterBtn li.active .filterC{
+    border: 1px solid #545454;
+}
+ .whiteBg .commonJcaroselWrapper .nextPrevCommon {
+     color:#838688
+ }
+ .whiteBg .commonJcaroselWrapper .tileCommon{
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-image: none;
+ }
+ .whiteBg .commonJcaroselWrapper .tileIcon{
+    border-right:solid 1px #dde4e9;
+ }
+ .whiteBg .commonJcaroselWrapper .tileCommon .statusBook{
+    background-image:none;
+    background-color: #dde4e9;
+    color:#474747;
+ }
+ .whiteBg .commonJcaroselWrapper .tileCommon.active{
+    background-color: #ffffff;
+    box-shadow: 2px 4px 7px 0 rgba(0, 0, 0, 0.3);
+    border: solid 1px #8b0e28;
+    background-image: none;
+    color: #474747;
+  }
+.whiteBg .commonJcaroselWrapper .tileCommon .count{
+    color:#919292;
+}
+.whiteBg .commonJcaroselWrapper .tileCommon.active .count{
+    color: #474747;
+}
+.whiteBg .commonJcaroselWrapper .tileCommon.active .statusBook{
+    background-color: #8b0e28;
+    border: solid 1px #8b0e28;
+    color:#fff;
+}
+/*Theme Css For White Bg End*/
+
+/*Ipad And Mobile Viewport css*/
+@media only screen and (min-device-width: 1440px) {
+.topHeaderCommon{
+    /*width:1440px;*/
+}
+
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+/*For IPad portrate and landscape*/
+.commonGridContentWrap tbody tr td:last-child i {
+    font-size: 14px;
+    margin: 0 10px;
+}
+.commonGridContentWrap tbody tr td {
+    font-size: 14px;
+}
+/*.filterBtn .filterC {
+    padding: 5px 6px;
+    font-size: 12px;
+}*/
+.tileCommon .statusBook {
+    padding: 15px 5px;
+    font-size: 12px;
+    margin: 0 -15px;
+}
+
+}
+@media only screen and (max-device-width: 768px) {
+/*For IPad portrate*/
+.commonJcaroselWrapper .col-md-3{
+    margin-bottom:15px;
+    width: 280px!important;
+}
+.tileCommon.active .arrow-down{
+    display: none;
+}
+}

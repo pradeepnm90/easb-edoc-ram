@@ -1,0 +1,229 @@
+﻿<html>
+<head>
+	<title>Markel.Pricing.Web.TokenProxy.Runtime</title>
+    <meta charset="utf-8" />
+	<script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/signalr/jquery.signalR.js"></script>
+	<script>
+        var messageList = '';
+
+        function run() {
+		    var auth_url = set('auth_url', getAuthUrl());
+		    var api_url = set('api_url', getApiUrl());
+            var user = get('user').value;
+
+			var token = authenticate(auth_url, user);
+
+			var connection = $.hubConnection(api_url);
+			var proxy = connection.createHubProxy('MarkelHub');
+		
+			proxy.on('Notify', function (message) {
+			    addMessage(message);
+			});
+
+			proxy.on('Remove', function (message) {
+			    addMessage(message, '[REMOVED]');
+			});
+			
+			proxy.on('UpdateNotificationList', function (messages, serverVersion) {
+			    messageList = '';
+
+			    messages.forEach(function (message) {
+			        addMessage(message);
+			    });
+			});
+			
+			connection.qs = {
+			    userName: token.userName,
+			    token: token.access_token,
+			    environmentName: token.environment,
+				domainName: token.domainName,
+				applicationVersion: '{DEVELOPMENT}'
+			};
+			
+			connection.start()
+				.done(function(){ set('hub', 'Now connected, connection ID=' + connection.id); })
+				.fail(function(){ set('hub', 'Could not connect'); });
+        }
+
+        function addMessage(notification, additionalInfo) {
+            var detail = notification.detail;
+            var message = detail.message;
+            if (notification.notificationType == 'ProcessAutomation') {
+                message = detail.referenceTypeName + '[' + detail.referenceValue + '], ' + detail.processDescription;
+                message += '[' + detail.taskDescription + '(' + detail.taskSequenceNumber + '/' + detail.taskCount + ')] = ' + detail.taskStatusName;
+                if (detail.message != null) {
+                    message += ', ' + detail.message;
+                }
+            }
+
+			if (additionalInfo != undefined) message += ' ' + additionalInfo;
+            messageList += '<li>[' + notification.logLevel + '] ' + notification.notificationType + '[' + notification.notificationId + ']: ' + message + '</li>';
+            set('messages', messageList);
+        }
+		
+        function authenticate(url, user) {
+            var token = null;
+            var params = null;
+			if (user != undefined && user != '') {
+				params = {
+					"impersonatedUser": user
+				};
+			}
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    var response = JSON.parse(xmlHttp.response);
+                    token = response;
+					set('authUser', response.userName);
+					set('authDomain', response.domainName);
+					set('token', response.isAuthorized);
+                }
+                else if (this.status != 200 && xmlHttp.statusText != '') {
+                    set('token', 'ERROR: ' + xmlHttp.statusText);
+                }
+            }
+            xmlHttp.open("POST", url + '/token', false); // false for synchronous request
+            xmlHttp.setRequestHeader('Accept', '*/*');
+			//xmlHttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+            xmlHttp.setRequestHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+            xmlHttp.setRequestHeader('Content-Type', 'application/json');
+			
+			if (params == null) xmlHttp.send();
+            else xmlHttp.send(JSON.stringify(params));
+
+            return token;
+        }
+
+		function getAuthUrl() {
+			var url = window.location.origin;
+			if (url != 'file://' && url != 'null') return url;
+		
+			switch (get('environment').value) {
+				case 'Localhost':
+					return 'http://localhost:50190';
+			    case 'DEV1':
+			        return 'https://Pricing-DEV1.MarkelCorp.com';
+			    case 'DEV2':
+			        return 'https://Pricing-DEV2.MarkelCorp.com';
+			    case 'PXDEV':
+			        return 'https://Pricing-PXDEV.MarkelCorp.com';
+			    case 'FINREC':
+			        return 'https://Pricing-FINREC.MarkelCorp.com';
+			    case 'QARBS':
+			        return 'https://Pricing-QARBS.MarkelCorp.com';
+			    case 'QA1':
+			        return 'https://Pricing-QA1.MarkelCorp.com';
+			    case 'QA2':
+			        return 'https://Pricing-QA2.MarkelCorp.com';
+			    case 'PXQA':
+			        return 'https://Pricing-PXQA.MarkelCorp.com';
+			    case 'UAT1':
+			        return 'https://Pricing-UAT1.MarkelCorp.com';
+			    case 'UAT2':
+			        return 'https://Pricing-UAT2.MarkelCorp.com';
+			    case 'PXUAT':
+			        return 'https://Pricing-PXUAT.MarkelCorp.com';
+			    case 'MOFFICE':
+			        return 'https://Pricing-MOFFICE.MarkelCorp.com';
+			    default:
+					return 'NOT SET';
+			}
+		}
+		
+		function getApiUrl() {
+			switch (get('environment').value) {
+				case 'Localhost':
+					return 'http://localhost:50090';
+			    case 'DEV1':
+			        return 'https://PricingAPI-DEV1.MarkelCorp.com';
+			    case 'DEV2':
+			        return 'https://PricingAPI-DEV2.MarkelCorp.com';
+			    case 'PXDEV':
+			        return 'https://PricingAPI-PXDEV.MarkelCorp.com';
+			    case 'FINREC':
+			        return 'https://PricingAPI-FINREC.MarkelCorp.com';
+			    case 'QARBS':
+				    return 'https://PricingAPI-QARBS.MarkelCorp.com';
+			    case 'QA1':
+			        return 'https://PricingAPI-QA1.MarkelCorp.com';
+			    case 'QA2':
+			        return 'https://PricingAPI-QA2.MarkelCorp.com';
+			    case 'PXQA':
+			        return 'https://PricingAPI-PXQA.MarkelCorp.com';
+			    case 'UAT1':
+			        return 'https://PricingAPI-UAT1.MarkelCorp.com';
+			    case 'UAT2':
+			        return 'https://PricingAPI-UAT2.MarkelCorp.com';
+			    case 'PXUAT':
+			        return 'https://PricingAPI-PXUAT.MarkelCorp.com';
+			    case 'MOFFICE':
+			        return 'https://PricingAPI-MOFFICE.MarkelCorp.com';
+			    default:
+					return 'NOT SET';
+			}
+		}
+		
+        function set(tag, data) {
+            var element = document.getElementById(tag);
+            if (element != null) {
+                element.innerHTML = data;
+            }
+            return data;
+        }
+		
+		function get(tag) {
+            return document.getElementById(tag);
+        }
+	</script>
+</head>
+<body>
+	
+	<h1>Markel Enterprise Pricing Web - Token Proxy Test</h1>
+	<table border="0">
+		<tr>
+            <td>User:</td>
+            <td><input type="text" id="user" autofocus autocomplete="on" value="" /></td>
+        </tr>
+        <tr>
+            <td>Server:</td>
+            <td>
+                <select id="environment" value="Localhost">
+                    <option selected value="Localhost">Localhost</option>
+                    <option value="DEV1">DEV 1</option>
+                    <option value="DEV2">DEV 2</option>
+                    <option value="PXDEV">PXDEV</option>
+
+                    <option value="FINREC">FINREC</option>
+                    <option value="QARBS">QARBS</option>
+
+                    <option value="QA1">QA 1</option>
+                    <option value="QA2">QA 2</option>
+                    <option value="PXQA">PXQA</option>
+
+                    <option value="UAT1">UAT 1</option>
+                    <option value="UAT2">UAT 2</option>
+                    <option value="PXUAT">PXUAT</option>
+
+                    <option value="MOFFICE">MOFFICE</option>
+                </select>
+            </td>
+        </tr>
+	</table>
+	<input type="button" value="Run" onclick="run()" />
+	
+    <h3>Service Info</h3>
+    <ul>
+        <li>Auth URL: <em id="auth_url"></em></li>
+        <li>API URL: <em id="api_url"></em></li>
+        <li>User: <em id="authUser"></em></li>
+        <li>Domain: <em id="authDomain"></em></li>
+        <li>Token: <em id="token"></em></li>
+        <li>SignalR: <em id="hub"></em></li>
+    </ul>
+	
+	<h3>Messages</h3>
+	<ul id="messages"></ul>
+
+</body>
+</html>

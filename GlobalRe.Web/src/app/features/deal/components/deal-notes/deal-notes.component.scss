@@ -1,0 +1,40 @@
+.notes-card {
+  padding: 0px;
+  display: flex;
+  .note-circle {
+    height: 55px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 8px;
+    text-align: center;
+    word-break: normal;
+    word-spacing: 10px;
+    margin-top: 15px !important;
+    border: 1px solid #DFE0E0;
+  }
+  .note-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    word-break: normal;
+    padding-top: 2px;
+  }
+  .note-bottom {
+    color: #a0a1a3;
+    height: 58px;
+    width: 100%;
+    overflow: hidden;
+    white-space: normal;
+  }
+
+  min-width: 342px;
+  overflow: hidden;
+  height: 85px !important;
+  max-height: 85px !important;
+}

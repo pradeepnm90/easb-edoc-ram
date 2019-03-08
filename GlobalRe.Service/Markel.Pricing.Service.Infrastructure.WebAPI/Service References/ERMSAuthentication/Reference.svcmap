@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0b3d8408-4496-4263-8667-2dbea2e53681" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AuthenticationService.xsd" MetadataType="Schema" ID="06f2f2fe-6490-4942-bea1-a49f1b64dbd9" SourceId="1" SourceUrl="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AuthenticationService1.xsd" MetadataType="Schema" ID="f5e64ae7-72ec-4483-878c-402fa1153524" SourceId="1" SourceUrl="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AuthenticationService2.xsd" MetadataType="Schema" ID="039de703-63c7-400e-8842-9e0f95a29cd3" SourceId="1" SourceUrl="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?xsd=xsd4" />
+    <MetadataFile FileName="AuthenticationService3.xsd" MetadataType="Schema" ID="d43704b0-b282-4ece-9fa1-c9fafe07ddcb" SourceId="1" SourceUrl="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AuthenticationService4.xsd" MetadataType="Schema" ID="b008cea2-7003-42a4-922f-a523c8291348" SourceId="1" SourceUrl="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AuthenticationService.disco" MetadataType="Disco" ID="b2c567a1-b848-4b5e-9b36-b1a41f5f3878" SourceId="1" SourceUrl="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?disco" />
+    <MetadataFile FileName="AuthenticationService.wsdl" MetadataType="Wsdl" ID="2386955a-0bae-42bb-a84f-21befc9bca0f" SourceId="1" SourceUrl="https://d-rdc-core01.alterracap.com:50070/AuthenticationService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

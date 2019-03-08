@@ -1,0 +1,461 @@
+<Queries>
+  <Deals>
+    <BoundDealByStatusName>
+      SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING ON; SET QUOTED_IDENTIFIER OFF;
+      SELECT d.dealnum as dealNumber,d.dealname as dealName,d.status as statusCode, st.name as status, d.contractnum as contractNumber,FORMAT(d.inceptdate,'MM-dd-yyyy') as inceptionDate, FORMAT(d.targetdt,'MM-dd-yyyy') as targetDate, dp.ModelPriority as priority,FORMAT(d.submissiondate,'MM-dd-yyyy') as submittedDate,d.uw1 as primaryUnderwriterCode,uw_n.FullName as primaryUnderwriterName,d.uw2 as secondaryUnderwriterCode, uw2_n.FullName as secondaryUnderwriterName,dp.TA as technicalAssistantCode, ta_n.FullName as technicalAssistantName, d.Modeller as modellerCode,
+      m_n.FullName as modellerName, d.act1 as actuaryCode, a_n.FullName as actuaryName, FORMAT(d.expirydate,'MM-dd-yyyy') as expiryDate, d.source as brokerCode,
+      n3.Name as brokerName, d.bbroker as brokerContactCode, n5.Name as brokerContactName,d.cpartynum as cedantCode,
+      n6.name as cedantName,d.Continuous as continuous,d.cpartylocation as cedantLocationCode,l6.locationName as cedantLocationName,
+      d.sourcelocation as brokerLocationCode,l.locationName as brokerLocationName,p.companyname as paper,d.renewal as renewal,d.Expiry_EOD as expiresAtEndOfDate,
+      d.exposuretype as exposureTypeCode,d.reinsurance as dealTypeCode,dt.name as dealTypeName,d.covtype as coverageType,
+      cb.name as coverageName,d.policybasis as policyBasis,pb.name as policyBasisName,d.currency as currencyCode,
+      cr.currname as currencyName,d.territory as domicileCode,dm.country as domicileName,d.Region as regionCode,
+      rg.name as regionName FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb
+      ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st
+      ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) LEFT OUTER JOIN tb_location l
+      ON (d.sourcelocation = l.LocationId) LEFT OUTER JOIN tb_catalogitems dt ON dt.catid = 79 AND (d.reinsurance = dt.code) LEFT OUTER JOIN tb_catalogitems cb ON cb.catid = 87 AND (d.covtype = cb.code) LEFT OUTER JOIN tb_catalogitems pb ON pb.catid = 81 AND (d.policybasis = pb.code) LEFT OUTER JOIN tb_currency cr ON (d.currency = cr.currency) LEFT OUTER JOIN tb_country dm ON (d.territory = dm.cnum) LEFT OUTER JOIN tb_catalogitems rg
+      ON rg.catid = 145 AND (d.Region = rg.code) LEFT OUTER JOIN tb_Names n6 ON (d.cpartynum = n6.NameId) LEFT OUTER JOIN tb_Location l6
+      ON (d.cpartylocation = l6.LocationId)WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB')
+      AND d.status = 0 AND NOT EXISTS (SELECT 1 FROM dbo.tb_chklistvals tc WHERE tc.entitynum = 1 AND tc.chklistnum = 100 AND tc.key1 = d.dealnum)
+    </BoundDealByStatusName>
+    <OnHoldDealByStatusName>
+      SELECT d.dealnum as dealNumber,d.dealname as dealName,d.status as statusCode, st.name as status, d.contractnum as contractNumber,FORMAT(d.inceptdate,'MM-dd-yyyy') as inceptionDate, FORMAT(d.targetdt,'MM-dd-yyyy') as targetDate, dp.ModelPriority as priority,FORMAT(d.submissiondate,'MM-dd-yyyy') as submittedDate,d.uw1 as primaryUnderwriterCode,uw_n.FullName as primaryUnderwriterName,d.uw2 as secondaryUnderwriterCode, uw2_n.FullName as secondaryUnderwriterName,dp.TA as technicalAssistantCode, ta_n.FullName as technicalAssistantName, d.Modeller as modellerCode,
+      m_n.FullName as modellerName, d.act1 as actuaryCode, a_n.FullName as actuaryName, FORMAT(d.expirydate,'MM-dd-yyyy') as expiryDate, d.source as brokerCode,
+      n3.Name as brokerName, d.bbroker as brokerContactCode, n5.Name as brokerContactName,d.cpartynum as cedantCode,
+      n6.name as cedantName,d.Continuous as continuous,d.cpartylocation as cedantLocationCode,l6.locationName as cedantLocationName,
+      d.sourcelocation as brokerLocationCode,l.locationName as brokerLocationName,p.companyname as paper,d.renewal as renewal,d.Expiry_EOD as expiresAtEndOfDate,
+      d.exposuretype as exposureTypeCode,d.reinsurance as dealTypeCode,dt.name as dealTypeName,d.covtype as coverageType,
+      cb.name as coverageName,d.policybasis as policyBasis,pb.name as policyBasisName,d.currency as currencyCode,
+      cr.currname as currencyName,d.territory as domicileCode,dm.country as domicileName,d.Region as regionCode,
+      rg.name as regionName FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb
+      ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st
+      ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) LEFT OUTER JOIN tb_location l
+      ON (d.sourcelocation = l.LocationId) LEFT OUTER JOIN tb_catalogitems dt ON dt.catid = 79 AND (d.reinsurance = dt.code) LEFT OUTER JOIN tb_catalogitems cb ON cb.catid = 87 AND (d.covtype = cb.code) LEFT OUTER JOIN tb_catalogitems pb ON pb.catid = 81 AND (d.policybasis = pb.code) LEFT OUTER JOIN tb_currency cr ON (d.currency = cr.currency) LEFT OUTER JOIN tb_country dm ON (d.territory = dm.cnum) LEFT OUTER JOIN tb_catalogitems rg
+      ON rg.catid = 145 AND (d.Region = rg.code) LEFT OUTER JOIN tb_Names n6 ON (d.cpartynum = n6.NameId) LEFT OUTER JOIN tb_Location l6
+      ON (d.cpartylocation = l6.LocationId)WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status = 16
+    </OnHoldDealByStatusName>
+    <InProgressDealByStatusName>
+      SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING ON; SET QUOTED_IDENTIFIER OFF;
+      SELECT d.dealnum as dealNumber,d.dealname as dealName,d.status as statusCode, st.name as status, d.contractnum as contractNumber,FORMAT(d.inceptdate,'MM-dd-yyyy') as inceptionDate, FORMAT(d.targetdt,'MM-dd-yyyy') as targetDate, dp.ModelPriority as priority,FORMAT(d.submissiondate,'MM-dd-yyyy') as submittedDate,d.uw1 as primaryUnderwriterCode,uw_n.FullName as primaryUnderwriterName,d.uw2 as secondaryUnderwriterCode, uw2_n.FullName as secondaryUnderwriterName,dp.TA as technicalAssistantCode, ta_n.FullName as technicalAssistantName, d.Modeller as modellerCode,
+      m_n.FullName as modellerName, d.act1 as actuaryCode, a_n.FullName as actuaryName, FORMAT(d.expirydate,'MM-dd-yyyy') as expiryDate, d.source as brokerCode,
+      n3.Name as brokerName, d.bbroker as brokerContactCode, n5.Name as brokerContactName,d.cpartynum as cedantCode,
+      n6.name as cedantName,d.Continuous as continuous,d.cpartylocation as cedantLocationCode,l6.locationName as cedantLocationName,
+      d.sourcelocation as brokerLocationCode,l.locationName as brokerLocationName,p.companyname as paper,d.renewal as renewal,d.Expiry_EOD as expiresAtEndOfDate,
+      d.exposuretype as exposureTypeCode,d.reinsurance as dealTypeCode,dt.name as dealTypeName,d.covtype as coverageType,
+      cb.name as coverageName,d.policybasis as policyBasis,pb.name as policyBasisName,d.currency as currencyCode,
+      cr.currname as currencyName,d.territory as domicileCode,dm.country as domicileName,d.Region as regionCode,
+      rg.name as regionName FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb
+      ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st
+      ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) LEFT OUTER JOIN tb_location l
+      ON (d.sourcelocation = l.LocationId) LEFT OUTER JOIN tb_catalogitems dt ON dt.catid = 79 AND (d.reinsurance = dt.code) LEFT OUTER JOIN tb_catalogitems cb ON cb.catid = 87 AND (d.covtype = cb.code) LEFT OUTER JOIN tb_catalogitems pb ON pb.catid = 81 AND (d.policybasis = pb.code) LEFT OUTER JOIN tb_currency cr ON (d.currency = cr.currency) LEFT OUTER JOIN tb_country dm ON (d.territory = dm.cnum) LEFT OUTER JOIN tb_catalogitems rg
+      ON rg.catid = 145 AND (d.Region = rg.code) LEFT OUTER JOIN tb_Names n6 ON (d.cpartynum = n6.NameId) LEFT OUTER JOIN tb_Location l6
+      ON (d.cpartylocation = l6.LocationId)WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB')
+      AND d.status IN (3,80,2,14,29)
+    </InProgressDealByStatusName>
+    <UnderReviewDealByStatusName>SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING ON; SET QUOTED_IDENTIFIER OFF;
+      SELECT d.dealnum as dealNumber,d.dealname as dealName,d.status as statusCode, st.name as status, d.contractnum as contractNumber,FORMAT(d.inceptdate,'MM-dd-yyyy') as inceptionDate, FORMAT(d.targetdt,'MM-dd-yyyy') as targetDate, dp.ModelPriority as priority,FORMAT(d.submissiondate,'MM-dd-yyyy') as submittedDate,d.uw1 as primaryUnderwriterCode,uw_n.FullName as primaryUnderwriterName,d.uw2 as secondaryUnderwriterCode, uw2_n.FullName as secondaryUnderwriterName,dp.TA as technicalAssistantCode, ta_n.FullName as technicalAssistantName, d.Modeller as modellerCode,
+      m_n.FullName as modellerName, d.act1 as actuaryCode, a_n.FullName as actuaryName, FORMAT(d.expirydate,'MM-dd-yyyy') as expiryDate, d.source as brokerCode,
+      n3.Name as brokerName, d.bbroker as brokerContactCode, n5.Name as brokerContactName,d.cpartynum as cedantCode,
+      n6.name as cedantName,d.Continuous as continuous,d.cpartylocation as cedantLocationCode,l6.locationName as cedantLocationName,
+      d.sourcelocation as brokerLocationCode,l.locationName as brokerLocationName,p.companyname as paper,d.renewal as renewal,d.Expiry_EOD as expiresAtEndOfDate,
+      d.exposuretype as exposureTypeCode,d.reinsurance as dealTypeCode,dt.name as dealTypeName,d.covtype as coverageType,
+      cb.name as coverageName,d.policybasis as policyBasis,pb.name as policyBasisName,d.currency as currencyCode,
+      cr.currname as currencyName,d.territory as domicileCode,dm.country as domicileName,d.Region as regionCode,
+      rg.name as regionName FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb
+      ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st
+      ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) LEFT OUTER JOIN tb_location l
+      ON (d.sourcelocation = l.LocationId) LEFT OUTER JOIN tb_catalogitems dt ON dt.catid = 79 AND (d.reinsurance = dt.code) LEFT OUTER JOIN tb_catalogitems cb ON cb.catid = 87 AND (d.covtype = cb.code) LEFT OUTER JOIN tb_catalogitems pb ON pb.catid = 81 AND (d.policybasis = pb.code) LEFT OUTER JOIN tb_currency cr ON (d.currency = cr.currency) LEFT OUTER JOIN tb_country dm ON (d.territory = dm.cnum) LEFT OUTER JOIN tb_catalogitems rg
+      ON rg.catid = 145 AND (d.Region = rg.code) LEFT OUTER JOIN tb_Names n6 ON (d.cpartynum = n6.NameId) LEFT OUTER JOIN tb_Location l6
+      ON (d.cpartylocation = l6.LocationId)WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (3)
+    </UnderReviewDealByStatusName>
+    <AuthorizeDealByStatusName>SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING ON; SET QUOTED_IDENTIFIER OFF;
+      SELECT d.dealnum as dealNumber,d.dealname as dealName,d.status as statusCode, st.name as status, d.contractnum as contractNumber,FORMAT(d.inceptdate,'MM-dd-yyyy') as inceptionDate, FORMAT(d.targetdt,'MM-dd-yyyy') as targetDate, dp.ModelPriority as priority,FORMAT(d.submissiondate,'MM-dd-yyyy') as submittedDate,d.uw1 as primaryUnderwriterCode,uw_n.FullName as primaryUnderwriterName,d.uw2 as secondaryUnderwriterCode, uw2_n.FullName as secondaryUnderwriterName,dp.TA as technicalAssistantCode, ta_n.FullName as technicalAssistantName, d.Modeller as modellerCode,
+      m_n.FullName as modellerName, d.act1 as actuaryCode, a_n.FullName as actuaryName, FORMAT(d.expirydate,'MM-dd-yyyy') as expiryDate, d.source as brokerCode,
+      n3.Name as brokerName, d.bbroker as brokerContactCode, n5.Name as brokerContactName,d.cpartynum as cedantCode,
+      n6.name as cedantName,d.Continuous as continuous,d.cpartylocation as cedantLocationCode,l6.locationName as cedantLocationName,
+      d.sourcelocation as brokerLocationCode,l.locationName as brokerLocationName,p.companyname as paper,d.renewal as renewal,d.Expiry_EOD as expiresAtEndOfDate,
+      d.exposuretype as exposureTypeCode,d.reinsurance as dealTypeCode,dt.name as dealTypeName,d.covtype as coverageType,
+      cb.name as coverageName,d.policybasis as policyBasis,pb.name as policyBasisName,d.currency as currencyCode,
+      cr.currname as currencyName,d.territory as domicileCode,dm.country as domicileName,d.Region as regionCode,
+      rg.name as regionName FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb
+      ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st
+      ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) LEFT OUTER JOIN tb_location l
+      ON (d.sourcelocation = l.LocationId) LEFT OUTER JOIN tb_catalogitems dt ON dt.catid = 79 AND (d.reinsurance = dt.code) LEFT OUTER JOIN tb_catalogitems cb ON cb.catid = 87 AND (d.covtype = cb.code) LEFT OUTER JOIN tb_catalogitems pb ON pb.catid = 81 AND (d.policybasis = pb.code) LEFT OUTER JOIN tb_currency cr ON (d.currency = cr.currency) LEFT OUTER JOIN tb_country dm ON (d.territory = dm.cnum) LEFT OUTER JOIN tb_catalogitems rg
+      ON rg.catid = 145 AND (d.Region = rg.code) LEFT OUTER JOIN tb_Names n6 ON (d.cpartynum = n6.NameId) LEFT OUTER JOIN tb_Location l6
+      ON (d.cpartylocation = l6.LocationId)WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (80)
+    </AuthorizeDealByStatusName>
+    <OutstandingQuoteDealByStatusName>
+      SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING ON; SET QUOTED_IDENTIFIER OFF;
+      SELECT d.dealnum as dealNumber,d.dealname as dealName,d.status as statusCode, st.name as status, d.contractnum as contractNumber,FORMAT(d.inceptdate,'MM-dd-yyyy') as inceptionDate, FORMAT(d.targetdt,'MM-dd-yyyy') as targetDate, dp.ModelPriority as priority,FORMAT(d.submissiondate,'MM-dd-yyyy') as submittedDate,d.uw1 as primaryUnderwriterCode,uw_n.FullName as primaryUnderwriterName,d.uw2 as secondaryUnderwriterCode, uw2_n.FullName as secondaryUnderwriterName,dp.TA as technicalAssistantCode, ta_n.FullName as technicalAssistantName, d.Modeller as modellerCode,
+      m_n.FullName as modellerName, d.act1 as actuaryCode, a_n.FullName as actuaryName, FORMAT(d.expirydate,'MM-dd-yyyy') as expiryDate, d.source as brokerCode,
+      n3.Name as brokerName, d.bbroker as brokerContactCode, n5.Name as brokerContactName,d.cpartynum as cedantCode,
+      n6.name as cedantName,d.Continuous as continuous,d.cpartylocation as cedantLocationCode,l6.locationName as cedantLocationName,
+      d.sourcelocation as brokerLocationCode,l.locationName as brokerLocationName,p.companyname as paper,d.renewal as renewal,d.Expiry_EOD as expiresAtEndOfDate,
+      d.exposuretype as exposureTypeCode,d.reinsurance as dealTypeCode,dt.name as dealTypeName,d.covtype as coverageType,
+      cb.name as coverageName,d.policybasis as policyBasis,pb.name as policyBasisName,d.currency as currencyCode,
+      cr.currname as currencyName,d.territory as domicileCode,dm.country as domicileName,d.Region as regionCode,
+      rg.name as regionName FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb
+      ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st
+      ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) LEFT OUTER JOIN tb_location l
+      ON (d.sourcelocation = l.LocationId) LEFT OUTER JOIN tb_catalogitems dt ON dt.catid = 79 AND (d.reinsurance = dt.code) LEFT OUTER JOIN tb_catalogitems cb ON cb.catid = 87 AND (d.covtype = cb.code) LEFT OUTER JOIN tb_catalogitems pb ON pb.catid = 81 AND (d.policybasis = pb.code) LEFT OUTER JOIN tb_currency cr ON (d.currency = cr.currency) LEFT OUTER JOIN tb_country dm ON (d.territory = dm.cnum) LEFT OUTER JOIN tb_catalogitems rg
+      ON rg.catid = 145 AND (d.Region = rg.code) LEFT OUTER JOIN tb_Names n6 ON (d.cpartynum = n6.NameId) LEFT OUTER JOIN tb_Location l6
+      ON (d.cpartylocation = l6.LocationId)WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB')
+      AND d.status IN (2)
+    </OutstandingQuoteDealByStatusName>
+    <ToBeDeclinedDealByStatusName>
+      SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING ON; SET QUOTED_IDENTIFIER OFF;
+      SELECT d.dealnum as dealNumber,d.dealname as dealName,d.status as statusCode, st.name as status, d.contractnum as contractNumber,FORMAT(d.inceptdate,'MM-dd-yyyy') as inceptionDate, FORMAT(d.targetdt,'MM-dd-yyyy') as targetDate, dp.ModelPriority as priority,FORMAT(d.submissiondate,'MM-dd-yyyy') as submittedDate,d.uw1 as primaryUnderwriterCode,uw_n.FullName as primaryUnderwriterName,d.uw2 as secondaryUnderwriterCode, uw2_n.FullName as secondaryUnderwriterName,dp.TA as technicalAssistantCode, ta_n.FullName as technicalAssistantName, d.Modeller as modellerCode,
+      m_n.FullName as modellerName, d.act1 as actuaryCode, a_n.FullName as actuaryName, FORMAT(d.expirydate,'MM-dd-yyyy') as expiryDate, d.source as brokerCode,
+      n3.Name as brokerName, d.bbroker as brokerContactCode, n5.Name as brokerContactName,d.cpartynum as cedantCode,
+      n6.name as cedantName,d.Continuous as continuous,d.cpartylocation as cedantLocationCode,l6.locationName as cedantLocationName,
+      d.sourcelocation as brokerLocationCode,l.locationName as brokerLocationName,p.companyname as paper,d.renewal as renewal,d.Expiry_EOD as expiresAtEndOfDate,
+      d.exposuretype as exposureTypeCode,d.reinsurance as dealTypeCode,dt.name as dealTypeName,d.covtype as coverageType,
+      cb.name as coverageName,d.policybasis as policyBasis,pb.name as policyBasisName,d.currency as currencyCode,
+      cr.currname as currencyName,d.territory as domicileCode,dm.country as domicileName,d.Region as regionCode,
+      rg.name as regionName FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb
+      ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st
+      ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) LEFT OUTER JOIN tb_location l
+      ON (d.sourcelocation = l.LocationId) LEFT OUTER JOIN tb_catalogitems dt ON dt.catid = 79 AND (d.reinsurance = dt.code) LEFT OUTER JOIN tb_catalogitems cb ON cb.catid = 87 AND (d.covtype = cb.code) LEFT OUTER JOIN tb_catalogitems pb ON pb.catid = 81 AND (d.policybasis = pb.code) LEFT OUTER JOIN tb_currency cr ON (d.currency = cr.currency) LEFT OUTER JOIN tb_country dm ON (d.territory = dm.cnum) LEFT OUTER JOIN tb_catalogitems rg
+      ON rg.catid = 145 AND (d.Region = rg.code) LEFT OUTER JOIN tb_Names n6 ON (d.cpartynum = n6.NameId) LEFT OUTER JOIN tb_Location l6
+      ON (d.cpartylocation = l6.LocationId)WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB')
+      AND d.status IN (14)
+    </ToBeDeclinedDealByStatusName>
+    <BoundPendingDataEntryDealByStatusName>
+      SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING ON; SET QUOTED_IDENTIFIER OFF;
+      SELECT d.dealnum as dealNumber,d.dealname as dealName,d.status as statusCode, st.name as status, d.contractnum as contractNumber,FORMAT(d.inceptdate,'MM-dd-yyyy') as inceptionDate, FORMAT(d.targetdt,'MM-dd-yyyy') as targetDate, dp.ModelPriority as priority,FORMAT(d.submissiondate,'MM-dd-yyyy') as submittedDate,d.uw1 as primaryUnderwriterCode,uw_n.FullName as primaryUnderwriterName,d.uw2 as secondaryUnderwriterCode, uw2_n.FullName as secondaryUnderwriterName,dp.TA as technicalAssistantCode, ta_n.FullName as technicalAssistantName, d.Modeller as modellerCode,
+      m_n.FullName as modellerName, d.act1 as actuaryCode, a_n.FullName as actuaryName, FORMAT(d.expirydate,'MM-dd-yyyy') as expiryDate, d.source as brokerCode,
+      n3.Name as brokerName, d.bbroker as brokerContactCode, n5.Name as brokerContactName,d.cpartynum as cedantCode,
+      n6.name as cedantName,d.Continuous as continuous,d.cpartylocation as cedantLocationCode,l6.locationName as cedantLocationName,
+      d.sourcelocation as brokerLocationCode,l.locationName as brokerLocationName,p.companyname as paper,d.renewal as renewal,d.Expiry_EOD as expiresAtEndOfDate,
+      d.exposuretype as exposureTypeCode,d.reinsurance as dealTypeCode,dt.name as dealTypeName,d.covtype as coverageType,
+      cb.name as coverageName,d.policybasis as policyBasis,pb.name as policyBasisName,d.currency as currencyCode,
+      cr.currname as currencyName,d.territory as domicileCode,dm.country as domicileName,d.Region as regionCode,
+      rg.name as regionName FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb
+      ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st
+      ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) LEFT OUTER JOIN tb_location l
+      ON (d.sourcelocation = l.LocationId) LEFT OUTER JOIN tb_catalogitems dt ON dt.catid = 79 AND (d.reinsurance = dt.code) LEFT OUTER JOIN tb_catalogitems cb ON cb.catid = 87 AND (d.covtype = cb.code) LEFT OUTER JOIN tb_catalogitems pb ON pb.catid = 81 AND (d.policybasis = pb.code) LEFT OUTER JOIN tb_currency cr ON (d.currency = cr.currency) LEFT OUTER JOIN tb_country dm ON (d.territory = dm.cnum) LEFT OUTER JOIN tb_catalogitems rg
+      ON rg.catid = 145 AND (d.Region = rg.code) LEFT OUTER JOIN tb_Names n6 ON (d.cpartynum = n6.NameId) LEFT OUTER JOIN tb_Location l6
+      ON (d.cpartylocation = l6.LocationId)WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB')
+      AND d.status IN (29)
+    </BoundPendingDataEntryDealByStatusName>
+    <RenewableDealByStatusName>
+      SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING ON; SET QUOTED_IDENTIFIER OFF;
+      SELECT d.dealnum as dealNumber,d.dealname as dealName,d.status as statusCode, st.name as status, d.contractnum as contractNumber,FORMAT(d.inceptdate,'MM-dd-yyyy') as inceptionDate, FORMAT(d.targetdt,'MM-dd-yyyy') as targetDate, dp.ModelPriority as priority,FORMAT(d.submissiondate,'MM-dd-yyyy') as submittedDate,d.uw1 as primaryUnderwriterCode,uw_n.FullName as primaryUnderwriterName,d.uw2 as secondaryUnderwriterCode, uw2_n.FullName as secondaryUnderwriterName,dp.TA as technicalAssistantCode, ta_n.FullName as technicalAssistantName, d.Modeller as modellerCode,
+      m_n.FullName as modellerName, d.act1 as actuaryCode, a_n.FullName as actuaryName, FORMAT(d.expirydate,'MM-dd-yyyy') as expiryDate, d.source as brokerCode,
+      n3.Name as brokerName, d.bbroker as brokerContactCode, n5.Name as brokerContactName,d.cpartynum as cedantCode,
+      n6.name as cedantName,d.Continuous as continuous,d.cpartylocation as cedantLocationCode,l6.locationName as cedantLocationName,
+      d.sourcelocation as brokerLocationCode,l.locationName as brokerLocationName,p.companyname as paper,d.renewal as renewal,d.Expiry_EOD as expiresAtEndOfDate,
+      d.exposuretype as exposureTypeCode,d.reinsurance as dealTypeCode,dt.name as dealTypeName,d.covtype as coverageType,
+      cb.name as coverageName,d.policybasis as policyBasis,pb.name as policyBasisName,d.currency as currencyCode,
+      cr.currname as currencyName,d.territory as domicileCode,dm.country as domicileName,d.Region as regionCode,
+      rg.name as regionName FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb
+      ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st
+      ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) LEFT OUTER JOIN tb_location l
+      ON (d.sourcelocation = l.LocationId) LEFT OUTER JOIN tb_catalogitems dt ON dt.catid = 79 AND (d.reinsurance = dt.code) LEFT OUTER JOIN tb_catalogitems cb ON cb.catid = 87 AND (d.covtype = cb.code) LEFT OUTER JOIN tb_catalogitems pb ON pb.catid = 81 AND (d.policybasis = pb.code) LEFT OUTER JOIN tb_currency cr ON (d.currency = cr.currency) LEFT OUTER JOIN tb_country dm ON (d.territory = dm.cnum) LEFT OUTER JOIN tb_catalogitems rg
+      ON rg.catid = 145 AND (d.Region = rg.code) LEFT OUTER JOIN tb_Names n6 ON (d.cpartynum = n6.NameId) LEFT OUTER JOIN tb_Location l6
+      ON (d.cpartylocation = l6.LocationId)WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB')
+      AND (d.inceptdate #= GETDATE()) AND (d.termdate IS NULL) AND (d.expirydate BETWEEN DATEADD(DAY, 1, EOMONTH(GETDATE())) AND EOMONTH(GETDATE(), 6) ) AND (d.status = 0)
+    </RenewableDealByStatusName>
+  </Deals>
+  <DealCount>
+    <DealSummary>select statusgroupname as groupstatus, statusgroup as groupstatuscode,statusName as StatusName,statuscode as StatusCode, count(*) as Count FROM [DEV_ERMS].[GRS].[v_GRSDealsByStatus] where statuscode in (3,80,2,14,29,16,1000,1001)</DealSummary>
+    <InProgressDealSummaryCountByStatusCode>SELECT 'In Progress' as StatusName ,count(*) as totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (3,80,2,14,29)</InProgressDealSummaryCountByStatusCode>
+    <UnderReviewDealSummaryCountByStatusCode>SELECT st.name AS StatusName, count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (3)</UnderReviewDealSummaryCountByStatusCode>
+    <AuthorizeDealSummaryCountByStatusCode>SELECT st.name AS StatusName, count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (80)</AuthorizeDealSummaryCountByStatusCode>
+    <OutstandingQuoteDealSummaryCountByStatusCode>SELECT st.name AS StatusName, count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (2)</OutstandingQuoteDealSummaryCountByStatusCode>
+    <ToBeDeclinedDealSummaryCountByStatusCode>SELECT st.name AS StatusName, count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (14)</ToBeDeclinedDealSummaryCountByStatusCode>
+    <BPDEDealSummaryCountByStatusCode>SELECT st.name AS StatusName, count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (29)</BPDEDealSummaryCountByStatusCode>
+    <OnHoldDealSummaryCountByStatusCode>SELECT st.name AS StatusName, count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (16)</OnHoldDealSummaryCountByStatusCode>
+    <BoundPendingActionsDealSummaryCountByStatusCode>SELECT st.name AS StatusName, count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status = 0 AND NOT EXISTS (SELECT 1 FROM dbo.tb_chklistvals tc WHERE tc.entitynum = 1 AND tc.chklistnum = 100 AND tc.key1 = d.dealnum)</BoundPendingActionsDealSummaryCountByStatusCode>
+    <Renewable6MonthsDealSummaryCountByStatusCode>SELECT st.name AS StatusName, count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND (d.inceptdate #= GETDATE()) AND (d.termdate IS NULL) AND (d.expirydate BETWEEN DATEADD(DAY, 1, EOMONTH(GETDATE())) AND EOMONTH(GETDATE(), 6) ) AND (d.status = 0)</Renewable6MonthsDealSummaryCountByStatusCode>
+  </DealCount>
+  <DatabaseVerification>
+    <GlobalReDataView>select distinct(division) from [DEV_ERMS].[GRS].[v_GRSDealsByStatus];</GlobalReDataView>
+  </DatabaseVerification>
+  <SubDivisions>SELECT DISTINCT [Extent1].[SubdivisionID] AS [id], [Extent1].[SubdivisionName] AS [name], [Extent1].[SubdivisionSortOrder] AS [sortOrder],1 as rs FROM [grs].[v_GRSSubdivisionExposure] AS [Extent1] UNION SELECT DISTINCT [Extent1].[ExposureGroupID] AS [id], [Extent1].[ExposureGroup] AS [name],[Extent1].[ExposureGroupSortOrder] AS [sortOrder], 2 as rs FROM [grs].[v_GRSSubdivisionExposure] AS [Extent1] ORDER BY rs</SubDivisions>
+  <Teams-Divisions>
+    <CasualtyTeamold>AND d.exposuretype IN (SELECT b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposurename IN ('CA - Auto','CA - CA','CA - GL','CA - PL','CA - Cas Fac')))</CasualtyTeamold>
+    <CasualtyTreatySubOptionold>AND d.exposuretype IN (SELECT b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposurename IN ('CA - Auto','CA - CA','CA - GL','CA - PL')))</CasualtyTreatySubOptionold>
+    <CasualtyFacSubOptionoldld>AND d.exposuretype IN (SELECT b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposurename IN ('CA - Cas Fac')))</CasualtyFacSubOptionoldld>
+    <PropertyTeamoldld>AND d.exposuretype IN (SELECT b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposurename IN ('Property International','Property North America')))</PropertyTeamoldld>
+    <PropertyInternationalSubOptionold>AND d.exposuretype IN (SELECT b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposurename IN ('Property International')))</PropertyInternationalSubOptionold>
+    <PropertyNorthAmericaSubOption>AND d.exposuretype IN (SELECT b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposurename IN ('Property North America')))</PropertyNorthAmericaSubOption>
+    <SpecialtyTeamold>AND d.exposuretype IN (SELECT b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposurename IN ('SP - A#H','SP - Agri','SP - Agri - Arc','SP - AV','SP - LPT','SP - M#E','SP - Mortgage','SP - Other','SP - SC','SP - Terrorism','SP - Terrorism - Arc','SP - WC','Whole Account','SP - Public Entity')))</SpecialtyTeamold>
+    <SpecialtyNon-PESubOptionold>AND d.exposuretype IN (SELECT b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposurename IN ('SP - A#H','SP - Agri','SP - Agri - Arc','SP - AV','SP - LPT','SP - M#E','SP - Mortgage','SP - Other','SP - SC','SP - Terrorism','SP - Terrorism - Arc','SP - WC','Whole Account')))</SpecialtyNon-PESubOptionold>
+    <PublicEntitySubOptionold>AND d.exposuretype IN (SELECT b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposurename IN ('SP - Public Entity')))</PublicEntitySubOptionold>
+  </Teams-Divisions>
+  <StatusDealCount>
+    <BoundDealCountByStatus>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status = 0 AND NOT EXISTS (SELECT 1 FROM dbo.tb_chklistvals tc WHERE tc.entitynum = 1 AND tc.chklistnum = 100 AND tc.key1 = d.dealnum)</BoundDealCountByStatus>
+    <OnHoldDealCountByStatus>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status = 16</OnHoldDealCountByStatus>
+    <InProgressDealCountByStatus>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (3,80,2,14,29)</InProgressDealCountByStatus>
+    <UnderReviewDealCountByStatus>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (3)</UnderReviewDealCountByStatus>
+    <AuthorizeDealCountByStatus>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (80)</AuthorizeDealCountByStatus>
+    <OutstandingQuoteDealCountByStatus>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (2)</OutstandingQuoteDealCountByStatus>
+    <ToBeDeclinedDealCountByStatus>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (14)</ToBeDeclinedDealCountByStatus>
+    <BoundPendingDataEntryDealCountByStatus>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (29)</BoundPendingDataEntryDealCountByStatus>
+    <RenewableDealCountByStatus>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND (d.inceptdate #= GETDATE()) AND (d.termdate IS NULL) AND (d.expirydate BETWEEN DATEADD(DAY, 1, EOMONTH(GETDATE())) AND EOMONTH(GETDATE(), 6) ) AND (d.status = 0)</RenewableDealCountByStatus>
+  </StatusDealCount>
+  <PersonsByPersonID>SELECT PersonId as personId,FirstName as firstName,LastName as lastName,(CASE WHEN CommonName IS NULL THEN (CASE WHEN PersonName IS NULL THEN Firstname + LastName ELSE PersonName END) ELSE CommonName END) as displayName from tb_person where PersonId = (SELECT TOP 1 tn.NameId FROM dbo.tb_Names tn WHERE tn.Name like 'Boya%Venkatesh%' ORDER BY tn.NameId desc)</PersonsByPersonID>
+  <PersonProfile>
+    <UWManagerPersonProfile>SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING ON; SET QUOTED_IDENTIFIER OFF; select STUFF(( SELECT DISTINCT ' ,' + CAST(t.ExposureGroupID AS varchar(5)) FROM grs.v_GRSSubdivisionExposure t INNER JOIN dbo.cfgSetting s ON s.Name = 'Subdivisions Defaults' INNER JOIN dbo.cfgFact f ON f.SettingFK = s.SettingPK LEFT OUTER JOIN dbo.cfgRole r ON r.RolePK = f.RoleFK LEFT OUTER JOIN tb_person p ON f.PersonFK = p.PersonId WHERE f.FactValue = cast(t.ExposureGroupID AS varchar(5)) AND f.RoleFK IN (SELECT DISTINCT crp.RoleFK  FROM tb_user u join dbo.tb_userLogins tul ON u.userid = tul.userid AND u.IsEnabled = 1 AND tul.IsEnabled = u.IsEnabled JOIN dbo.tb_Person tp ON tp.PersonSID = u.ContactNum JOIN dbo.cfgRolePerson crp ON crp.PersonNameFK = tp.PersonId WHERE tul.LoginName LIKE 'Andrew%Barnard%@markel%') AND (f.PersonFK IN (SELECT DISTINCT tp.PersonId  FROM tb_user u join dbo.tb_userLogins tul ON u.userid = tul.userid AND u.IsEnabled = 1 AND tul.IsEnabled = u.IsEnabled JOIN dbo.tb_Person tp ON tp.PersonSID = u.ContactNum JOIN dbo.cfgRolePerson crp ON crp.PersonNameFK = tp.PersonId WHERE tul.LoginName LIKE 'Andrew%Barnard%@markel%') OR f.PersonFK IS NULL ) FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'),1,2,'') AS defaultSubdivisions; SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING OFF;  SET QUOTED_IDENTIFIER ON;</UWManagerPersonProfile>
+    <PTAPersonProfile>SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING ON; SET QUOTED_IDENTIFIER OFF; select STUFF(( SELECT DISTINCT ' ,' + CAST(t.ExposureGroupID AS varchar(5)) FROM grs.v_GRSSubdivisionExposure t INNER JOIN dbo.cfgSetting s ON s.Name = 'Subdivisions Defaults' INNER JOIN dbo.cfgFact f ON f.SettingFK = s.SettingPK LEFT OUTER JOIN dbo.cfgRole r ON r.RolePK = f.RoleFK LEFT OUTER JOIN tb_person p ON f.PersonFK = p.PersonId WHERE f.FactValue = cast(t.ExposureGroupID AS varchar(5)) AND f.RoleFK IN (SELECT DISTINCT crp.RoleFK  FROM tb_user u join dbo.tb_userLogins tul ON u.userid = tul.userid AND u.IsEnabled = 1 AND tul.IsEnabled = u.IsEnabled JOIN dbo.tb_Person tp ON tp.PersonSID = u.ContactNum JOIN dbo.cfgRolePerson crp ON crp.PersonNameFK = tp.PersonId WHERE tul.LoginName LIKE 'Elena.Marshall%@markelcorp%') AND (f.PersonFK IN (SELECT DISTINCT tp.PersonId  FROM tb_user u join dbo.tb_userLogins tul ON u.userid = tul.userid AND u.IsEnabled = 1 AND tul.IsEnabled = u.IsEnabled JOIN dbo.tb_Person tp ON tp.PersonSID = u.ContactNum JOIN dbo.cfgRolePerson crp ON crp.PersonNameFK = tp.PersonId WHERE tul.LoginName LIKE 'Elena.Marshall%@markelcorp%') OR f.PersonFK IS NULL ) FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'),1,2,'') AS defaultSubdivisions; SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING OFF;  SET QUOTED_IDENTIFIER ON;</PTAPersonProfile>
+  </PersonProfile>
+  <NotUsed>
+    <DealCountByStatus>SELECT ci.code AS 'statusid' , ci.name AS 'statusName', ISNULL(deals.Count,0) AS count FROM dbo.tb_catalogitems ci LEFT OUTER JOIN (SELECT d.status, COUNT(d.dealnum) AS 'Count' FROM GRS.v_GRDeals d WHERE d.inceptdate > '20171001' GROUP BY d.status) deals ON deals.status  = ci.code WHERE ci.catid = 7  AND ci.active = 1 AND ci.code IN (80, 2, 3, 29, 14) ORDER BY ci.catorder;</DealCountByStatus>
+    <BoundDealCountByStatusName>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status = 0 AND NOT EXISTS (SELECT 1 FROM dbo.tb_chklistvals tc WHERE tc.entitynum = 1 AND tc.chklistnum = 100 AND tc.key1 = d.dealnum);</BoundDealCountByStatusName>
+    <OnHoldDealCountByStatusName>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status = 16;</OnHoldDealCountByStatusName>
+    <InProgressDealCountByStatusName>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (3,80,2,14,29);</InProgressDealCountByStatusName>
+    <UnderReviewDealCountByStatusName>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (3);</UnderReviewDealCountByStatusName>
+    <AuthorizeDealCountByStatusName>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (80)</AuthorizeDealCountByStatusName>
+    <OutstandingQuoteDealCountByStatusName>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (2);</OutstandingQuoteDealCountByStatusName>
+    <ToBeDeclinedDealCountByStatusName>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (14);</ToBeDeclinedDealCountByStatusName>
+    <BoundPendingDataEntryDealCountByStatusName>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.status IN (29);</BoundPendingDataEntryDealCountByStatusName>
+    <RenewableDealCountByStatusName>SELECT count(*) AS totalRecords FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND (d.inceptdate #= GETDATE()) AND (d.termdate IS NULL) AND (d.expirydate BETWEEN DATEADD(DAY, 1, EOMONTH(GETDATE())) AND EOMONTH(GETDATE(), 6) ) AND (d.status = 0);</RenewableDealCountByStatusName>
+  </NotUsed>
+  <New-Teams-Divisions>
+    <CasualtySubdivisionQuery>5908,5909,2306,2308,2311,5764,5765,5766,5763,5910,2310,5911,5912,5773,5774,2313,5768,5769,5770,5771,5914,5913,5915,5919,5917,5920,5921,5923,5924,5925,5926,5927,5928</CasualtySubdivisionQuery>
+    <PropertySubdivisionQuery>5797,5798,5799,5800,5801,5802,5803,5804,5805,5806,5807,5809,5810,5811,5813,5814,5815,5933,5817,5818,5819,5820,5821,5822,5823,5824,5825,5826,5829,5830,5831,5832,5833,5834,5835,5836,5837,5838,5839,5840,5841,5842,5843,5844,5845,5847,5848,5849,5851,5852,5853,5934,5855,5856,5857,5858,5859,5860,5861,5862,5863,5864,5865,5866,5867,5868,5869,5870,5871,5873,5874,5875,5876,5877,5878,5879,5880,5881,5883,5884,5885,5886,5887,5888,5889,5890,5891,5893,5894,5895,5896,5897,5898,5899,5900,5901</PropertySubdivisionQuery>
+    <SpecialtySubdivisionQuery>2318,5775,5776,5904,5905,5906,2319,2320,1134,2324,2325,2326,1132,2321,2322,2323,1129,1138,5907,1135,2327,2328,2329,2220,1150,1151,1152,1153,1154,1155,1156,1157,1158</SpecialtySubdivisionQuery>
+    <CasualtyTeam>AND d.exposuretype IN (5917,5920,5921,5764,5765,5766,5919,5913,2313,5768,5914,5769,5770,5771,5915,5773,5774,5857,5855,5856,5862,5863,5864,5859,5860,5861,5865,5858,5871,5867,5866,5868,5869,5870,5873,5874,5875,5876,5877,5881,5878,5879,5880,5831,5829,5830,5836,5837,5838,5833,5834,5835,5839,5832,5845,5841,5840,5842,5843,5844,5847,5849,5848,5851,5853,5852,5934,5893,5894,5895,5896,5897,5901,5898,5899,5900,5883,5884,5885,5886,5887,5891,5888,5889,5890,5824,5825,5823,5818,5817,5826,5821,5822,5819,5820,5805,5806,5803,5798,5797,5807,5801,5802,5799,5800,5804,5809,5811,5810,5813,5815,5814,5933,5910,5763,2308,2310,5912,2311,5911,5923,5924,5925,5926,5927,5928,5909,5908,2306)</CasualtyTeam>
+    <CasualtyTreatySubOption>AND d.exposuretype IN (SELECT distinct b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT tem.exptype1,tem.exptype1 FROM dbo.tb_exp_map tem WHERE tem.etmnum = 7 AND NOT exists (SELECT * FROM dbo.tb_exp_map_dtl temd WHERE temd.exptype1 = tem.exptype1 AND temd.etmnum = 7)) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposuretype IN (1125,1126,1128,5916)))</CasualtyTreatySubOption>
+    <CasualtyFacSubOption>AND d.exposuretype IN (SELECT distinct b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT tem.exptype1,tem.exptype1 FROM dbo.tb_exp_map tem WHERE tem.etmnum = 7 AND NOT exists (SELECT * FROM dbo.tb_exp_map_dtl temd WHERE temd.exptype1 = tem.exptype1 AND temd.etmnum = 7)) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposuretype IN (5922)))</CasualtyFacSubOption>
+    <PropertyTeam>AND d.exposuretype IN (SELECT distinct b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT tem.exptype1,tem.exptype1 FROM dbo.tb_exp_map tem WHERE tem.etmnum = 7 AND NOT exists (SELECT * FROM dbo.tb_exp_map_dtl temd WHERE temd.exptype1 = tem.exptype1 AND temd.etmnum = 7)) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposuretype IN (5795,5827)))</PropertyTeam>
+    <PropertyInternationalSubOption>AND d.exposuretype IN (SELECT distinct b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT tem.exptype1,tem.exptype1 FROM dbo.tb_exp_map tem WHERE tem.etmnum = 7 AND NOT exists (SELECT * FROM dbo.tb_exp_map_dtl temd WHERE temd.exptype1 = tem.exptype1 AND temd.etmnum = 7)) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposuretype IN (5827)))</PropertyInternationalSubOption>
+    <PropertyNorthAmericaSubOption>AND d.exposuretype IN (SELECT distinct b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT tem.exptype1,tem.exptype1 FROM dbo.tb_exp_map tem WHERE tem.etmnum = 7 AND NOT exists (SELECT * FROM dbo.tb_exp_map_dtl temd WHERE temd.exptype1 = tem.exptype1 AND temd.etmnum = 7)) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposuretype IN (5795)))</PropertyNorthAmericaSubOption>
+    <SpecialtyTeam>AND d.exposuretype IN (SELECT distinct b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT tem.exptype1,tem.exptype1 FROM dbo.tb_exp_map tem WHERE tem.etmnum = 7 AND NOT exists (SELECT * FROM dbo.tb_exp_map_dtl temd WHERE temd.exptype1 = tem.exptype1 AND temd.etmnum = 7)) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposuretype IN (1020,1113,1130,1131,1132,1134,1135,1136,1137,1138,1139,2220,5902,5907)))</SpecialtyTeam>
+    <SpecialtyNon-PESubOption>AND d.exposuretype IN (SELECT distinct b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT tem.exptype1,tem.exptype1 FROM dbo.tb_exp_map tem WHERE tem.etmnum = 7 AND NOT exists (SELECT * FROM dbo.tb_exp_map_dtl temd WHERE temd.exptype1 = tem.exptype1 AND temd.etmnum = 7)) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposuretype IN (1020,1113,1130,1131,1132,1134,1135,1137,1138,1139,2220,5902,5907)))</SpecialtyNon-PESubOption>
+    <PublicEntitySubOption>AND d.exposuretype IN (SELECT distinct b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT tem.exptype1,tem.exptype1 FROM dbo.tb_exp_map tem WHERE tem.etmnum = 7 AND NOT exists (SELECT * FROM dbo.tb_exp_map_dtl temd WHERE temd.exptype1 = tem.exptype1 AND temd.etmnum = 7)) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposuretype IN (1136)))</PublicEntitySubOption>
+    <AllTeams>AND d.exposuretype IN (SELECT distinct b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT tem.exptype1,tem.exptype1 FROM dbo.tb_exp_map tem WHERE tem.etmnum = 7 AND NOT exists (SELECT * FROM dbo.tb_exp_map_dtl temd WHERE temd.exptype1 = tem.exptype1 AND temd.etmnum = 7)) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposuretype IN (1020,1113,1125,1126,1128,1130,1131,1132,1134,1135,1136,1137,1138,1139,2220,5795,5827,5902,5907,5916,5922)))</AllTeams>
+  </New-Teams-Divisions>
+  <UWManager>AND d.exposuretype IN (SELECT distinct b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT tem.exptype1,tem.exptype1 FROM dbo.tb_exp_map tem WHERE tem.etmnum = 7 AND NOT exists (SELECT * FROM dbo.tb_exp_map_dtl temd WHERE temd.exptype1 = tem.exptype1 AND temd.etmnum = 7)) b where b.exposure IS NOT NULL AND b.exptype1 IN (select distinct  t.exposuretype   FROM grs.v_GRSSubdivisionExposure t INNER JOIN dbo.cfgSetting s ON s.Name = 'Subdivisions Defaults' INNER JOIN dbo.cfgFact f ON f.SettingFK = s.SettingPK LEFT OUTER JOIN dbo.cfgRole r ON r.RolePK = f.RoleFK LEFT OUTER JOIN tb_person p ON f.PersonFK = p.PersonId WHERE f.FactValue = cast(t.ExposureGroupID AS varchar(5)) AND f.RoleFK IN (SELECT DISTINCT crp.RoleFK  FROM tb_user u join dbo.tb_userLogins tul ON u.userid = tul.userid AND u.IsEnabled = 1 AND tul.IsEnabled = u.IsEnabled JOIN dbo.tb_Person tp ON tp.PersonSID = u.ContactNum JOIN dbo.cfgRolePerson crp ON crp.PersonNameFK = tp.PersonId WHERE tul.LoginName LIKE 'Andrew%Barnard%@markel%') AND (f.PersonFK IN (SELECT DISTINCT tp.PersonId  FROM tb_user u join dbo.tb_userLogins tul ON u.userid = tul.userid AND u.IsEnabled = 1 AND tul.IsEnabled = u.IsEnabled JOIN dbo.tb_Person tp ON tp.PersonSID = u.ContactNum JOIN dbo.cfgRolePerson crp ON crp.PersonNameFK = tp.PersonId WHERE tul.LoginName LIKE 'Andrew%Barnard%@markel%') OR f.PersonFK IS NULL )))</UWManager>
+  <SETUSERENV>SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING ON; SET QUOTED_IDENTIFIER OFF; </SETUSERENV>
+  <UNSETUSERENV>SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING OFF; SET QUOTED_IDENTIFIER ON; </UNSETUSERENV>
+  <PropertyTA>AND d.exposuretype IN (SELECT distinct b.exposure FROM (SELECT exptype1,ve.exptype2 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION SELECT exptype1,ve.exptype3 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT exptype1,exptype1 AS exposure FROM dbo.V_exposuretree ve WHERE ve.etmnum = 7 UNION  SELECT tem.exptype1,tem.exptype1 FROM dbo.tb_exp_map tem WHERE tem.etmnum = 7 AND NOT exists (SELECT * FROM dbo.tb_exp_map_dtl temd WHERE temd.exptype1 = tem.exptype1 AND temd.etmnum = 7)) b where b.exposure IS NOT NULL AND b.exptype1 IN (SELECT te.exposuretype FROM dbo.tb_exposetype te WHERE te.exposuretype IN (5795,5827)))</PropertyTA>
+  <DealStatusLookup>select name as [name] ,CAST(code AS varchar(max)) AS value,FloatData1 as [group], CASE WHEN active = 1 THEN 'true' WHEN active = 0 THEN 'false' END AS isActive FROM tb_catalogitems WHERE catid = 7 and active = 1 and code #= 0 order by catorder asc</DealStatusLookup>
+  <DealDetailsByDealNumber>
+    SELECT d.dealnum as dealNumber,d.dealname as dealName,d.status as statusCode, st.name as status, d.contractnum as contractNumber,FORMAT(d.inceptdate,'MM-dd-yyyy') as inceptionDate, FORMAT(d.targetdt,'MM-dd-yyyy') as targetDate, dp.ModelPriority as priority,FORMAT(d.submissiondate,'MM-dd-yyyy') as submittedDate,d.uw1 as primaryUnderwriterCode,uw_n.FullName as primaryUnderwriterName,d.uw2 as secondaryUnderwriterCode, uw2_n.FullName as secondaryUnderwriterName,dp.TA as technicalAssistantCode, ta_n.FullName as technicalAssistantName, d.Modeller as modellerCode,
+    m_n.FullName as modellerName, d.act1 as actuaryCode, a_n.FullName as actuaryName, FORMAT(d.expirydate,'MM-dd-yyyy') as expiryDate, d.source as brokerCode,
+    n3.Name as brokerName, d.bbroker as brokerContactCode, n5.Name as brokerContactName,d.cpartynum as cedantCode,
+    n6.name as cedantName,d.Continuous as continuous,d.cpartylocation as cedantLocationCode,l6.locationName as cedantLocationName,
+    d.sourcelocation as brokerLocationCode,l.locationName as brokerLocationName,p.companyname as paper,d.renewal as renewal,d.Expiry_EOD as expiresAtEndOfDate,
+    d.exposuretype as exposureTypeCode,d.reinsurance as dealTypeCode,dt.name as dealTypeName,d.covtype as coverageType,
+    cb.name as coverageName,d.policybasis as policyBasis,pb.name as policyBasisName,d.currency as currencyCode,
+    cr.currname as currencyName,d.territory as domicileCode,dm.country as domicileName,d.Region as regionCode,
+    rg.name as regionName FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb
+    ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st
+    ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) LEFT OUTER JOIN tb_location l
+    ON (d.sourcelocation = l.LocationId) LEFT OUTER JOIN tb_catalogitems dt ON dt.catid = 79 AND (d.reinsurance = dt.code) LEFT OUTER JOIN tb_catalogitems cb ON cb.catid = 87 AND (d.covtype = cb.code) LEFT OUTER JOIN tb_catalogitems pb ON pb.catid = 81 AND (d.policybasis = pb.code) LEFT OUTER JOIN tb_currency cr ON (d.currency = cr.currency) LEFT OUTER JOIN tb_country dm ON (d.territory = dm.cnum) LEFT OUTER JOIN tb_catalogitems rg
+    ON rg.catid = 145 AND (d.Region = rg.code) LEFT OUTER JOIN tb_Names n6 ON (d.cpartynum = n6.NameId) LEFT OUTER JOIN tb_Location l6
+    ON (d.cpartylocation = l6.LocationId)WHERE d.dealnum > 0 AND tb.busdiv IN ('MGR','FED','CHUB') AND d.dealnum =
+  </DealDetailsByDealNumber>
+  <RolePersonsLookup>select CONCAT(FirstName, ' ', LastName) AS name, CAST(PersonId AS Varchar(MAX)) as value, cfgr.Name AS [group], CASE WHEN cfgr.active = 1 THEN 'true' WHEN cfgr.active = 0 THEN 'false' END AS isActive from tb_person tbp INNER JOIN cfgRolePerson cfgrp ON tbp.PersonId = cfgrp.PersonNameFK INNER JOIN cfgRole as cfgr ON cfgrp.RoleFK = cfgr.RolePK WHERE cfgr.Name in (</RolePersonsLookup>
+  <DealFieldByDealNumber>FROM dbo.tbl_deals d JOIN dbo.dmUnderwritingTeam t ON t.UnderwritingTeamPK=d.producer JOIN dbo.tb_paper p ON p.papernum=d.paper JOIN dbo.tb_teambuc tb ON tb.paper=d.paper AND tb.team=t.UnderwritingTeamPK LEFT OUTER JOIN dbo.tb_deal_pipeline dp ON dp.DealNum = d.dealnum LEFT OUTER JOIN dbo.fnDWgetCatalogItems(7) st ON st.code=d.status LEFT OUTER JOIN tb_Names uw_n ON uw_n.NameId=d.uw1 LEFT OUTER JOIN tb_Names uw2_n ON uw2_n.NameId=d.uw2 LEFT OUTER JOIN tb_Names ta_n ON ta_n.NameId=dp.TA LEFT OUTER JOIN tb_Names m_n ON m_n.NameId=d.Modeller LEFT OUTER JOIN tb_Names a_n ON a_n.NameId=d.act1 LEFT OUTER JOIN tb_Names n3 ON (d.source = n3.NameId) LEFT OUTER JOIN tb_Names n5 ON (d.bbroker = n5.NameId) WHERE d.dealnum > 0  AND tb.busdiv IN ('MGR','FED','CHUB') AND d.dealnum = </DealFieldByDealNumber>
+  <CoverageBasisOptions>
+    Select
+      code as coverageCode,
+      name as coverageDescription,
+      active as activeFlag,
+      assumedflag as assumedFlag,
+      assumedName as assumedName,
+      cededflag as cededFlag,
+      cededname as cededName
+        from [grs].[v_GRSCoverageBasis]
+  </CoverageBasisOptions>
+  <AttachmentBasisOptions>
+  Select
+  code as attachmentCode,
+  name as attachmentDescription,
+  active as activeFlag,
+  assumedflag as assumedFlag,
+  assumedName as assumedDescription,
+  cededflag as cededFlag,
+  cededname as cededDescription
+  from [grs].[v_GRSAttachmentBasis]
+</AttachmentBasisOptions>
+
+  <ContractTypesLookup>
+    select exposuretype AS level1ExposureTypeCode,
+    exposurename AS level1ExposureTypeValue,
+    code AS level1ContractTypeCode,
+    AssumedName AS level1ContractTypeValue,
+    AssumedFlag AS assumedCededFlag
+    from grs.v_grscontracttypes
+  </ContractTypesLookup>
+
+  <ExposureTypeCode>
+    SELECT exposuretype FROM dbo.tb_exposetype te WHERE te.explevel = 1 and te.exposurename =
+  </ExposureTypeCode>
+
+  <DeriveBusinessClass>
+    SELECT riskcatagory AS RiskCategory, liabtype AS LiabilityType, busclass AS BusinessClass
+    FROM dbo.tbl_deals WHERE dealnum =
+  </DeriveBusinessClass>
+
+  <CedantInformation>
+    SELECT
+    cpartynum AS 'CedentCode',
+    cpartylocation AS 'CedentLocationCode'
+    from tbl_deals
+    where dealnum=
+  </CedantInformation>
+
+  <getNotes>  SELECT notenum,dealnum as dealNumber,FORMAT(notedate,'yyyy-MM-ddTHH:mm:ss') as notedate,notetype,notes,whoentered,name,firstName,middleName,lastName from [DEV_ERMS].[grs].[v_GRSNotes] where dealnum = #dealnumber order by notedate desc</getNotes>
+<fetchCreatednote>SELECT notenum,dealnum as dealNumber,FORMAT(notedate,'yyyy-MM-ddTHH:mm:ss') as notedate,notetype,notes,whoentered from dbo.tb_dealnotes where dealnum = #dealnumber and notenum = #notenum</fetchCreatednote>
+<deleteNote>delete from dbo.tb_dealnotes where dealnum = #dealnumber  and notenum = #notenum</deleteNote>
+  <searchNoteByNotenum>SELECT notenum,dealnum as dealNumber,FORMAT(notedate,'yyyy-MM-ddTHH:mm:ss') as notedate,notetype,notes,whoentered ,name,firstName,middleName,lastName from [DEV_ERMS].[grs].[v_GRSNotes] where dealnum = #dealnumber  and notenum = #notenum</searchNoteByNotenum>
+  <WritingCompanies>
+    select papernum,companyname,cpnum,relatedcompany,address1,address2,address3,city,state,postalcode,country,phone,fax,imagefilename,company_shortname as companyshortname,SLTrequired as sltrequired,IPTrequired as iptrequired,policynumber_token as policynumbertoken,currency,territory,active,HideUnusedClaimCategory as hideunusedclaimcategory,JECode as jecode,IsGRSDisplay as isgrsdisplay from grs.v_GRSWritingCompany where isGRSDisplay =1 and active = 1 order by companyname
+  </WritingCompanies>
+  <CedantSearchAndSelect>
+    SET ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING ON; SET QUOTED_IDENTIFIER ON;
+    SELECT
+    CN.NameId as cedantid,
+    CN.Name AS cedantname,
+    L.LocationId AS locationid,
+    --L.LocationName AS locationname,
+    L.LocationAddress AS address,
+    L.LocationCity as city,
+    L.LocationState AS state,
+    L.LocationPostCode AS postalcode,
+    ct.country AS country,
+    CNG.NameId AS parentgroupid,
+    CNG.Name AS parentgroupname
+
+    FROM dbo.tb_Company cmp
+    JOIN [dbo].[tb_Location] AS L ON (L.[CompanyRSID] = cmp.[CompanySID])
+    LEFT JOIN [dbo].[tb_Names] CN ON CN.NameId = cmp.CompanyId
+    LEFT OUTER JOIN [dbo].[tb_Names] CN2 ON cmp.ParentCompany = CN2.NameId
+    LEFT OUTER JOIN [dbo].[tb_Names] CNG ON cmp.[CompanyGroupID] = CNG.NameId
+    OUTER APPLY (SELECT TOP 1 Cct.[code] AS [ParentGroupId], Cct.name AS [ParentGroupName]
+    FROM [dbo].[tbl_Company] Ccg
+    INNER JOIN [dbo].[tb_CompanyCategory] Ccc ON Ccc.CompanyRSID = Ccg.CompanySID AND Ccc.Active = 1
+    INNER JOIN [dbo].[tb_catalogitems] Cct ON Cct.[catid] = 89 AND Cct.[code] = Ccc.[CategoryId] AND Cct.[charcode] = 'GROUP'
+    WHERE Ccg.[CompanySID] = CNG.[CompanyId]
+    ORDER BY Cct.code DESC
+    ) CPG
+    LEFT JOIN dbo.tb_CompanyCategory Ccat ON Ccat.CompanyRSID = cmp.CompanySID
+    LEFT OUTER JOIN dbo.tb_country ct ON ct.cnum = L.LocationCountryId
+    WHERE
+    Ccat.CategoryId IN (90)
+    AND CPG.ParentGroupId = 10011
+    and CN.Name like 'Am%' Order by CN.Name, L.LocationId
+  </CedantSearchAndSelect>
+  <ExposureTypeLookup>
+    SELECT DISTINCT
+
+    tc2.code AS subdivisioncode,
+    tc2.name AS subdivisionname,
+    rdrpl.Product_Line_Code AS productLinecode,
+    rdrpl.Product_Line_Name AS productLinename,
+    temg.GroupId AS exposuregroupcode,
+    temg.GroupName AS exposuregroupname,
+    ename.exposuretype  AS exposuretypecode,
+    ename.exposurename AS exposuretypename
+
+    --logic for getting GR exposure tree
+    FROM  dbo.tb_exposetype explev1
+    OUTER APPLY
+    (
+    SELECT et.exptype1 AS exposuretype
+    FROM dbo.tb_exp_map et
+    WHERE et.exptype1 = explev1.exposuretype AND et.etmnum = 7
+    UNION ALL
+
+    SELECT et.exptype2 AS exposuretype
+    FROM dbo.V_exposuretree et
+    WHERE et.exptype1 = explev1.exposuretype AND et.etmnum = 7
+
+    UNION ALL
+
+    SELECT et.exptype3 AS exposuretype
+    FROM dbo.V_exposuretree et
+    WHERE et.exptype1 = explev1.exposuretype AND et.etmnum = 7
+    ) x
+    INNER JOIN dbo.tb_exposetype ename ON ename.exposuretype = x.exposuretype
+
+    -- logic for getting ExposureGroup and Subdivision
+    JOIN dbo.tb_ExposureMapDetail temd ON temd.exposureid = ename.exposuretype
+    JOIN dbo.tb_ExposureMapGroup temg ON temg.GroupId = temd.GroupId AND temg.mapid = 13
+
+    -- logic for getting product line name and code
+    JOIN rpt.ReferenceDB_XREFTAB_ERMS_Product_Line rdxepl ON cast(ename.exposuretype AS varchar(10)) = rdxepl.Legacy_Exposure_Type_Code
+    JOIN rpt.ReferenceDB_REFTAB_Product_Line rdrpl ON rdxepl.Product_Line_Code = rdrpl.Product_Line_Code
+
+    LEFT OUTER JOIN dbo.tb_catalogdef tc ON tc.catname = 'Subdivision'
+    LEFT OUTER JOIN dbo.tb_catalogitems tc2 ON tc.catid = tc2.catid AND tc2.active = 1 AND tc2.name =
+    CASE WHEN temg.SubDivision = 'Property International' OR temg.SubDivision = 'Property North America' THEN 'Property' ELSE temg.SubDivision END
+
+    WHERE explev1.explevel = 1 AND ename.active = 1
+
+    --additionlal logic to get only child node and exclude parent exposure as per requirement sheet
+    AND ename.exposuretype NOT IN (SELECT temd2.exptype1 FROM dbo.tb_exp_map_dtl temd2 WHERE temd2.exptype2 IS NOT NULL)
+    AND ename.exposuretype NOT IN (SELECT distinct temd2.exptype2 FROM dbo.tb_exp_map_dtl temd2
+    JOIN dbo.tb_exposetype te ON temd2.exptype2 = te.parent WHERE temd2.exptype2 IS NOT NULL AND parent IS NOT NULL AND te.active = 1)
+    AND rdxepl.Legacy_UW_Team_Code IN (SELECT cast(tt.team AS varchar(10))  FROM dbo.tb_teambuc tt WHERE busdiv IN ('MGR','FED','CHUB'))
+    AND rdxepl.Mapping_Effective_End_Date >= Getdate() order by ExposureTypeName
+  </ExposureTypeLookup>
+
+  <DealFilterQuery>
+    SELECT [dealnum] as dealNumber
+    ,[dealname] as dealName
+    ,[status] as statusCode
+    ,[status_name] as status
+    ,[contractnum] as contractNumber
+    ,FORMAT([inceptdate],'MM-dd-yyyy') as inceptionDate
+    ,FORMAT([targetdt],'MM-dd-yyyy') as targetDate
+    ,[ModelPriority] as priority
+    ,FORMAT([submissiondate],'MM-dd-yyyy') as submittedDate
+    ,[uw1] as primaryUnderwriterCode
+    ,[uw1_name] as primaryUnderwriterName
+    ,[uw2] as secondaryUnderwriterCode
+    ,[uw2_name] as secondaryUnderwriterName
+    ,[TA] as technicalAssistantCode
+    ,[TA_Name] as technicalAssistantName
+    ,[Modeller] as modellerCode
+    ,[modeller_name] as modellerName
+    ,[act1] as actuaryCode
+    ,[act1_name] as actuaryName
+    ,FORMAT([expirydate],'MM-dd-yyyy') as expiryDate
+    ,[broker] as brokerCode
+    ,[broker_name] as brokerName
+    ,[broker_contact] as brokerContactCode
+    ,[broker_contact_name] as brokerContactName
+    ,[Cedant] as cedantCode
+    ,[cedant_name] as cedantName
+    ,[continuous] as continuous
+    ,[cedent_location] as cedantLocationCode
+    ,[cedent_locationname] as cedantLocationName
+    ,[broker_location] as brokerLocationCode
+    ,[broker_locationname] as brokerLocationName
+    ,[paper_name] as paper
+    ,[renewal] as renewal
+    ,[Expiry_EOD] as expiresAtEndOfDate
+    ,[exposuretype] as exposureTypeCode
+    ,[dealtype] as dealTypeCode
+    ,[dealtype_name] as dealTypeName
+    ,[coveragetype] as coverageType
+    ,[coveragetype_name] as coverageName
+    ,[policybasis] as policyBasis
+    ,[policybasis_name] as policyBasisName
+    ,[currency] as currencyCode
+    ,[currency_name] as currencyName
+    ,[domicile] as domicileCode
+    ,[domicile_name] as domicileName
+    ,[region] as regionCode
+    ,[region_name] as regionName
+    FROM grs.v_GRSDealsByStatus vgbs WHERE
+  </DealFilterQuery>
+
+  <assumedNoteTypes>select code,name as notetype, active ,AssumedFlag as assumedFlag,AssumedName as assumedName,CededFlag as cededFlag,CededName as cededName from [dbo].[v_CatalogItemsExt]  where AssumedFlag = 1 and active =1 and catid=100</assumedNoteTypes>
+  <cededNoteTypes>select code,name as notetype, active ,AssumedFlag as assumedFlag,AssumedName as assumedName,CededFlag as cededFlag,CededName as cededName from [dbo].[v_CatalogItemsExt]  where CededFlag = 1 and active =1 and catid=100</cededNoteTypes>
+  <allNoteTypes>select code,name as notetype, active ,AssumedFlag as assumedFlag,AssumedName as assumedName,CededFlag as cededFlag,CededName as cededName from [dbo].[v_CatalogItemsExt]  where  active =1 and catid=100 order by catorder</allNoteTypes>
+  <ViewQuery>
+    select view_id as viewId,
+    userid as userId,
+    screenname as screenName,
+    viewname as viewname,
+    [default],
+    layout as layout
+    from GRS.tbl_userviews  where view_id=
+  </ViewQuery>>
+</Queries>

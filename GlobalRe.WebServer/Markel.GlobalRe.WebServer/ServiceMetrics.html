@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Markel.GlobalRe.Service - Service Metrics</title>
+    <meta charset="utf-8" />
+    <script>
+        function run() {
+            var token = authenticate();
+            if (token != null) {
+                var apiUrl = set('apiUrl', token.apiUrl + '/');
+                
+                // GET: Ping
+                serviceCall('GET', apiUrl + 'ping', function (response) {
+                    return 'Server Time: ' + response;
+                }, token.access_token, 'serverTime', null, true);
+
+				// Service Metrics
+				serviceCall('GET', apiUrl + 'v1/servicemetrics', function (response) {
+					set('serverVersion', response.serverVersion);
+					set('dataSource', response.dataSource);
+
+					var serviceMetrics = response.serviceMetrics;
+					set('apiMachineName', serviceMetrics.machineName);
+					set('apiProcessorCount', serviceMetrics.processorCount);
+					set('apiServerTime', serviceMetrics.serverTime);
+
+					return getServiceMetrics(serviceMetrics.serviceMetricData);
+				}, token.access_token, 'metrics');
+            }
+        }
+
+		function getServiceMetrics(serviceData) {
+			var metrics = '<tr><th>Controller Name</th><th>Method Name</th><th>Completed</th><th>Active</th><th>Min</th><th>Max</th><th>Last</th><th>Errors</th><th>Faults</th></tr>';
+			serviceData.forEach(function(service) {
+				service.webMethodMetrics.forEach(function(method) {
+					metrics += '<tr>';
+					metrics += '<td>' + service.serviceName + '</td>';
+					metrics += '<td>' + method.webMethodName + '</td>';
+					metrics += '<td>' + method.completedRequests + '</td>';
+					metrics += '<td>' + method.activeRequests + '</td>';
+					metrics += '<td>' + method.minProcessTime + '</td>';
+					metrics += '<td>' + method.maxProcessTime + '</td>';
+					metrics += '<td>' + method.lastProcessTime + '</td>';
+					metrics += '<td>' + format(method.totalErrors) + '</td>';
+					metrics += '<td' + getRedBackColorAttribute(method.totalFaults) + '>' + format(method.totalFaults) + '</td>';
+					metrics += '</tr>';
+				});
+			});
+			
+			return metrics;
+		}
+		
+		function getRedBackColorAttribute(value) {
+			if (value === null) return '';
+			else return ' bgcolor="#FF0000"';
+		}
+		
+		function format(value, defaultValue) {
+			if (defaultValue === undefined)
+				defaultValue = '';
+				
+			if (value == null)
+				return defaultValue;
+			else	
+				return value;
+		}
+
+    </script>
+    <script>
+        //#region Generic Functions
+
+        function authenticate() {
+            var url = window.location.origin;
+            var token = null;
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    var response = JSON.parse(xmlHttp.response);
+                    token = response;
+                    set('auth', '[' + url + '] ' + response.user);
+                }
+                else if (this.status != 200 && xmlHttp.statusText != '') {
+                    set('auth', '[' + url + '] ' + 'ERROR: ' + xmlHttp.statusText);
+                }
+            }
+            xmlHttp.open("POST", url + '/token', false); // false for synchronous request
+			xmlHttp.setRequestHeader('Accept', '*/*');
+            xmlHttp.setRequestHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+            xmlHttp.setRequestHeader('Content-Type', 'application/json');
+            xmlHttp.send();
+
+            return token;
+        }
+
+        function serviceCall(method, url, successHandler, token, tagName, params, async) {
+            set(tagName, "<font color='red'><b>Loading...</b></font>");
+
+            var xmlHttp = new XMLHttpRequest();
+
+            if (tagName != undefined) {
+                xmlHttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && (this.status == 200 || this.status == 201)) {
+                        var response = this.responseText != "" ? JSON.parse(this.responseText) : "";
+
+                        if (successHandler != null) {
+                            set(tagName, successHandler(response));
+                        }
+                        else if (response.limit != undefined) {
+                            // Search (Limit, Offset, Total, Result Length)
+                            set(tagName, 'L:' + response.limit + ', O:' + response.offset + ', T:' + response.totalRecords + ', R: ' + response.results.length);
+                        }
+                        else if (response.totalRecords != undefined) {
+                            // List (Total Records)
+                            set(tagName, response.totalRecords);
+                        }
+                        else {
+                            // Default
+                            set(tagName, this.responseText);
+                        }
+                    }
+                    else if (this.status != 200 && (this.status == 201 || this.status >= 400)) {
+                        set(tagName, this.responseText);
+                    }
+                };
+            }
+            else {
+                xmlHttp.onreadystatechange = successHandler;
+            }
+
+            //Send the proper header information along with the request
+            xmlHttp.open(method, url, async == true); // true for asynchronous request
+            xmlHttp.setRequestHeader('Accept', '*/*');
+            xmlHttp.setRequestHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+            xmlHttp.setRequestHeader('Content-Type', 'application/json');
+            if (token != undefined || token != null) {
+                xmlHttp.setRequestHeader('Authorization', 'Bearer ' + token);
+            }
+            xmlHttp.setRequestHeader('X-Request-ID', Math.floor((1 + Math.random()) * 0x10000).toString(16));
+
+            if (params != undefined) {
+                xmlHttp.send(JSON.stringify(params));
+            }
+            else {
+                xmlHttp.send();
+            }
+
+            return xmlHttp;
+        }
+
+        function set(tag, data) {
+            var element = document.getElementById(tag);
+            if (element != null) {
+                element.innerHTML = data;
+            }
+            return data;
+        }
+
+        function get(tag) {
+            return document.getElementById(tag);
+        }
+
+        function getUser() {
+            return get('user').value;
+        }
+
+        //#endregion Generic Functions
+    </script>
+</head>
+<body>
+    <h1>Markel Enterprise Pricing Service -  Metrics</h1>
+
+    <h3>API Info</h3>
+    <ul>
+        <li>Auth: <em id="auth"></em></li>
+        <li>API URL: <em id="apiUrl"></em></li>
+        <li>Server Version: <em id="serverVersion"></em></li>
+        <li>Data Source: <em id="dataSource"></em></li>
+        <li>API Server Name: <em id="apiMachineName"></em></li>
+        <li>API Processor Count: <em id="apiProcessorCount"></em></li>
+        <li>API Server Time: <em id="apiServerTime"></em></li>
+    </ul>
+
+    <h3>Service Metrics</h3>
+    <table id="metrics" border="1"></table>
+
+    <footer><small id="serverTime"></small></footer>
+
+    <script>run();</script>
+</body>
+</html>

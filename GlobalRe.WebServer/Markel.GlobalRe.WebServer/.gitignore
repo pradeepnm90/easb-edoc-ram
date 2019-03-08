@@ -1,0 +1,7 @@
+ng
+**/.vs
+**/.vscode
+**/obj
+**/bin
+**/node_modules
+**/packages

@@ -1,0 +1,108 @@
+#%RAML 1.0 ResourceType
+##### REMOVABLE MEMBER #####
+get:
+  description: Get a <<item>>
+  responses:
+    200:
+      body:
+        application/json:
+          description: "<<item>> and Links"
+          type: object
+          properties:
+            url: string
+            data: <<item>>
+            links?: !include ../types/links.raml
+            messages?:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example: <<getResponse_example>>
+
+    404:
+      body:
+        application/json:
+          type: object
+          properties:
+            url: string
+            errors:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example:
+            url: "{Requested URL}"
+            errors: [
+              {
+                title: "Not Found",
+                detail: "<<item>> not found.",
+                severity: "Fatal"
+              }
+            ]
+
+put:
+  description: Save (update) an existing <<item>>
+  body:
+    application/json:
+      type: <<item>>
+      example: <<put_example>>
+
+  responses:
+    200: # OK
+      body:
+        application/json:
+          description: "Updated <<item>> and Links"
+          type: object
+          properties:
+            url: string
+            data: <<item>>
+            links?: !include ../types/links.raml
+            messages?:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example: <<getResponse_example>>
+    400:
+      body:
+        application/json:
+          description: |
+            The request could not be understood by the server due to malformed syntax.
+            The client SHOULD NOT repeat the request without modifications.
+          type: object
+          properties:
+            url: string
+            errors:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example: <<putResponse400_example>>
+
+delete:
+  description: Delete an existing <<item>>
+  responses:
+    200:
+      body:
+        application/json:
+          description: "Delete Response"
+          type: object
+          properties:
+            url: string
+            links?: !include ../types/links.raml
+            messages?:
+              type: array
+              items: !include ../types/responseMessage.raml
+    400:
+      body:
+        application/json:
+          description: |
+            The request could not be understood by the server due to malformed syntax.
+            The client SHOULD NOT repeat the request without modifications.
+          type: object
+          properties:
+            url: string
+            errors:
+              type: array
+              items: !include ../types/responseMessage.raml
+          example:
+            url: "{Requested URL}"
+            errors: [
+              {
+                title: "Cannot delete record",
+                detail: "Record has dependency on another entity.",
+                severity: "Fatal"
+              }
+            ]

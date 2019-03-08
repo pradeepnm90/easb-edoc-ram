@@ -1,0 +1,258 @@
+#%RAML 1.0
+title: Markel Enterprise Global Reinsurance System
+description: REST API for Markel Enterprise Global Reinsurance System
+version: v1
+baseUri: https://grs.markelcorp.com/{version}
+mediaType: application/json
+protocols: [ HTTP, HTTPS ]
+
+uses:
+  t: ./types/types.raml
+
+securitySchemes:
+  oauth_2_0: !include ./securitySchemes/oauth_2_0.raml
+
+types:
+  Deal: !include ./types/deal.raml
+  Person: !include ./types/person.raml
+  PersonProfile: !include ./types/personProfile.raml
+
+#Reference Data
+  NameValuePair: !include ./types/nameValuePair.raml
+  ContractType: !include ./types/contractType.raml
+  DealNote: !include ./types/dealNote.raml
+  Coverage: !include ./types/coverage.raml
+  WritingCompany: !include ./types/WritingCompany.raml
+
+resourceTypes:
+  Collection: !include ./resourceTypes/collection.raml
+  Member: !include ./resourceTypes/member.raml
+  PatchMember: !include ./resourceTypes/patchMember.raml
+  PostMember: !include ./resourceTypes/postMember.raml
+  ReadOnlyCollection: !include ./resourceTypes/readOnlyCollection.raml
+  ReadOnlyMember: !include ./resourceTypes/readOnlyMember.raml
+  ReferenceCollection: !include ./resourceTypes/referenceCollection.raml
+  RemovableMember: !include ./resourceTypes/removableMember.raml
+
+traits:
+  # Generic
+  Pageable: !include ./traits/pageable.raml
+  Orderable: !include ./traits/orderable.raml
+
+  #Deals
+  DealsFiltered: !include ./traits/filter-deals.raml
+
+  #Persons
+  PersonsFiltered: !include ./traits/filter-persons.raml
+
+  #RolePersons
+  RolePersonsFiltered: !include ./traits/filter-rolepersons.raml
+
+# API:
+/deals:
+  description: Collection of Deals/Submission
+  type: {
+    Collection: {
+      item: Deal,
+      getResponse_singleExample: !include ./examples/deals/searchResponse-singleExample.json,
+      getResponse_arrayExample: !include ./examples/deals/searchResponse-arrayExample.json
+    }
+  }
+  get:
+    is: [ DealsFiltered, Pageable,
+      Orderable: {
+        fieldsList : "dealNumber, dealName, status, etc..."
+      }
+    ]
+    body:
+      application/json:
+        example: !include ./examples/deals/search-example.json
+    responses:
+      200:
+        description: ""
+  /{dealNumber}:
+    type: {
+      Member: {
+        item: Deal,
+        put_item: Deal,
+        getResponse_example: !include ./examples/deals/getResponse-example.json,
+        put_example: !include ./examples/deals/put-example.json,
+        putResponse400_example: !include ./examples/deals/postResponse400-example.json
+      }
+    }
+
+/dealstatussummaries:
+  description: Collection of Deal Status Summary
+  type: {
+     ReadOnlyCollection: {
+       description: "",
+       item: t.DealStatusSummary,
+       getResponse_example: !include ./examples/dealstatussummaries/getResponseExample.json
+    }
+  }
+  get:
+    body:
+      application/json:
+        example: !include ./examples/dealstatussummaries/search-example.json
+    responses:
+      200:
+        description: "Collection of Deal Status Summary"
+
+/subdivisions:
+  description: Collection of Subdivisions
+  type: {
+     ReadOnlyCollection: {
+       description: "",
+       item: t.Subdivision,
+       getResponse_example: !include ./examples/subdivisions/getResponseExample.json
+    }
+  }
+  get:
+    body:
+      application/json:
+        example: !include ./examples/subdivisions/search-example.json
+    responses:
+      200:
+        description: "Collection of Subdivisions"
+
+/persons:
+  description: Collection of Persons
+  type: {
+     ReadOnlyCollection: {
+       description: "",
+       item: Person,
+       getResponse_example: !include ./examples/persons/getResponseExample.json
+    }
+  }
+  get:
+    is: [PersonsFiltered]
+    body:
+      application/json:
+        example: !include ./examples/persons/search-example.json
+    responses:
+      200:
+        description: "Collection of Persons"
+
+/personprofile:
+  description: Person Profile
+  type: {
+    ReadOnlyMember: {
+      description: "",
+      item: PersonProfile,
+      getResponse_example: !include ./examples/personprofile/getResponseExample.json
+    }
+  }
+  get:
+    body:
+      application/json:
+        example: !include ./examples/personprofile/search-example.json
+    responses:
+      200:
+        description: "Person Profile"
+
+/lookups:
+  /dealstatuses:
+    description: Deal Statuses Reference Data
+    type: {
+      ReferenceCollection: {
+        item: NameValuePair,
+        description: Returns a master list of all deal statuses,
+        getResponse_example: !include ./examples/lookups/ref_dealStatuses-example.json
+      }
+    }
+  /rolepersons:
+    description: Role Persons Reference Data
+    type: {
+      ReferenceCollection: {
+        item: NameValuePair,
+        description: Returns list of persons that belong to requested role,
+        getResponse_example: !include ./examples/lookups/ref_rolePersons-example.json
+      }
+    }
+    get:
+      is: [RolePersonsFiltered]
+      body:
+        application/json:
+          example: !include ./examples/lookups/search-rolePersons.json
+      responses:
+        200:
+          description: "Collection of persons that belong to requested role."
+
+  /contractTypes/{AssumedCededAllFlag}:
+    description: Contract Types reference data based on AssumedCededAllFlag
+    type: {
+      ReferenceCollection: {
+        item: ContractType,
+        description: Returns list of Contract Types for Assumed Ceded or All,
+        getResponse_example: !include ./examples/lookups/ref_ContractTypes-example.json
+      }
+    }
+    get:
+      body:
+        application/json:
+      responses:
+        200:
+          description: "Collection of ContractTypes based on AssumedCededAllFlag"
+
+/dealscoverage/{dealNumber}:
+  description: Collection of coverages associated with deal number (Submission ID)
+  type: {
+    ReferenceCollection: {
+      item: Coverage,
+      description: Returns list of Coverages for given deal number,
+      getResponse_example: !include ./examples/dealsCoverage/getResponse-example.json
+    }
+  }
+  get:
+    body:
+      application/json:
+    responses:
+      200:
+        description: "Collection of Deal Coverages for given deal number (Submission ID)"
+
+/dealNotes:
+  description: Deal Notes associated with deal number (Submission ID)
+  type: {
+    ReferenceCollection: {
+      item: DealNote,
+      description: Returns list of Deal Notes associated with deal number,
+      getResponse_example: !include ./examples/dealNote/getResponse-example.json
+    }
+  }
+  get:
+    body:
+      application/json:
+        example: !include ./examples/dealNote/search-example.json
+    responses:
+      200:
+        description: "Collection of Deal Notes for given deal number (Submission ID)"
+
+/writingCompany:
+  description: Writing Companies (Paper) Collection
+  type: {
+    ReferenceCollection: {
+      item: WritingCompany,
+      description: Returns list of all Writing Companies (Paper),
+      getResponse_example: !include ./examples/writingCompanies/getResponseAll-example.json
+    }
+  }
+  get:
+    body:
+      application/json:
+    responses:
+      200:
+        description: "Collection of all Writing Companies (Paper)"
+  /{isGRSFlag}:   # Accepts only TRUE/FALSE
+    type: {
+      ReferenceCollection: {
+        item: WritingCompany,
+        description: Returns list of GRS Writing Companies (Paper) when isGRSFlag is TRUE. Error for other values,
+        getResponse_example: !include ./examples/writingCompanies/getResponseGRS-example.json
+      }
+    }
+      get:
+        body:
+          application/json:
+        responses:
+          200:
+            description: "Collection of GRS Writing Companies (Paper) when is GRSFlag is TRUE. Error for other values."

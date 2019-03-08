@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E364DF31-E439-4B1F-B2F0-FC65DAEC5085}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Markel.Pricing.Service.Infrastructure</RootNamespace>
+    <AssemblyName>Markel.Pricing.Service.Infrastructure.WebAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.4.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.4.0.1\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.4.0.1\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.7\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.WebApi, Version=5.2.3.0, Culture=neutral, PublicKeyToken=43da31bc42a85347, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.WebAPI.5.2.3\lib\net45\Unity.WebApi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Cache\CacheManager.cs" />
+    <Compile Include="Cache\CacheStoreCollection.cs" />
+    <Compile Include="Cache\CacheStoreManager.cs" />
+    <Compile Include="Cache\NullCacheManager.cs" />
+    <Compile Include="Constants\TransactionResult.cs" />
+    <Compile Include="Controllers\BaseLookupsController.cs" />
+    <Compile Include="Dependency\BaseAspectBehavior.cs" />
+    <Compile Include="Dependency\DependencyInstanceProvider.cs" />
+    <Compile Include="Dependency\DependencyManager.cs" />
+    <Compile Include="Dependency\DependencyServiceBehavior.cs" />
+    <Compile Include="Dependency\DependencyServiceHost.cs" />
+    <Compile Include="Dependency\DisposeExtension.cs" />
+    <Compile Include="Dependency\IDependencyManager.cs" />
+    <Compile Include="Enums\ExportTypeEnum.cs" />
+    <Compile Include="Exceptions\BadRequestException.cs" />
+    <Compile Include="Exceptions\CancelledTaskBugWorkaroundMessageHandler.cs" />
+    <Compile Include="Exceptions\GlobalExceptionHandler.cs" />
+    <Compile Include="Exceptions\GlobalExceptionLogger.cs" />
+    <Compile Include="Exceptions\NotFoundException.cs" />
+    <Compile Include="Extensions\ApiEntityConversion.cs" />
+    <Compile Include="Extensions\ClaimsIdentityExtension.cs" />
+    <Compile Include="Extensions\HttpExtensions.cs" />
+    <Compile Include="Extensions\ResponseExtensions.cs" />
+    <Compile Include="Filters\RequestIDHeaderFilter.cs" />
+    <Compile Include="Attributes\TrackingActionFilterAttribute.cs" />
+    <Compile Include="Interfaces\IBaseApiModel.cs" />
+    <Compile Include="Json\JsonCreationConverter.cs" />
+    <Compile Include="Logging\Check.cs" />
+    <Compile Include="Logging\Configuration\LoggerConfigurationSetting.cs" />
+    <Compile Include="Logging\Configuration\LoggersConfigurationSection.cs" />
+    <Compile Include="Logging\Configuration\LoggerSettingCollection.cs" />
+    <Compile Include="Logging\Configuration\LoggingConfigurationSection.cs" />
+    <Compile Include="Logging\Configuration\LoggingConfigurationSetting.cs" />
+    <Compile Include="Controllers\LogController.cs" />
+    <Compile Include="Logging\LogEntry.cs" />
+    <Compile Include="Logging\LoggerHelper.cs" />
+    <Compile Include="Logging\LoggerLevel.cs" />
+    <Compile Include="Logging\Loggers\Log4NetLogger.cs" />
+    <Compile Include="Logging\LoggingAttribute.cs" />
+    <Compile Include="Logging\LoggingBehavior.cs" />
+    <Compile Include="Logging\ServiceMetrics.cs" />
+    <Compile Include="Models\ApiEndpoint.cs" />
+    <Compile Include="Models\BaseApiList.cs" />
+    <Compile Include="Models\BaseApiModel.cs" />
+    <Compile Include="Models\NameValuePair.cs" />
+    <Compile Include="Models\Metrics\CacheMetricData.cs" />
+    <Compile Include="Models\Metrics\MetricData.cs" />
+    <Compile Include="Models\Metrics\ServiceMetricData.cs" />
+    <Compile Include="Models\Metrics\ServiceMetricStatusEnum.cs" />
+    <Compile Include="Models\Metrics\WebMethodAggregateData.cs" />
+    <Compile Include="Models\Metrics\WebMethodMetricData.cs" />
+    <Compile Include="Models\GroupNameValuePair.cs" />
+    <Compile Include="Notifications\ConnectionMemoryStore.cs" />
+    <Compile Include="Notifications\HubAuthorizationHandler.cs" />
+    <Compile Include="Notifications\NotificationMemoryStore.cs" />
+    <Compile Include="Notifications\NotificationExtension.cs" />
+    <Compile Include="Notifications\UnityHubActivator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\CustomDirectRouteProvider.cs" />
+    <Compile Include="Providers\AuthProvider.cs" />
+    <Compile Include="ResourceTypes\HttpMethodType.cs" />
+    <Compile Include="ResourceTypes\LinkType.cs" />
+    <Compile Include="ResourceTypes\Options.cs" />
+    <Compile Include="ResourceTypes\Item.cs" />
+    <Compile Include="ResourceTypes\Link.cs" />
+    <Compile Include="ResourceTypes\Response.cs" />
+    <Compile Include="ResourceTypes\ResponseLookup.cs" />
+    <Compile Include="ResourceTypes\ResponseCollectionPaginated.cs" />
+    <Compile Include="ResourceTypes\ResponseCollection.cs" />
+    <Compile Include="ResourceTypes\ResponseMessage.cs" />
+    <Compile Include="ResourceTypes\ResponseOptions.cs" />
+    <Compile Include="ResourceTypes\ResponseItem.cs" />
+    <Compile Include="Security\ADAuthenticationManager.cs" />
+    <Compile Include="Security\ERMSAuthorizationManager.cs" />
+    <Compile Include="Security\UserManager.cs" />
+    <Compile Include="Service References\ERMSAuthentication\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Traits\APIPaginationCriteria.cs" />
+    <Compile Include="Traits\APISearchCriteria.cs" />
+    <Compile Include="Controllers\BaseEntityApiController.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Notifications\NotificationManager.cs" />
+    <Compile Include="Notifications\MarkelHub.cs" />
+    <Compile Include="WebApi\RestClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CoreVelocity.Core.Security.EnterpriseIdentity.datasource" />
+    <None Include="Properties\DataSources\CoreVelocity.Security.Model.AuthenticationResponse.datasource" />
+    <None Include="Service References\ERMSAuthentication\AuthenticationService.wsdl" />
+    <None Include="Service References\ERMSAuthentication\AuthenticationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ERMSAuthentication\AuthenticationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ERMSAuthentication\AuthenticationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ERMSAuthentication\AuthenticationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ERMSAuthentication\AuthenticationService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoreVelocity.Data\CoreVelocity.Data.csproj">
+      <Project>{3e8f802a-2b43-40a2-9882-087735f9426a}</Project>
+      <Name>CoreVelocity.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.GlobalRe.Service.Underwriting.BLL\Markel.GlobalRe.Service.Underwriting.BLL.csproj">
+      <Project>{7DBE533A-FF18-4DDA-9634-E82A95705F4C}</Project>
+      <Name>Markel.GlobalRe.Service.Underwriting.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.BLL\Markel.Pricing.Service.Infrastructure.BLL.csproj">
+      <Project>{c1c9e3b1-bf21-41ef-b9e8-bca0730edf92}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markel.Pricing.Service.Infrastructure.Core\Markel.Pricing.Service.Infrastructure.Core.csproj">
+      <Project>{4bef6fff-c688-45ed-99f0-b89ff79994b9}</Project>
+      <Name>Markel.Pricing.Service.Infrastructure.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ERMSAuthentication\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ERMSAuthentication\AuthenticationService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ERMSAuthentication\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ERMSAuthentication\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ERMSAuthentication\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,318 @@
+{
+    "url": "/v1/lookups/dealstatuses",
+    "results": [
+        {
+            "name": "Bound",
+            "value": "0",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Cleared",
+            "value": "21",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Authorize",
+            "value": "80",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "In Due Diligence",
+            "value": "1",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Indicated",
+            "value": "15",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Inquired",
+            "value": "41",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Outstanding Quote",
+            "value": "2",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Under Review",
+            "value": "3",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Declined - Exceeds Capacity",
+            "value": "46",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Declined - Exposure to Loss",
+            "value": "48",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Declined - Financials",
+            "value": "71",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Declined - Insufficient Data/Terms",
+            "value": "72",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Declined - Insufficient Pricing",
+            "value": "47",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Declined - Loss History",
+            "value": "52",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Declined - Outside Guidelines",
+            "value": "49",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Declined - Underwriting reasons",
+            "value": "30",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Closed Quote",
+            "value": "44",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Class of Business",
+            "value": "12",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Cleared in Error",
+            "value": "40",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Declined",
+            "value": "6",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Follow line - Lost",
+            "value": "31",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - FOT Rejected",
+            "value": "65",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Authorization Rejected",
+            "value": "66",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Inadequate Terms",
+            "value": "9",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Insuffcient Data",
+            "value": "8",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Cedent Did Not Purchase (CDNP)",
+            "value": "67",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Insufficient Pricing",
+            "value": "7",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - No Activity",
+            "value": "39",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - No Opportunity",
+            "value": "11",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Not Renewed",
+            "value": "34",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Not Renewed - Lost",
+            "value": "38",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - One Off",
+            "value": "13",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Quoted - CDNP",
+            "value": "5",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Quoted - Lost",
+            "value": "4",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Quoted - LR Cap",
+            "value": "10",
+            "group": null,
+            "isActive": true
+        },
+       {
+            "name": "Dead - Quoted - quote not taken",
+            "value": "36",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dead - Quoted - Renewal Lost",
+            "value": "37",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Accepted Pending contract",
+            "value": "70",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Bound (Other System)",
+            "value": "26",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Bound Pending Data Entry",
+            "value": "29",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Closed - Other Max Team",
+            "value": "20",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Informational Agreement",
+            "value": "33",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "On Hold",
+            "value": "16",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Outstanding Follow line",
+            "value": "32",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Quoted (Other System)",
+            "value": "25",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Reviewed (Awaiting Terms)",
+            "value": "27",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Submission Not Received",
+            "value": "24",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Superceded (Imported Deal)",
+            "value": "28",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "To Be Declined",
+            "value": "14",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Max Managers Lineslip",
+            "value": "64",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "Dummy Deal",
+            "value": "99",
+            "group": null,
+            "isActive": true
+        },
+        {
+            "name": "System Use Only",
+            "value": "999",
+            "group": null,
+            "isActive": true
+        }
+    ],
+    "totalRecords": 52
+}

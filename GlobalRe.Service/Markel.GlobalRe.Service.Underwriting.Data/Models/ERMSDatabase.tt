@@ -1,0 +1,28 @@
+﻿<#@ include file="EF.Reverse.POCO.Core.ttinclude" #>
+<#
+    Namespace = "Markel.GlobalRe.Service.Underwriting.Data.Models";
+
+    // Elements to generate ***************************************************************************************************************
+    // Add the elements that should be generated when the template is executed.
+    // Multiple projects can now be used that separate the different concerns.
+    ElementsToGenerate = Elements.Poco | Elements.StoredProcedures; //| Elements.Context | Elements.UnitOfWork | Elements.PocoConfiguration;
+
+    // Use these namespaces to specify where the different elements now live. These may even be in different assemblies.
+    // Please note this does not create the files in these locations, it only adds a using statement to say where they are.
+    // I show how this works on the video from 26:08 onwards.
+    // The way to do this is to add the "EntityFramework Reverse POCO Code First Generator" into each of these folders.
+    // Then set the .tt to only generate the relevant section you need by setting
+    //      ElementsToGenerate = Elements.Poco; in your Entity folder,
+    //      ElementsToGenerate = Elements.Context | Elements.UnitOfWork; in your Context folder,
+    //      ElementsToGenerate = Elements.PocoConfiguration; in your Maps folder.
+    //      PocoNamespace = "YourProject.Entities";
+    //      ContextNamespace = "YourProject.Context";
+    //      UnitOfWorkNamespace = "YourProject.Context";	
+    //      PocoConfigurationNamespace = "YourProject.Maps";
+    // You also need to set the following to the namespace where they now live:
+    PocoNamespace = "";
+    ContextNamespace = "";
+    UnitOfWorkNamespace = "";	
+    PocoConfigurationNamespace = "";
+#>
+<#@ include file="EF.ERMS.ttinclude" #>

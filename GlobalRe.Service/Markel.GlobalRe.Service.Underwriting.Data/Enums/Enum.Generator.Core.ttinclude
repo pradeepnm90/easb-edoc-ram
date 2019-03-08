@@ -1,0 +1,239 @@
+<#@ template hostspecific="true" language="C#" #>
+<#@ include file="EF6.Utility.CS.ttinclude"#>
+<#@ assembly name="System.Configuration" #>
+<#@ assembly name="System.Windows.Forms" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Data.Common" #>
+<#@ import namespace="System.Data.Entity.Infrastructure.Pluralization" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Configuration" #>
+<#@ import namespace="System.Windows.Forms" #>
+<#@ import namespace="EnvDTE" #>
+<#@ output extension=".generated.cs"#>
+<#+
+    public class EnumTableColumnDefinition
+    {
+        public string Schema;
+        public string Table;
+        public string KeyColumnName;
+        public string ValueColumnName;
+        public string DescriptionColumnName;
+        public bool Pascalize;
+    }
+
+    // Settings - edit these in the main <name>.tt file *******************************************************************************
+    string ProjectName= "";
+    string connectionString = ""; //"data source=.;initial catalog=DBName;integrated security=SSPI";
+    string ConnectionStringName = "";
+    string DefaultEnumValueColumnName = "";
+    string DefaultEnumDescriptionColumnName = "";
+    string EnumNameFormat = "{0}";
+    Regex TableFilterInclude = null;
+    Regex TableFilterExclude = null;
+    List<EnumTableColumnDefinition> TableColumnDefinitions = new List<EnumTableColumnDefinition>();
+
+    private string Pascalize(object value)
+    {
+        //Regex rx = new Regex(@"^\w|\b\w(?=\w{{1}})");
+        //return rx.Replace(value.ToString(), m => m.Value.ToUpperInvariant());
+
+        Regex rx = new Regex(@"(?:[^a-zA-Z0-9]*)(?<first>[a-zA-Z0-9])(?<reminder>[a-zA-Z0-9]*)(?:[^a-zA-Z0-9]*)");
+        return rx.Replace(value.ToString(), m => m.Groups["first"].ToString().ToUpper() + m.Groups["reminder"].ToString().ToLower());
+    }
+
+    private string RemoveInvalidNameCharacters(object value)
+    {
+        string[] characters = { @"%", @"\", @"/", "&", ".", "-", " " };
+        string[] replacements = { "_Percent", "_", "_", "", "", "_", "" };
+
+        string outValue = value.ToString();
+        for (int index = 0; index < characters.Length; index++)
+            outValue = outValue.Replace(characters[index], replacements[index]);
+
+        return outValue;
+
+        //return value.ToString().Replace("&", "").Replace(" ", "").Replace(".", "");
+    }
+
+    public static void ArgumentNotNull<T>(T arg, string name) where T : class
+    {
+        if (arg == null)
+        {
+            throw new ArgumentNullException(name);
+        }
+    }
+
+    public string GetConnectionString(string projectName)
+    {
+        string connection = "data source=.;initial catalog=DBName;integrated security=SSPI";
+
+        // Get connection strings from config file - using relative path from ttinclude to config directory
+        var config = System.Configuration.ConfigurationManager.OpenMappedExeConfiguration(new ExeConfigurationFileMap { ExeConfigFilename = GetConfigPath(projectName) }, ConfigurationUserLevel.None);
+        var connStrings = config.ConnectionStrings;
+        foreach (System.Configuration.ConnectionStringSettings css in connStrings.ConnectionStrings)
+        {
+            if (css.Name == ConnectionStringName)
+            {
+                connection = css.ConnectionString;
+                break;
+            }
+        }
+        return connection;
+    }
+
+    public EnvDTE.DTE GetDTE()
+    {
+        var serviceProvider = (IServiceProvider)Host;
+        if(serviceProvider == null)
+            throw new Exception("Host property returned unexpected value (null)");
+
+        var dte = (EnvDTE.DTE)serviceProvider.GetService(typeof(EnvDTE.DTE));
+        if(dte == null)
+            throw new Exception("Unable to retrieve EnvDTE.DTE");
+
+        return dte;
+    }
+        
+    public EnvDTE.Solution GetSolution()
+    {
+        return GetDTE().Solution;
+    }
+
+    public IEnumerable<EnvDTE.Project> GetAllProjects()
+    {
+        foreach(var projectObj in GetSolution().Projects)
+        {
+            var project = projectObj as EnvDTE.Project;
+            if(project == null)
+                continue;
+            if(project.Kind == EnvDTE.Constants.vsProjectKindSolutionItems)
+                foreach(var p in RecurseSolutionFolder(project))
+                    yield return p;
+            else
+                yield return project;
+        }
+    }
+
+    private IEnumerable<EnvDTE.Project> RecurseSolutionFolder(EnvDTE.Project project)
+    {
+        if (project.ProjectItems == null)
+            yield break;
+            
+        foreach (EnvDTE.ProjectItem projectItem in project.ProjectItems)
+        {
+            var subProject = projectItem.SubProject;
+            if (subProject == null)
+                continue;
+            if (subProject.Kind == EnvDTE.Constants.vsProjectKindSolutionItems)
+            {
+                foreach (var p in RecurseSolutionFolder(subProject))
+                    yield return p;
+            }
+            else
+                yield return subProject;
+        }
+    }
+
+    public EnvDTE.Project GetCurrentProject()
+    {
+        var dte = GetDTE();
+        var activeSolutionProjects = (Array)dte.ActiveSolutionProjects;
+        if(activeSolutionProjects == null)
+            throw new Exception("DTE.ActiveSolutionProjects returned null");
+
+        if (activeSolutionProjects.Length > 0)
+        {
+            var dteProject = (EnvDTE.Project) activeSolutionProjects.GetValue(0);
+            if (dteProject != null)
+                return dteProject;
+        }
+
+        var item = dte.Solution.FindProjectItem(Host.TemplateFile);
+        if (item != null && item.ContainingProject != null)
+            return item.ContainingProject;
+            
+        throw new InvalidOperationException("Error in GetCurrentProject(). Unable to find project.");
+    }
+
+    public EnvDTE.Project GetContainingProject()
+    {
+        var dte = GetDTE();
+        var activeSolutionProjects = (Array)dte.ActiveSolutionProjects;
+        if(activeSolutionProjects == null)
+            throw new Exception("DTE.ActiveSolutionProjects returned null");
+
+        var item = dte.Solution.FindProjectItem(Host.TemplateFile);
+        if (item != null && item.ContainingProject != null)
+            return item.ContainingProject;
+            
+        throw new InvalidOperationException("Error in GetCurrentProject(). Unable to find project.");
+    }
+
+    public string GetConfigPath(string projectName)
+    {
+        EnvDTE.Project project = GetProject(projectName);
+        foreach (EnvDTE.ProjectItem item in project.ProjectItems)
+        {
+            // if it is the app.config file, then open it up
+            if (item.Name.Equals("App.config", StringComparison.InvariantCultureIgnoreCase) || item.Name.Equals("Web.config", StringComparison.InvariantCultureIgnoreCase))
+                return GetProjectPath(project) + "\\" + item.Name;
+        }
+        return String.Empty;
+    }
+    
+    public EnvDTE.Project GetProject(string projectName)
+    {
+        EnvDTE.Project dteProject = null;
+
+        var dte = GetDTE();
+        var activeSolutionProjects = (Array)dte.ActiveSolutionProjects;
+        if(activeSolutionProjects == null)
+            throw new Exception("DTE.ActiveSolutionProjects returned null");
+
+        if (string.IsNullOrEmpty(projectName))
+        {
+            dteProject = activeSolutionProjects.GetValue(0) as EnvDTE.Project;
+            if (dteProject == null)
+                throw new Exception("DTE.ActiveSolutionProjects[0] returned null");
+        }
+        else if (activeSolutionProjects.Length != 0)
+        {
+            foreach (Project p in GetAllProjects())
+            {
+                if (p.Name == projectName)
+                {
+                    dteProject = p;
+                    break;
+                }
+            }
+        }
+        else
+        {
+            throw new Exception("DTE.ActiveSolutionProjects - no projects");
+        }
+		
+        return dteProject;
+    }
+
+    private string GetProjectPath(EnvDTE.Project project)
+    {
+        var fullProjectName = project.FullName;
+
+        if (string.IsNullOrWhiteSpace(fullProjectName))
+            return string.Empty;
+
+        try
+        {
+            var info = new FileInfo(fullProjectName);
+            return info.Directory == null ? string.Empty : info.Directory.FullName;
+        }
+        catch
+        {
+            WriteLine("// Project " + fullProjectName + " excluded.");
+            return string.Empty;
+        }
+    }
+#>
